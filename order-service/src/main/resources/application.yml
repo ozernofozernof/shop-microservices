@@ -1,0 +1,41 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: order-service
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/orderdb
+    username: order_user
+    password: order_pass
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+  kafka:
+    bootstrap-servers: localhost:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+jwt:
+  secret: "your-super-secret-jwt-key-change-me"
+  expiration-ms: 3600000 # 1 hour
+
+grpc:
+  client:
+    inventory:
+      address: "static://localhost:9090"
+      negotiationType: plaintext
+
+kafka:
+  topic:
+    orders: orders
+
