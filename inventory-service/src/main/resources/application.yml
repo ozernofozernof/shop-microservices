@@ -6,15 +6,18 @@ spring:
     name: inventory-service
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/inventorydb
-    username: inventory_user
-    password: inventory_pass
+    url: jdbc:postgresql://localhost:5433/inventory_db
+    username: postgres
+    password: postgres
     driver-class-name: org.postgresql.Driver
 
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
+
+  kafka:
+    bootstrap-servers: localhost:9092
 
 grpc:
   server:

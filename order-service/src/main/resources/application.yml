@@ -6,9 +6,10 @@ spring:
     name: order-service
 
   datasource:
-    url: jdbc:postgresql://localhost:5433/postgres
+    url: jdbc:postgresql://localhost:5433/order_db
     username: postgres
     password: postgres
+    driver-class-name: org.postgresql.Driver
 
   jpa:
     hibernate:
@@ -34,7 +35,7 @@ grpc:
       address: "static://localhost:9090"
       negotiationType: plaintext
 
-kafka:
-  topic:
-    orders: orders
+app:
+  kafka:
+    orders-topic: orders
 
