@@ -26,14 +26,14 @@ spring:
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
 
 jwt:
-  secret: "your-super-secret-jwt-key-change-me"
+  secret: "SUPER_PAVEL_SECRET_KEY_SUPER_PAVEL_SECRET_KEY_123"
   expiration-ms: 3600000 # 1 hour
 
 grpc:
   client:
     inventory:
-      address: "static://localhost:9090"
-      negotiationType: plaintext
+      address: "static://localhost:8082"
+      negotiation-type: plaintext
 
 app:
   kafka:

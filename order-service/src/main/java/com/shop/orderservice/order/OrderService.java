@@ -1,7 +1,6 @@
 package com.shop.orderservice.order;
 
 import com.shop.orderservice.inventory.InventoryClient;
-import com.shop.orderservice.inventory.ProductInfo;
 import com.shop.orderservice.kafka.OrderCreatedEvent;
 import com.shop.orderservice.kafka.OrderEventProducer;
 import com.shop.orderservice.order.dto.OrderCreateRequest;
@@ -9,6 +8,7 @@ import com.shop.orderservice.order.dto.OrderItemRequest;
 import com.shop.orderservice.order.dto.OrderResponse;
 import com.shop.orderservice.user.User;
 import com.shop.orderservice.user.UserRepository;
+import com.shop.proto.inventory.ProductResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -31,7 +31,6 @@ public class OrderService {
 
     @Transactional
     public OrderResponse createOrder(OrderCreateRequest request) {
-        // 1. Берём текущего юзера из SecurityContext
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         String username = authentication.getName();
         User user = userRepository.findByUsername(username)
@@ -40,9 +39,8 @@ public class OrderService {
         List<OrderItem> orderItems = new ArrayList<>();
         BigDecimal totalOrderPrice = BigDecimal.ZERO;
 
-        // 2. Для каждой позиции идём в Inventory Service (gRPC)
         for (OrderItemRequest itemRequest : request.getItems()) {
-            ProductInfo productInfo = inventoryClient.checkAvailability(
+            ProductResponse productInfo = inventoryClient.checkAvailability(
                     itemRequest.getProductId(),
                     itemRequest.getQuantity()
             );
@@ -51,8 +49,8 @@ public class OrderService {
                 throw new IllegalArgumentException("Not enough stock for product " + productInfo.getProductId());
             }
 
-            BigDecimal price = productInfo.getPrice();
-            BigDecimal sale = productInfo.getSale(); // допустим, это скидка в деньгах
+            BigDecimal price = BigDecimal.valueOf(productInfo.getPrice());
+            BigDecimal sale = BigDecimal.valueOf(productInfo.getSale());
             BigDecimal lineTotal = price
                     .subtract(sale != null ? sale : BigDecimal.ZERO)
                     .multiply(BigDecimal.valueOf(itemRequest.getQuantity()));
@@ -70,20 +68,17 @@ public class OrderService {
             orderItems.add(orderItem);
         }
 
-        // 3. Создаём заказ и сохраняем в БД
         Order order = Order.builder()
                 .user(user)
                 .totalPrice(totalOrderPrice)
                 .createdAt(OffsetDateTime.now())
                 .build();
 
-        // связываем items с order
         orderItems.forEach(item -> item.setOrder(order));
         order.setItems(orderItems);
 
         Order saved = orderRepository.save(order);
 
-        // 4. Отправляем событие в Kafka
         List<OrderCreatedEvent.Item> eventItems = new ArrayList<>();
         for (OrderItem item : saved.getItems()) {
             eventItems.add(new OrderCreatedEvent.Item(
@@ -105,7 +100,6 @@ public class OrderService {
 
         orderEventProducer.send(event);
 
-        // 5. Формируем ответ клиенту
         List<OrderResponse.Item> responseItems = new ArrayList<>();
         for (OrderItem item : saved.getItems()) {
             responseItems.add(new OrderResponse.Item(
@@ -126,4 +120,3 @@ public class OrderService {
         );
     }
 }
-
