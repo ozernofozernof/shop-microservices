@@ -1,6 +1,6 @@
 package com.shop.orderservice.security;
 
-import com.shop.orderservice.user.User;
+import com.shop.orderservice.entity.User;
 import lombok.Getter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

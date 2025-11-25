@@ -1,6 +1,6 @@
 package com.example.notification.config;
 
-import com.example.notification.order.OrderMessage;
+import com.example.notification.dto.OrderMessage;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.serialization.StringDeserializer;
 import org.springframework.beans.factory.annotation.Value;

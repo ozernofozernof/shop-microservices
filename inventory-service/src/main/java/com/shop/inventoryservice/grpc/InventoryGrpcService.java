@@ -1,7 +1,7 @@
 package com.shop.inventoryservice.grpc;
 
-import com.shop.inventoryservice.product.Product;
-import com.shop.inventoryservice.product.ProductService;
+import com.shop.inventoryservice.entity.Product;
+import com.shop.inventoryservice.service.ProductService;
 import com.shop.proto.inventory.InventoryServiceGrpc;
 import com.shop.proto.inventory.ProductRequest;
 import com.shop.proto.inventory.ProductResponse;

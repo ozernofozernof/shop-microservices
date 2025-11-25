@@ -1,7 +1,7 @@
 package com.shop.orderservice.security;
 
-import com.shop.orderservice.user.User;
-import com.shop.orderservice.user.UserRepository;
+import com.shop.orderservice.entity.User;
+import com.shop.orderservice.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
