@@ -23,11 +23,22 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
     @Override
     protected void doFilterInternal(
+
             HttpServletRequest request,
             HttpServletResponse response,
             FilterChain filterChain
     ) throws ServletException, IOException {
 
+        System.out.println("FILTER ACTIVE: " + request.getServletPath());
+
+        //1. Пропускаем все запросы на /api/auth**
+        String path = request.getServletPath();
+        if (path.startsWith("/api/auth")) {
+            filterChain.doFilter(request, response);
+            return;
+        }
+
+        //2. Извлекаем токен из заголовка
         String header = request.getHeader("Authorization");
         String token = null;
 
@@ -35,10 +46,29 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
             token = header.substring(7);
         }
 
-        if (token != null && jwtTokenProvider.validateToken(token)) {
-            System.out.println("HEADER = " + header);
+        //3. Проверяем токен
+//        if (token != null && jwtTokenProvider.validateToken(token)) {
+//            String username = jwtTokenProvider.getUsernameFromToken(token);
+//            CustomUserDetails userDetails = userDetailsService.loadUserByUsername(username);
+//
+//            UsernamePasswordAuthenticationToken auth =
+//                    new UsernamePasswordAuthenticationToken(
+//                            userDetails, null, userDetails.getAuthorities());
+//            auth.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
+//
+//            SecurityContextHolder.getContext().setAuthentication(auth);
+//
+//        }
+        System.out.println("HEADER RAW = " + header);
+        System.out.println("TOKEN RAW = " + token);
+
+        boolean valid = token != null && jwtTokenProvider.validateToken(token);
+        System.out.println("TOKEN VALID = " + valid);
+
+        if (valid) {
             String username = jwtTokenProvider.getUsernameFromToken(token);
-            System.out.println("TOKEN = " + token);
+            System.out.println("USERNAME = " + username);
+
             CustomUserDetails userDetails = userDetailsService.loadUserByUsername(username);
 
             UsernamePasswordAuthenticationToken auth =
@@ -47,10 +77,9 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
             auth.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
 
             SecurityContextHolder.getContext().setAuthentication(auth);
-        } else {
-            System.out.println("VALID = " + jwtTokenProvider.validateToken(token));
         }
 
+        //4. Продолжаем выполнение цепочки
         filterChain.doFilter(request, response);
     }
 }

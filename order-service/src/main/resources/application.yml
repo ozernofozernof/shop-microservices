@@ -32,7 +32,7 @@ jwt:
 grpc:
   client:
     inventory:
-      address: "static://localhost:8082"
+      address: "static://localhost:9091"
       negotiation-type: plaintext
 
 app:
