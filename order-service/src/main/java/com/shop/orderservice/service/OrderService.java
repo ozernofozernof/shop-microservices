@@ -34,6 +34,8 @@ public class OrderService {
 
     @Transactional
     public OrderResponse createOrder(OrderCreateRequest request) {
+
+        // 1. Получаем пользователя
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         String username = authentication.getName();
         User user = userRepository.findByUsername(username)
@@ -42,35 +44,53 @@ public class OrderService {
         List<OrderItem> orderItems = new ArrayList<>();
         BigDecimal totalOrderPrice = BigDecimal.ZERO;
 
+        // 2. Обрабатываем каждый товар
         for (OrderItemRequest itemRequest : request.getItems()) {
+
             ProductResponse productInfo = inventoryClient.checkAvailability(
                     itemRequest.getProductId(),
                     itemRequest.getQuantity()
             );
 
-            if (productInfo.getAvailableQuantity() < itemRequest.getQuantity()) {
-                throw new IllegalArgumentException("Not enough stock for product " + productInfo.getProductId());
+            if (productInfo == null) {
+                throw new IllegalStateException("Product not found: " + itemRequest.getProductId());
             }
 
+            // 3. Проверка остатков
+            if (productInfo.getAvailableQuantity() < itemRequest.getQuantity()) {
+                throw new IllegalArgumentException(
+                        "Not enough stock for product: " + productInfo.getProductId()
+                );
+            }
+
+            // 4. Корректное вычисление скидки
             BigDecimal price = BigDecimal.valueOf(productInfo.getPrice());
-            BigDecimal sale = BigDecimal.valueOf(productInfo.getSale());
+            BigDecimal salePercent = BigDecimal.valueOf(productInfo.getSale());
+
             BigDecimal lineTotal = price
-                    .subtract(sale != null ? sale : BigDecimal.ZERO)
                     .multiply(BigDecimal.valueOf(itemRequest.getQuantity()));
+
+            if (salePercent.compareTo(BigDecimal.ZERO) > 0) {
+                BigDecimal discount = lineTotal.multiply(salePercent)
+                        .divide(BigDecimal.valueOf(100), 2, BigDecimal.ROUND_HALF_UP);
+                lineTotal = lineTotal.subtract(discount);
+            }
 
             totalOrderPrice = totalOrderPrice.add(lineTotal);
 
+            // 5. Формируем OrderItem
             OrderItem orderItem = OrderItem.builder()
                     .productId(productInfo.getProductId())
                     .quantity(itemRequest.getQuantity())
                     .price(price)
-                    .sale(sale)
+                    .sale(salePercent)
                     .totalPrice(lineTotal)
                     .build();
 
             orderItems.add(orderItem);
         }
 
+        // 6. Создание заказа
         Order order = Order.builder()
                 .user(user)
                 .totalPrice(totalOrderPrice)
@@ -82,6 +102,7 @@ public class OrderService {
 
         Order saved = orderRepository.save(order);
 
+        // 7. Формирование Kafka-события
         List<OrderCreatedEvent.Item> eventItems = new ArrayList<>();
         for (OrderItem item : saved.getItems()) {
             eventItems.add(new OrderCreatedEvent.Item(
@@ -103,6 +124,7 @@ public class OrderService {
 
         orderEventProducer.send(event);
 
+        // 8. Формирование ответа
         List<OrderResponse.Item> responseItems = new ArrayList<>();
         for (OrderItem item : saved.getItems()) {
             responseItems.add(new OrderResponse.Item(
@@ -122,4 +144,5 @@ public class OrderService {
                 responseItems
         );
     }
+
 }

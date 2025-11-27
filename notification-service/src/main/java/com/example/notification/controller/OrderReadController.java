@@ -14,18 +14,25 @@ public class OrderReadController {
 
     private final OrderService orderService;
 
+     //Вывод всей таблицы заказов
+
     @GetMapping("/all")
     public List<OrderEntity> getAll() {
         return orderService.getAll();
     }
 
-    @GetMapping("/by-order/{orderId}")
+    //Вывод всех покупок по одному заказу (order_id)
+
+    @GetMapping("/{orderId}")
     public List<OrderEntity> getByOrderId(@PathVariable Long orderId) {
         return orderService.getByOrderId(orderId);
     }
 
-    @GetMapping("/by-user/{userId}")
+    //Вывод всех покупок по одному пользователю
+
+    @GetMapping("/user/{userId}")
     public List<OrderEntity> getByUserId(@PathVariable Long userId) {
         return orderService.getByUserId(userId);
     }
 }
+

@@ -1,6 +1,6 @@
 package com.example.notification.kafka;
 
-import com.example.notification.dto.OrderMessage;
+import com.example.notification.dto.OrderCreatedEvent;
 import com.example.notification.service.OrderService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -18,10 +18,11 @@ public class OrderKafkaListener {
     @KafkaListener(
             topics = "${app.kafka.orders-topic}",
             groupId = "notification-service",
-            containerFactory = "orderKafkaListenerContainerFactory"
+            containerFactory = "eventKafkaListenerContainerFactory"
     )
-    public void handleOrder(@Payload OrderMessage message) {
-        log.info("Received order message: {}", message);
-        orderService.saveFromMessage(message);
+    public void handleOrder(@Payload OrderCreatedEvent event) {
+        log.info("Received order: {}", event);
+        orderService.saveOrder(event);
     }
 }
+

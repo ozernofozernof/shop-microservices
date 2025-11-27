@@ -63,11 +63,15 @@ public class AuthController {
 
     @PostMapping("/refresh")
     public ResponseEntity<JwtResponse> refresh(@RequestBody RefreshTokenRequest request) {
-        if (!jwtTokenProvider.validateToken(request.getRefreshToken())) {
-            return ResponseEntity.badRequest().build();
+        String refreshToken = request.getRefreshToken();
+
+        if (!jwtTokenProvider.validateToken(refreshToken) ||
+                !jwtTokenProvider.isRefreshToken(refreshToken)) {
+            return ResponseEntity.badRequest().body(null);
         }
 
-        String username = jwtTokenProvider.getUsernameFromToken(request.getRefreshToken());
+        String username = jwtTokenProvider.getUsernameFromToken(refreshToken);
+
         String newAccess = jwtTokenProvider.generateAccessToken(username);
         String newRefresh = jwtTokenProvider.generateRefreshToken(username);
 

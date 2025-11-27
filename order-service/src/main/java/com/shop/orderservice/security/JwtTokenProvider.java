@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 
 import java.security.Key;
 import java.util.Date;
+import java.util.Map;
 
 @Component
 public class JwtTokenProvider {
@@ -22,19 +23,20 @@ public class JwtTokenProvider {
     }
 
     public String generateAccessToken(String username) {
-        return generateToken(username, accessTokenValidityMs);
+        return generateToken(username, accessTokenValidityMs, "access");
     }
 
     public String generateRefreshToken(String username) {
-        return generateToken(username, refreshTokenValidityMs);
+        return generateToken(username, refreshTokenValidityMs, "refresh");
     }
 
-    private String generateToken(String username, long validityMs) {
+    private String generateToken(String username, long validityMs, String type) {
         Date now = new Date();
         Date expiry = new Date(now.getTime() + validityMs);
 
         return Jwts.builder()
                 .setSubject(username)
+                .addClaims(Map.of("type", type))
                 .setIssuedAt(now)
                 .setExpiration(expiry)
                 .signWith(getSigningKey(), SignatureAlgorithm.HS256)
@@ -48,6 +50,20 @@ public class JwtTokenProvider {
                 .parseClaimsJws(token)
                 .getBody()
                 .getSubject();
+    }
+
+    public boolean isRefreshToken(String token) {
+        try {
+            Claims claims = Jwts.parserBuilder()
+                    .setSigningKey(getSigningKey())
+                    .build()
+                    .parseClaimsJws(token)
+                    .getBody();
+
+            return "refresh".equals(claims.get("type"));
+        } catch (JwtException | IllegalArgumentException e) {
+            return false;
+        }
     }
 
     public boolean validateToken(String token) {

@@ -16,7 +16,7 @@ public class InventoryGrpcService extends InventoryServiceGrpc.InventoryServiceI
     private final ProductService productService;
 
     @Override
-    public void checkProduct(
+    public void checkAvailability(
             ProductRequest request,
             StreamObserver<ProductResponse> responseObserver
     ) {

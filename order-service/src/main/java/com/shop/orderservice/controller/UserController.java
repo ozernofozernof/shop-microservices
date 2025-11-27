@@ -1,7 +1,8 @@
 package com.shop.orderservice.controller;
 
+import com.shop.orderservice.dto.UserDto;
 import com.shop.orderservice.entity.User;
-import com.shop.orderservice.repository.UserRepository;
+import com.shop.orderservice.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,43 +14,34 @@ import java.util.List;
 @RequiredArgsConstructor
 public class UserController {
 
-    private final UserRepository userRepository;
+    private final UserService userService;
 
     @GetMapping
-    public List<User> getAll() {
-        return userRepository.findAll();
+    public List<UserDto> getAll() {
+        return userService.getAllUsers();
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<User> getById(@PathVariable Long id) {
-        return userRepository.findById(id)
-                .map(ResponseEntity::ok)
-                .orElse(ResponseEntity.notFound().build());
+    public UserDto getById(@PathVariable Long id) {
+        return userService.getUserById(id);
     }
 
     @PostMapping
-    public User create(@RequestBody User user) {
-        return userRepository.save(user);
+    public ResponseEntity<UserDto> create(@RequestBody User user) {
+        UserDto created = userService.createUser(user);
+        return ResponseEntity.ok(created);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<User> update(@PathVariable Long id, @RequestBody User updated) {
-        return userRepository.findById(id)
-                .map(user -> {
-                    user.setUsername(updated.getUsername());
-                    user.setEmail(updated.getEmail());
-                    user.setRole(updated.getRole());
-                    return ResponseEntity.ok(userRepository.save(user));
-                })
-                .orElse(ResponseEntity.notFound().build());
+    public ResponseEntity<UserDto> update(@PathVariable Long id,
+                                          @RequestBody User user) {
+        UserDto updated = userService.updateUser(id, user);
+        return ResponseEntity.ok(updated);
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> delete(@PathVariable Long id) {
-        if (!userRepository.existsById(id)) {
-            return ResponseEntity.notFound().build();
-        }
-        userRepository.deleteById(id);
+        userService.deleteUser(id);
         return ResponseEntity.noContent().build();
     }
 }

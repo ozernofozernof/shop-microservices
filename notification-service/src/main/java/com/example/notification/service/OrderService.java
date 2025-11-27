@@ -1,7 +1,7 @@
 package com.example.notification.service;
 
+import com.example.notification.dto.OrderCreatedEvent;
 import com.example.notification.entity.OrderEntity;
-import com.example.notification.dto.OrderMessage;
 import com.example.notification.repository.OrderRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -14,18 +14,22 @@ public class OrderService {
 
     private final OrderRepository orderRepository;
 
-    public void saveFromMessage(OrderMessage msg) {
-        OrderEntity entity = OrderEntity.builder()
-                .orderId(msg.orderId())
-                .productId(msg.productId())
-                .quantity(msg.quantity())
-                .price(msg.price())
-                .sale(msg.sale())
-                .totalPrice(msg.totalPrice())
-                .userId(msg.userId())
-                .build();
+    public void saveOrder(OrderCreatedEvent event) {
 
-        orderRepository.save(entity);
+        for (OrderCreatedEvent.Item item : event.items()) {
+
+            OrderEntity entity = OrderEntity.builder()
+                    .orderId(event.orderId())
+                    .userId(event.userId())
+                    .totalPrice(item.totalPrice())
+                    .productId(item.productId())
+                    .quantity(item.quantity())
+                    .price(item.price())
+                    .sale(item.sale())
+                    .build();
+
+            orderRepository.save(entity);
+        }
     }
 
     public List<OrderEntity> getAll() {
@@ -40,4 +44,5 @@ public class OrderService {
         return orderRepository.findByUserId(userId);
     }
 }
+
 

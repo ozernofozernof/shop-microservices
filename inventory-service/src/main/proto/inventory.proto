@@ -7,7 +7,7 @@ option java_package = "com.shop.proto.inventory";
 option java_outer_classname = "InventoryProto";
 
 service InventoryService {
-  rpc CheckProduct(ProductRequest) returns (ProductResponse);
+  rpc checkAvailability(ProductRequest) returns (ProductResponse);
 }
 
 message ProductRequest {
