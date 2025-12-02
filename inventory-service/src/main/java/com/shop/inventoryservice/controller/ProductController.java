@@ -1,7 +1,7 @@
 package com.shop.inventoryservice.controller;
 
 import com.shop.inventoryservice.entity.Product;
-import com.shop.inventoryservice.service.ProductService;
+import com.shop.inventoryservice.service.ProductServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,7 +13,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class ProductController {
 
-    private final ProductService productService;
+    private final ProductServiceImpl productService;
 
     @GetMapping
     public List<Product> getAll() {

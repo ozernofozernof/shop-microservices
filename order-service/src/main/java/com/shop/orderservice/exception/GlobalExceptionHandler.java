@@ -28,7 +28,6 @@ public class GlobalExceptionHandler {
     /**
      * Ошибки валидации тела запроса
      */
-
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<Map<String, Object>> handleValidation(MethodArgumentNotValidException ex) {
         String msg = ex.getBindingResult().getFieldError().getDefaultMessage();
@@ -38,7 +37,6 @@ public class GlobalExceptionHandler {
     /**
      * Неверный логин/пароль
      */
-
     @ExceptionHandler(BadCredentialsException.class)
     public ResponseEntity<Map<String, Object>> handleBadCredentials(BadCredentialsException ex) {
         return build(HttpStatus.UNAUTHORIZED, "Invalid username or password");
@@ -48,7 +46,6 @@ public class GlobalExceptionHandler {
      * Проверка остатков: IllegalArgumentException
      * Например: "Not enough stock", "Product not found"
      */
-
     @ExceptionHandler(IllegalArgumentException.class)
     public ResponseEntity<Map<String, Object>> handleIllegalArgument(IllegalArgumentException ex) {
         return build(HttpStatus.BAD_REQUEST, ex.getMessage());
@@ -58,7 +55,6 @@ public class GlobalExceptionHandler {
      * Логические ошибки: IllegalStateException
      * Например: "Inventory unavailable"
      */
-
     @ExceptionHandler(IllegalStateException.class)
     public ResponseEntity<Map<String, Object>> handleIllegalState(IllegalStateException ex) {
         return build(HttpStatus.CONFLICT, ex.getMessage());
@@ -67,7 +63,6 @@ public class GlobalExceptionHandler {
     /**
      * Все остальные ошибки
      */
-
     @ExceptionHandler(Exception.class)
     public ResponseEntity<Map<String, Object>> handleException(Exception ex) {
         log.error("Unhandled exception:", ex);

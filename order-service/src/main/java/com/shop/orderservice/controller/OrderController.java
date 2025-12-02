@@ -4,9 +4,11 @@ import com.shop.orderservice.service.OrderService;
 import com.shop.orderservice.dto.OrderCreateRequest;
 import com.shop.orderservice.dto.OrderResponse;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+@Slf4j
 @RestController
 @RequestMapping("/api/order")
 @RequiredArgsConstructor
@@ -16,7 +18,7 @@ public class OrderController {
 
     @PostMapping
     public ResponseEntity<OrderResponse> createOrder(@RequestBody OrderCreateRequest request) {
-        System.out.println(">>> CREATE ORDER CALLED");
+        log.info(">>> CREATE ORDER CALLED");
         OrderResponse response = orderService.createOrder(request);
         return ResponseEntity.ok(response);
     }
