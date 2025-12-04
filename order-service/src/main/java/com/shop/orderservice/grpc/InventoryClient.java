@@ -27,7 +27,6 @@ public class InventoryClient {
             //Создаём запрос по одному продукту
             ProductRequest item = ProductRequest.newBuilder()
                     .setProductId(productId)
-                    .setRequestedQuantity(quantity)
                     .build();
 
             //Обёрточный запрос для batсh-метода
@@ -67,7 +66,6 @@ public class InventoryClient {
                 requestBuilder.addItems(
                         ProductRequest.newBuilder()
                                 .setProductId(itemRequest.getProductId())
-                                .setRequestedQuantity(itemRequest.getQuantity())
                                 .build()
                 );
             }
