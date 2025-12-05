@@ -1,16 +1,16 @@
 package com.shop.orderservice.service;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.shop.orderservice.dto.OrderCreateRequest;
 import com.shop.orderservice.dto.OrderItemRequest;
 import com.shop.orderservice.dto.OrderResponse;
-import com.shop.orderservice.entity.Order;
-import com.shop.orderservice.entity.OrderItem;
-import com.shop.orderservice.entity.User;
+import com.shop.orderservice.entity.*;
 import com.shop.orderservice.grpc.InventoryClient;
 import com.shop.orderservice.kafka.OrderCreatedEvent;
-import com.shop.orderservice.kafka.OrderEventProducer;
 import com.shop.orderservice.mapper.OrderMapper;
 import com.shop.orderservice.repository.OrderRepository;
+import com.shop.orderservice.repository.OutboxMessageRepository;
 import com.shop.orderservice.repository.UserRepository;
 import com.shop.proto.inventory.ProductResponse;
 import lombok.RequiredArgsConstructor;
@@ -34,7 +34,10 @@ public class OrderService {
     private final OrderRepository orderRepository;
     private final UserRepository userRepository;
     private final InventoryClient inventoryClient;
-    private final OrderEventProducer orderEventProducer;
+
+    //репозиторий outbox и ObjectMapper
+    private final OutboxMessageRepository outboxMessageRepository;
+    private final ObjectMapper objectMapper;
 
     @Transactional
     public OrderResponse createOrder(OrderCreateRequest request) {
@@ -107,6 +110,7 @@ public class OrderService {
                 .user(user)
                 .totalPrice(totalOrderPrice)
                 .createdAt(OffsetDateTime.now())
+                .status(OrderStatus.PENDING)
                 .build();
 
         orderItems.forEach(item -> item.setOrder(order));
@@ -114,10 +118,36 @@ public class OrderService {
 
         Order saved = orderRepository.save(order);
 
-        // 5. Kafka-событие и ответ — через маппер (см. ниже)
-        OrderCreatedEvent event = OrderMapper.toOrderCreatedEvent(saved);
-        orderEventProducer.send(event);
+        // 5. Кладём событие в outbox
 
+        // 5.1. Собираем существующий OrderCreatedEvent через маппер
+        OrderCreatedEvent event = OrderMapper.toOrderCreatedEvent(saved);
+
+        // 5.2. Сериализуем в JSON
+        String payload = toJson(event);
+
+        // 5.3. Сохраняем OutboxMessage со статусом NEW
+        OutboxMessage outboxMessage = OutboxMessage.builder()
+                .aggregateType("ORDER")
+                .aggregateId(saved.getId())
+                .type("ORDER_CREATED")
+                .payload(payload)
+                .status(OutboxStatus.NEW)
+                .createdAt(OffsetDateTime.now())
+                .build();
+
+        outboxMessageRepository.save(outboxMessage);
+
+
+        // 6. Ответ клиенту
         return OrderMapper.toOrderResponse(saved);
+    }
+
+    private String toJson(Object value) {
+        try {
+            return objectMapper.writeValueAsString(value);
+        } catch (JsonProcessingException e) {
+            throw new IllegalStateException("Failed to serialize OrderCreatedEvent", e);
+        }
     }
 }

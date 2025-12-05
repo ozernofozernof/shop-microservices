@@ -1,0 +1,53 @@
+package com.shop.orderservice.kafka;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.shop.orderservice.entity.Order;
+import com.shop.orderservice.entity.OrderStatus;
+import com.shop.orderservice.repository.OrderRepository;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.kafka.annotation.KafkaListener;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+@Service
+@RequiredArgsConstructor
+@Slf4j
+public class OrderStatusListener {
+
+    private final OrderRepository orderRepository;
+    private final ObjectMapper objectMapper;
+
+    @KafkaListener(
+            topics = "${app.kafka.order-status-topic}",
+            groupId = "order-service"
+    )
+    @Transactional
+    public void handleStatus(String payload) {
+        try {
+            OrderStatusEvent event =
+                    objectMapper.readValue(payload, OrderStatusEvent.class);
+
+            log.info("OrderStatusListener: received status event orderId={}, status={}, reason={}",
+                    event.getOrderId(), event.getStatus(), event.getReason());
+
+            Order order = orderRepository.findById(event.getOrderId())
+                    .orElseThrow(() -> new IllegalStateException(
+                            "Order not found: " + event.getOrderId()
+                    ));
+
+            String status = event.getStatus();
+            if ("CONFIRMED".equalsIgnoreCase(status)) {
+                order.setStatus(OrderStatus.CONFIRMED);
+            } else if ("REJECTED".equalsIgnoreCase(status)) {
+                order.setStatus(OrderStatus.REJECTED);
+            } else {
+                log.warn("OrderStatusListener: unknown status '{}' for orderId={}",
+                        status, event.getOrderId());
+            }
+        } catch (Exception e) {
+            log.error("OrderStatusListener: failed to process payload={}", payload, e);
+        }
+    }
+}
+

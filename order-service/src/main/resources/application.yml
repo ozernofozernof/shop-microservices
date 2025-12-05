@@ -38,4 +38,6 @@ grpc:
 app:
   kafka:
     orders-topic: orders
+    order-status-topic: order-status
+
 

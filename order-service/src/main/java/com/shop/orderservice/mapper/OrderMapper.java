@@ -44,11 +44,16 @@ public class OrderMapper {
                 ))
                 .collect(Collectors.toList());
 
+        String status = order.getStatus() != null
+                ? order.getStatus().name()
+                : "PENDING"; //если вдруг старые данные без статуса
+
         return new OrderResponse(
                 order.getId(),
                 order.getUser().getId(),
                 order.getTotalPrice(),
                 order.getCreatedAt(),
+                status,
                 responseItems
         );
     }

@@ -16,7 +16,19 @@ spring:
       ddl-auto: update
     show-sql: true
 
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: inventory-service
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+
 
 grpc:
   server:
     port: 9091
+
+app:
+  kafka:
+    orders-topic: orders
+    order-status-topic: order-status

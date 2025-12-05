@@ -1,7 +1,8 @@
-package com.shop.orderservice.dto;
+package com.shop.inventoryservice.kafka;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 import java.time.OffsetDateTime;
@@ -9,16 +10,18 @@ import java.util.List;
 
 @Data
 @AllArgsConstructor
-public class OrderResponse {
+@NoArgsConstructor
+public class OrderCreatedEvent {
+
     private Long orderId;
     private Long userId;
-    private BigDecimal totalPrice;
     private OffsetDateTime createdAt;
-    private String status;
+    private BigDecimal totalPrice;
     private List<Item> items;
 
     @Data
     @AllArgsConstructor
+    @NoArgsConstructor
     public static class Item {
         private Long productId;
         private Integer quantity;
