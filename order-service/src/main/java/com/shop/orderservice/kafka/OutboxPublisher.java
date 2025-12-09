@@ -1,4 +1,4 @@
-package com.shop.orderservice.outbox;
+package com.shop.orderservice.kafka;
 
 import com.shop.orderservice.entity.OutboxMessage;
 import com.shop.orderservice.entity.OutboxStatus;
@@ -34,23 +34,35 @@ public class OutboxPublisher {
             return;
         }
 
-        log.info("Outbox: found {} NEW messages", messages.size());
+        log.info("OutboxPublisher: found {} NEW messages to send", messages.size());
 
         for (OutboxMessage msg : messages) {
+            Long orderId = msg.getAggregateId();
+            Long outboxId = msg.getId();
+
             try {
+                log.info("OutboxPublisher: sending outboxId={} for orderId={} to topic={}",
+                        outboxId, orderId, ordersTopic);
+
                 kafkaTemplate.send(
                         ordersTopic,
-                        msg.getAggregateId().toString(),
-                        msg.getPayload() //шлём уже готовый JSON
+                        orderId != null ? orderId.toString() : null,
+                        msg.getPayload()
                 );
+
                 msg.setStatus(OutboxStatus.SENT);
+
+                log.info("OutboxPublisher: message sent successfully, outboxId={}, orderId={}, newStatus={}",
+                        outboxId, orderId, msg.getStatus());
             } catch (Exception e) {
-                log.error("Failed to send outbox message id={}", msg.getId(), e);
+                log.error("OutboxPublisher: failed to send outboxId={} for orderId={}",
+                        outboxId, orderId, e);
                 msg.setStatus(OutboxStatus.FAILED);
             }
         }
     }
 }
+
 
 
 

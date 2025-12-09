@@ -28,13 +28,16 @@ public class OrderStatusListener {
             OrderStatusEvent event =
                     objectMapper.readValue(payload, OrderStatusEvent.class);
 
-            log.info("OrderStatusListener: received status event orderId={}, status={}, reason={}",
+            log.info("OrderStatusListener: received status event, orderId={}, status={}, reason={}",
                     event.getOrderId(), event.getStatus(), event.getReason());
 
             Order order = orderRepository.findById(event.getOrderId())
-                    .orElseThrow(() -> new IllegalStateException(
-                            "Order not found: " + event.getOrderId()
-                    ));
+                    .orElseThrow(() -> {
+                        log.error("OrderStatusListener: order not found, orderId={}", event.getOrderId());
+                        return new IllegalStateException("Order not found: " + event.getOrderId());
+                    });
+
+            OrderStatus previousStatus = order.getStatus();
 
             String status = event.getStatus();
             if ("CONFIRMED".equalsIgnoreCase(status)) {
@@ -44,10 +47,16 @@ public class OrderStatusListener {
             } else {
                 log.warn("OrderStatusListener: unknown status '{}' for orderId={}",
                         status, event.getOrderId());
+                return;
             }
+
+            log.info("OrderStatusListener: updated order status, orderId={}, previousStatus={}, newStatus={}, reason={}",
+                    event.getOrderId(), previousStatus, order.getStatus(), event.getReason());
+
         } catch (Exception e) {
             log.error("OrderStatusListener: failed to process payload={}", payload, e);
         }
     }
 }
+
 

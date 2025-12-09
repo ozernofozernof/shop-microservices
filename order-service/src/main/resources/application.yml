@@ -40,4 +40,14 @@ app:
     orders-topic: orders
     order-status-topic: order-status
 
+logging:
+  file:
+    name: logs/order-service.log
+
+  level:
+    org.hibernate.SQL: WARN
+    org.hibernate.type: WARN
+    com.shop.orderservice: INFO
+
+
 

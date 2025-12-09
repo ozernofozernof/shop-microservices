@@ -28,4 +28,3 @@ spring:
 app:
   kafka:
     orders-topic: orders
-

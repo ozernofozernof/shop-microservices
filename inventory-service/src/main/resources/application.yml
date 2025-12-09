@@ -32,3 +32,12 @@ app:
   kafka:
     orders-topic: orders
     order-status-topic: order-status
+
+logging:
+  file:
+    name: logs/inventory-service.log
+
+  level:
+    org.hibernate.SQL: WARN
+    org.hibernate.type: WARN
+    com.shop.inventoryservice: INFO

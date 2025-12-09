@@ -35,50 +35,57 @@ public class OrderService {
     private final UserRepository userRepository;
     private final InventoryClient inventoryClient;
 
-    //репозиторий outbox и ObjectMapper
     private final OutboxMessageRepository outboxMessageRepository;
     private final ObjectMapper objectMapper;
 
     @Transactional
     public OrderResponse createOrder(OrderCreateRequest request) {
 
-        // 1. Получаем пользователя
+        // 1. Пользователь
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         String username = authentication.getName();
 
-        log.info("Create order request from user={}, itemsCount={}", username, request.getItems().size());
+        log.info("OrderService: createOrder started, username={}, itemsCount={}",
+                username, request.getItems().size());
 
         User user = userRepository.findByUsername(username)
-                .orElseThrow(() -> new IllegalStateException("User not found"));
+                .orElseThrow(() -> {
+                    log.error("OrderService: user '{}' not found", username);
+                    return new IllegalStateException("User not found");
+                });
 
         List<OrderItem> orderItems = new ArrayList<>();
         BigDecimal totalOrderPrice = BigDecimal.ZERO;
 
-        // 2. ОДИН раз идём в inventory за информацией по всем товарам
+        // 2. Идём в inventory один раз
         List<OrderItemRequest> itemRequests = request.getItems();
 
-        log.info("Sending inventory check for {} items", itemRequests.size());
+        log.info("OrderService: sending inventory check for {} items", itemRequests.size());
         Map<Long, ProductResponse> inventoryInfo =
                 inventoryClient.checkAvailabilityBatch(itemRequests);
-        log.info("Inventory response contains {} products", inventoryInfo.size());
+        log.info("OrderService: inventory response contains {} products", inventoryInfo.size());
 
-        // 3. Обрабатываем каждый товар, используя уже полученные данные
+        // 3. Обрабатываем товары
         for (OrderItemRequest itemRequest : itemRequests) {
 
             ProductResponse productInfo = inventoryInfo.get(itemRequest.getProductId());
 
             if (productInfo == null) {
+                log.error("OrderService: product not found in inventory, productId={}",
+                        itemRequest.getProductId());
                 throw new IllegalStateException("Product not found: " + itemRequest.getProductId());
             }
 
-            // Проверка остатков
             if (productInfo.getAvailableQuantity() < itemRequest.getQuantity()) {
+                log.warn("OrderService: not enough stock, productId={}, requested={}, available={}",
+                        productInfo.getProductId(),
+                        itemRequest.getQuantity(),
+                        productInfo.getAvailableQuantity());
                 throw new IllegalArgumentException(
                         "Not enough stock for product: " + productInfo.getProductId()
                 );
             }
 
-            // Корректное вычисление скидки
             BigDecimal price = BigDecimal.valueOf(productInfo.getPrice());
             BigDecimal salePercent = BigDecimal.valueOf(productInfo.getSale());
 
@@ -93,7 +100,6 @@ public class OrderService {
 
             totalOrderPrice = totalOrderPrice.add(lineTotal);
 
-            // Формируем OrderItem
             OrderItem orderItem = OrderItem.builder()
                     .productId(productInfo.getProductId())
                     .quantity(itemRequest.getQuantity())
@@ -101,6 +107,10 @@ public class OrderService {
                     .sale(salePercent)
                     .totalPrice(lineTotal)
                     .build();
+
+            log.debug("OrderService: prepared OrderItem productId={}, quantity={}, price={}, salePercent={}, lineTotal={}",
+                    orderItem.getProductId(), orderItem.getQuantity(),
+                    orderItem.getPrice(), orderItem.getSale(), orderItem.getTotalPrice());
 
             orderItems.add(orderItem);
         }
@@ -116,17 +126,18 @@ public class OrderService {
         orderItems.forEach(item -> item.setOrder(order));
         order.setItems(orderItems);
 
+        log.info("OrderService: saving order (PENDING), username={}, totalPrice={}, itemsCount={}",
+                user.getUsername(), totalOrderPrice, orderItems.size());
+
         Order saved = orderRepository.save(order);
 
+        log.info("OrderService: order saved, orderId={}, status={}, totalPrice={}",
+                saved.getId(), saved.getStatus(), saved.getTotalPrice());
+
         // 5. Кладём событие в outbox
-
-        // 5.1. Собираем существующий OrderCreatedEvent через маппер
         OrderCreatedEvent event = OrderMapper.toOrderCreatedEvent(saved);
-
-        // 5.2. Сериализуем в JSON
         String payload = toJson(event);
 
-        // 5.3. Сохраняем OutboxMessage со статусом NEW
         OutboxMessage outboxMessage = OutboxMessage.builder()
                 .aggregateType("ORDER")
                 .aggregateId(saved.getId())
@@ -136,17 +147,24 @@ public class OrderService {
                 .createdAt(OffsetDateTime.now())
                 .build();
 
-        outboxMessageRepository.save(outboxMessage);
+        OutboxMessage savedOutbox = outboxMessageRepository.save(outboxMessage);
 
+        log.info("OrderService: outbox message created, outboxId={}, orderId={}, status={}",
+                savedOutbox.getId(), saved.getId(), savedOutbox.getStatus());
 
         // 6. Ответ клиенту
-        return OrderMapper.toOrderResponse(saved);
+        OrderResponse response = OrderMapper.toOrderResponse(saved);
+        log.info("OrderService: createOrder finished, orderId={}, userId={}, totalPrice={}",
+                response.getOrderId(), response.getUserId(), response.getTotalPrice());
+
+        return response;
     }
 
     private String toJson(Object value) {
         try {
             return objectMapper.writeValueAsString(value);
         } catch (JsonProcessingException e) {
+            log.error("OrderService: failed to serialize event to JSON", e);
             throw new IllegalStateException("Failed to serialize OrderCreatedEvent", e);
         }
     }

@@ -18,8 +18,16 @@ public class OrderController {
 
     @PostMapping
     public ResponseEntity<OrderResponse> createOrder(@RequestBody OrderCreateRequest request) {
-        log.info(">>> CREATE ORDER CALLED");
+        log.info("OrderController: POST /api/orders called, itemsCount={}",
+                request.getItems() != null ? request.getItems().size() : 0);
+
         OrderResponse response = orderService.createOrder(request);
+
+        log.info("OrderController: order created successfully, orderId={}, userId={}, totalPrice={}, itemsCount={}",
+                response.getOrderId(), response.getUserId(),
+                response.getTotalPrice(),
+                response.getItems() != null ? response.getItems().size() : 0);
+
         return ResponseEntity.ok(response);
     }
 }
