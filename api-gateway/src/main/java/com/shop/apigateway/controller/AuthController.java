@@ -1,17 +1,15 @@
-package com.shop.orderservice.controller;
+package com.shop.apigateway.controller;
 
-import com.shop.orderservice.dto.JwtResponse;
-import com.shop.orderservice.dto.LoginRequest;
-import com.shop.orderservice.dto.RefreshTokenRequest;
-import com.shop.orderservice.dto.RegisterRequest;
-import com.shop.orderservice.security.JwtTokenProvider;
-import com.shop.orderservice.entity.Role;
-import com.shop.orderservice.entity.User;
-import com.shop.orderservice.repository.UserRepository;
+import com.shop.apigateway.dto.JwtResponse;
+import com.shop.apigateway.dto.LoginRequest;
+import com.shop.apigateway.dto.RefreshTokenRequest;
+import com.shop.apigateway.dto.RegisterRequest;
+import com.shop.apigateway.entity.Role;
+import com.shop.apigateway.entity.User;
+import com.shop.apigateway.repository.UserRepository;
+import com.shop.apigateway.security.JwtTokenProvider;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
@@ -22,7 +20,6 @@ public class AuthController {
 
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
-    private final AuthenticationManager authenticationManager;
     private final JwtTokenProvider jwtTokenProvider;
 
     @PostMapping("/register")
@@ -51,12 +48,16 @@ public class AuthController {
 
     @PostMapping("/login")
     public ResponseEntity<JwtResponse> login(@RequestBody LoginRequest request) {
-        authenticationManager.authenticate(
-                new UsernamePasswordAuthenticationToken(
-                        request.getUsername(), request.getPassword()));
+        // руками проверяем логин/пароль
+        User user = userRepository.findByUsername(request.getUsername())
+                .orElseThrow(() -> new RuntimeException("Invalid username or password"));
 
-        String accessToken = jwtTokenProvider.generateAccessToken(request.getUsername());
-        String refreshToken = jwtTokenProvider.generateRefreshToken(request.getUsername());
+        if (!passwordEncoder.matches(request.getPassword(), user.getPassword())) {
+            throw new RuntimeException("Invalid username or password");
+        }
+
+        String accessToken = jwtTokenProvider.generateAccessToken(user.getUsername());
+        String refreshToken = jwtTokenProvider.generateRefreshToken(user.getUsername());
 
         return ResponseEntity.ok(new JwtResponse(accessToken, refreshToken));
     }

@@ -1,0 +1,402 @@
+2025-12-10T13:27:37.396+03:00  INFO 5792 --- [api-gateway] [main] c.shop.apigateway.ApiGatewayApplication  : Starting ApiGatewayApplication using Java 17.0.2 with PID 5792 (D:\DeskTop\Reposit\shop-microservices\api-gateway\target\classes started by Павел in D:\DeskTop\Reposit\shop-microservices\api-gateway)
+2025-12-10T13:27:37.400+03:00  INFO 5792 --- [api-gateway] [main] c.shop.apigateway.ApiGatewayApplication  : No active profile set, falling back to 1 default profile: "default"
+2025-12-10T13:27:38.329+03:00  INFO 5792 --- [api-gateway] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-10T13:27:38.482+03:00  INFO 5792 --- [api-gateway] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 145 ms. Found 1 JPA repository interface.
+2025-12-10T13:27:38.640+03:00  INFO 5792 --- [api-gateway] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=acdffac4-4686-3063-82bc-6f29161205a6
+2025-12-10T13:27:39.139+03:00  INFO 5792 --- [api-gateway] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-12-10T13:27:39.151+03:00  INFO 5792 --- [api-gateway] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-10T13:27:39.152+03:00  INFO 5792 --- [api-gateway] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2025-12-10T13:27:39.308+03:00  INFO 5792 --- [api-gateway] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-10T13:27:39.377+03:00  INFO 5792 --- [api-gateway] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2025-12-10T13:27:39.417+03:00  INFO 5792 --- [api-gateway] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-12-10T13:27:39.655+03:00  INFO 5792 --- [api-gateway] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-10T13:27:39.683+03:00  INFO 5792 --- [api-gateway] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-12-10T13:27:40.734+03:00 ERROR 5792 --- [api-gateway] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
+
+org.postgresql.util.PSQLException: Подсоединение по адресу localhost:5433 отклонено. Проверьте что хост и порт указаны правильно и что postmaster принимает TCP/IP-подсоединения.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:342) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:263) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.Driver.makeConnection(Driver.java:443) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.Driver.connect(Driver.java:297) ~[postgresql-42.6.0.jar:42.6.0]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-5.0.1.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:428) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:276) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:107) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:129) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:223) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:170) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1432) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1503) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.1.3.jar:6.1.3]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376) ~[spring-orm-6.1.3.jar:6.1.3]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.1.3.jar:6.1.3]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.1.3.jar:6.1.3]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352) ~[spring-orm-6.1.3.jar:6.1.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1820) ~[spring-beans-6.1.3.jar:6.1.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1769) ~[spring-beans-6.1.3.jar:6.1.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599) ~[spring-beans-6.1.3.jar:6.1.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.1.3.jar:6.1.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325) ~[spring-beans-6.1.3.jar:6.1.3]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.3.jar:6.1.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323) ~[spring-beans-6.1.3.jar:6.1.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.1.3.jar:6.1.3]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1231) ~[spring-context-6.1.3.jar:6.1.3]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:949) ~[spring-context-6.1.3.jar:6.1.3]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624) ~[spring-context-6.1.3.jar:6.1.3]
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:66) ~[spring-boot-3.2.2.jar:3.2.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.2.2.jar:3.2.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.2.2.jar:3.2.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) ~[spring-boot-3.2.2.jar:3.2.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-3.2.2.jar:3.2.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-3.2.2.jar:3.2.2]
+	at com.shop.apigateway.ApiGatewayApplication.main(ApiGatewayApplication.java:10) ~[classes/:na]
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:633) ~[na:na]
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:243) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.PGStream.<init>(PGStream.java:98) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:132) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:258) ~[postgresql-42.6.0.jar:42.6.0]
+	... 50 common frames omitted
+
+2025-12-10T13:27:40.814+03:00  WARN 5792 --- [api-gateway] [main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
+
+java.lang.NullPointerException: Cannot invoke "org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(java.sql.SQLException, String)" because the return value of "org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.sqlExceptionHelper()" is null
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:116) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:276) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:107) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:129) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:223) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:170) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1432) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1503) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.1.3.jar:6.1.3]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376) ~[spring-orm-6.1.3.jar:6.1.3]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.1.3.jar:6.1.3]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.1.3.jar:6.1.3]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352) ~[spring-orm-6.1.3.jar:6.1.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1820) ~[spring-beans-6.1.3.jar:6.1.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1769) ~[spring-beans-6.1.3.jar:6.1.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599) ~[spring-beans-6.1.3.jar:6.1.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.1.3.jar:6.1.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325) ~[spring-beans-6.1.3.jar:6.1.3]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.3.jar:6.1.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323) ~[spring-beans-6.1.3.jar:6.1.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.1.3.jar:6.1.3]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1231) ~[spring-context-6.1.3.jar:6.1.3]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:949) ~[spring-context-6.1.3.jar:6.1.3]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624) ~[spring-context-6.1.3.jar:6.1.3]
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:66) ~[spring-boot-3.2.2.jar:3.2.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.2.2.jar:3.2.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.2.2.jar:3.2.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) ~[spring-boot-3.2.2.jar:3.2.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-3.2.2.jar:3.2.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-3.2.2.jar:3.2.2]
+	at com.shop.apigateway.ApiGatewayApplication.main(ApiGatewayApplication.java:10) ~[classes/:na]
+
+2025-12-10T13:27:40.851+03:00 ERROR 5792 --- [api-gateway] [main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2025-12-10T13:27:40.852+03:00  WARN 5792 --- [api-gateway] [main] onfigReactiveWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2025-12-10T13:27:40.869+03:00  INFO 5792 --- [api-gateway] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-12-10T13:27:40.885+03:00 ERROR 5792 --- [api-gateway] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1773) ~[spring-beans-6.1.3.jar:6.1.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599) ~[spring-beans-6.1.3.jar:6.1.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.1.3.jar:6.1.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325) ~[spring-beans-6.1.3.jar:6.1.3]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.3.jar:6.1.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323) ~[spring-beans-6.1.3.jar:6.1.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.1.3.jar:6.1.3]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1231) ~[spring-context-6.1.3.jar:6.1.3]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:949) ~[spring-context-6.1.3.jar:6.1.3]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624) ~[spring-context-6.1.3.jar:6.1.3]
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:66) ~[spring-boot-3.2.2.jar:3.2.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.2.2.jar:3.2.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.2.2.jar:3.2.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) ~[spring-boot-3.2.2.jar:3.2.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-3.2.2.jar:3.2.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-3.2.2.jar:3.2.2]
+	at com.shop.apigateway.ApiGatewayApplication.main(ApiGatewayApplication.java:10) ~[classes/:na]
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:276) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:223) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:170) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1432) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1503) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.1.3.jar:6.1.3]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376) ~[spring-orm-6.1.3.jar:6.1.3]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.1.3.jar:6.1.3]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.1.3.jar:6.1.3]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352) ~[spring-orm-6.1.3.jar:6.1.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1820) ~[spring-beans-6.1.3.jar:6.1.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1769) ~[spring-beans-6.1.3.jar:6.1.3]
+	... 16 common frames omitted
+Caused by: org.hibernate.HibernateException: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:191) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:87) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentWithDefaults(JdbcEnvironmentInitiator.java:143) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:348) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:107) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:129) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	... 31 common frames omitted
+
+2025-12-10T13:35:20.879+03:00  INFO 6680 --- [api-gateway] [main] c.shop.apigateway.ApiGatewayApplication  : Starting ApiGatewayApplication using Java 17.0.2 with PID 6680 (D:\DeskTop\Reposit\shop-microservices\api-gateway\target\classes started by Павел in D:\DeskTop\Reposit\shop-microservices\api-gateway)
+2025-12-10T13:35:20.881+03:00  INFO 6680 --- [api-gateway] [main] c.shop.apigateway.ApiGatewayApplication  : No active profile set, falling back to 1 default profile: "default"
+2025-12-10T13:35:21.639+03:00  INFO 6680 --- [api-gateway] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-10T13:35:21.790+03:00  INFO 6680 --- [api-gateway] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 145 ms. Found 1 JPA repository interface.
+2025-12-10T13:35:21.927+03:00  INFO 6680 --- [api-gateway] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=acdffac4-4686-3063-82bc-6f29161205a6
+2025-12-10T13:35:22.358+03:00  INFO 6680 --- [api-gateway] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-12-10T13:35:22.367+03:00  INFO 6680 --- [api-gateway] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-10T13:35:22.367+03:00  INFO 6680 --- [api-gateway] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2025-12-10T13:35:22.500+03:00  INFO 6680 --- [api-gateway] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-10T13:35:22.550+03:00  INFO 6680 --- [api-gateway] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2025-12-10T13:35:22.581+03:00  INFO 6680 --- [api-gateway] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-12-10T13:35:22.780+03:00  INFO 6680 --- [api-gateway] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-10T13:35:22.803+03:00  INFO 6680 --- [api-gateway] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-12-10T13:35:22.965+03:00  INFO 6680 --- [api-gateway] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@197d5a87
+2025-12-10T13:35:22.967+03:00  INFO 6680 --- [api-gateway] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-12-10T13:35:23.874+03:00  INFO 6680 --- [api-gateway] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-10T13:35:23.959+03:00  INFO 6680 --- [api-gateway] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-10T13:35:24.316+03:00  WARN 6680 --- [api-gateway] [main] onfigReactiveWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authController' defined in file [D:\DeskTop\Reposit\shop-microservices\api-gateway\target\classes\com\shop\apigateway\controller\AuthController.class]: Unsatisfied dependency expressed through constructor parameter 2: Error creating bean with name 'authenticationManager' defined in class path resource [com/shop/apigateway/config/SecurityConfig.class]: Unsatisfied dependency expressed through method 'authenticationManager' parameter 0: No qualifying bean of type 'org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2025-12-10T13:35:24.317+03:00  INFO 6680 --- [api-gateway] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-10T13:35:24.319+03:00  INFO 6680 --- [api-gateway] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-12-10T13:35:24.326+03:00  INFO 6680 --- [api-gateway] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-12-10T13:35:24.342+03:00  INFO 6680 --- [api-gateway] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-12-10T13:35:24.362+03:00 ERROR 6680 --- [api-gateway] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method authenticationManager in com.shop.apigateway.config.SecurityConfig required a bean of type 'org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration' in your configuration.
+
+2025-12-10T13:40:21.459+03:00  INFO 14868 --- [api-gateway] [main] c.shop.apigateway.ApiGatewayApplication  : Starting ApiGatewayApplication using Java 17.0.2 with PID 14868 (D:\DeskTop\Reposit\shop-microservices\api-gateway\target\classes started by Павел in D:\DeskTop\Reposit\shop-microservices\api-gateway)
+2025-12-10T13:40:21.462+03:00  INFO 14868 --- [api-gateway] [main] c.shop.apigateway.ApiGatewayApplication  : No active profile set, falling back to 1 default profile: "default"
+2025-12-10T13:40:22.283+03:00  INFO 14868 --- [api-gateway] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-10T13:40:22.411+03:00  INFO 14868 --- [api-gateway] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 122 ms. Found 1 JPA repository interface.
+2025-12-10T13:40:22.553+03:00  INFO 14868 --- [api-gateway] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=132007ea-a9cd-34bb-b424-5df9cc3be2c2
+2025-12-10T13:40:22.981+03:00  INFO 14868 --- [api-gateway] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-12-10T13:40:22.990+03:00  INFO 14868 --- [api-gateway] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-10T13:40:22.991+03:00  INFO 14868 --- [api-gateway] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2025-12-10T13:40:23.126+03:00  INFO 14868 --- [api-gateway] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-10T13:40:23.177+03:00  INFO 14868 --- [api-gateway] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2025-12-10T13:40:23.210+03:00  INFO 14868 --- [api-gateway] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-12-10T13:40:23.408+03:00  INFO 14868 --- [api-gateway] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-10T13:40:23.431+03:00  INFO 14868 --- [api-gateway] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-12-10T13:40:23.563+03:00  INFO 14868 --- [api-gateway] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3f80d8c
+2025-12-10T13:40:23.565+03:00  INFO 14868 --- [api-gateway] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-12-10T13:40:24.316+03:00  INFO 14868 --- [api-gateway] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-10T13:40:24.359+03:00  INFO 14868 --- [api-gateway] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-10T13:40:24.673+03:00  WARN 14868 --- [api-gateway] [main] onfigReactiveWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'filterChain' defined in class path resource [com/shop/apigateway/config/SecurityConfig.class]: Unsatisfied dependency expressed through method 'filterChain' parameter 0: No qualifying bean of type 'org.springframework.security.config.annotation.web.builders.HttpSecurity' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2025-12-10T13:40:24.673+03:00  INFO 14868 --- [api-gateway] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-10T13:40:24.675+03:00  INFO 14868 --- [api-gateway] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-12-10T13:40:24.681+03:00  INFO 14868 --- [api-gateway] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-12-10T13:40:24.695+03:00  INFO 14868 --- [api-gateway] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-12-10T13:40:24.712+03:00 ERROR 14868 --- [api-gateway] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method filterChain in com.shop.apigateway.config.SecurityConfig required a bean of type 'org.springframework.security.config.annotation.web.builders.HttpSecurity' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.config.annotation.web.builders.HttpSecurity' in your configuration.
+
+2025-12-10T14:37:05.904+03:00  INFO 17972 --- [api-gateway] [main] c.shop.apigateway.ApiGatewayApplication  : Starting ApiGatewayApplication using Java 17.0.2 with PID 17972 (D:\DeskTop\Reposit\shop-microservices\api-gateway\target\classes started by Павел in D:\DeskTop\Reposit\shop-microservices\api-gateway)
+2025-12-10T14:37:05.906+03:00  INFO 17972 --- [api-gateway] [main] c.shop.apigateway.ApiGatewayApplication  : No active profile set, falling back to 1 default profile: "default"
+2025-12-10T14:37:06.680+03:00  INFO 17972 --- [api-gateway] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-10T14:37:06.801+03:00  INFO 17972 --- [api-gateway] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 115 ms. Found 1 JPA repository interface.
+2025-12-10T14:37:06.948+03:00  INFO 17972 --- [api-gateway] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=eca10b6e-13b3-3f7d-a37c-47e8d1e6fa8b
+2025-12-10T14:37:07.382+03:00  INFO 17972 --- [api-gateway] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-12-10T14:37:07.392+03:00  INFO 17972 --- [api-gateway] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-10T14:37:07.392+03:00  INFO 17972 --- [api-gateway] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2025-12-10T14:37:07.530+03:00  INFO 17972 --- [api-gateway] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-10T14:37:07.582+03:00  INFO 17972 --- [api-gateway] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2025-12-10T14:37:07.621+03:00  INFO 17972 --- [api-gateway] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-12-10T14:37:07.870+03:00  INFO 17972 --- [api-gateway] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-10T14:37:07.896+03:00  INFO 17972 --- [api-gateway] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-12-10T14:37:08.048+03:00  INFO 17972 --- [api-gateway] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5876bed9
+2025-12-10T14:37:08.050+03:00  INFO 17972 --- [api-gateway] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-12-10T14:37:08.892+03:00  INFO 17972 --- [api-gateway] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-10T14:37:08.938+03:00  INFO 17972 --- [api-gateway] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-10T14:37:09.312+03:00  INFO 17972 --- [api-gateway] [main] ctiveUserDetailsServiceAutoConfiguration : 
+
+Using generated security password: b5980612-c47c-42f0-9339-dce0a26129c3
+
+2025-12-10T14:37:10.790+03:00  INFO 17972 --- [api-gateway] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2025-12-10T14:37:11.017+03:00 DEBUG 17972 --- [api-gateway] [main] o.s.c.gateway.config.GatewayProperties   : Routes supplied from Gateway Properties: [RouteDefinition{id='order-service', predicates=[PredicateDefinition{name='Path', args={_genkey_0=/api/orders/**, _genkey_1=/api/users/**, _genkey_2=/api/auth/**}}], filters=[], uri=http://localhost:8081, order=0, metadata={}}, RouteDefinition{id='inventory-service', predicates=[PredicateDefinition{name='Path', args={_genkey_0=/api/inventory/**, _genkey_1=/api/products/**}}], filters=[], uri=http://localhost:8082, order=0, metadata={}}, RouteDefinition{id='notification-service', predicates=[PredicateDefinition{name='Path', args={_genkey_0=/api/notifications/**}}], filters=[], uri=http://localhost:8083, order=0, metadata={}}]
+2025-12-10T14:37:11.130+03:00  INFO 17972 --- [api-gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2025-12-10T14:37:11.131+03:00  INFO 17972 --- [api-gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2025-12-10T14:37:11.131+03:00  INFO 17972 --- [api-gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2025-12-10T14:37:11.131+03:00  INFO 17972 --- [api-gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2025-12-10T14:37:11.131+03:00  INFO 17972 --- [api-gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2025-12-10T14:37:11.131+03:00  INFO 17972 --- [api-gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2025-12-10T14:37:11.132+03:00  INFO 17972 --- [api-gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2025-12-10T14:37:11.132+03:00  INFO 17972 --- [api-gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2025-12-10T14:37:11.132+03:00  INFO 17972 --- [api-gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2025-12-10T14:37:11.132+03:00  INFO 17972 --- [api-gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2025-12-10T14:37:11.132+03:00  INFO 17972 --- [api-gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2025-12-10T14:37:11.132+03:00  INFO 17972 --- [api-gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2025-12-10T14:37:11.133+03:00  INFO 17972 --- [api-gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2025-12-10T14:37:11.133+03:00  INFO 17972 --- [api-gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2025-12-10T14:37:12.361+03:00  INFO 17972 --- [api-gateway] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2025-12-10T14:37:12.411+03:00  INFO 17972 --- [api-gateway] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-12-10T14:37:12.722+03:00  INFO 17972 --- [api-gateway] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2025-12-10T14:37:13.793+03:00  INFO 17972 --- [api-gateway] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2025-12-10T14:37:14.866+03:00  INFO 17972 --- [api-gateway] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2025-12-10T14:37:14.898+03:00 DEBUG 17972 --- [api-gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition order-service applying {_genkey_0=/api/orders/**, _genkey_1=/api/users/**, _genkey_2=/api/auth/**} to Path
+2025-12-10T14:37:14.910+03:00 DEBUG 17972 --- [api-gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition order-service applying filter {_genkey_0=Cookie} to RemoveRequestHeader
+2025-12-10T14:37:14.916+03:00 DEBUG 17972 --- [api-gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: order-service
+2025-12-10T14:37:14.916+03:00 DEBUG 17972 --- [api-gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition inventory-service applying {_genkey_0=/api/inventory/**, _genkey_1=/api/products/**} to Path
+2025-12-10T14:37:14.917+03:00 DEBUG 17972 --- [api-gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition inventory-service applying filter {_genkey_0=Cookie} to RemoveRequestHeader
+2025-12-10T14:37:14.918+03:00 DEBUG 17972 --- [api-gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: inventory-service
+2025-12-10T14:37:14.918+03:00 DEBUG 17972 --- [api-gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition notification-service applying {_genkey_0=/api/notifications/**} to Path
+2025-12-10T14:37:14.918+03:00 DEBUG 17972 --- [api-gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition notification-service applying filter {_genkey_0=Cookie} to RemoveRequestHeader
+2025-12-10T14:37:14.919+03:00 DEBUG 17972 --- [api-gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: notification-service
+2025-12-10T14:37:14.924+03:00 DEBUG 17972 --- [api-gateway] [main] o.s.c.g.filter.GatewayMetricsFilter      : New routes count: 3
+2025-12-10T14:37:14.926+03:00  INFO 17972 --- [api-gateway] [main] c.shop.apigateway.ApiGatewayApplication  : Started ApiGatewayApplication in 10.526 seconds (process running for 10.863)
+2025-12-10T14:38:38.506+03:00  INFO 17972 --- [api-gateway] [http-nio-8080-exec-6] c.shop.apigateway.security.JwtWebFilter  : JwtWebFilter: token valid, username=testuser
+2025-12-10T14:38:38.517+03:00  INFO 17972 --- [api-gateway] [parallel-2] c.shop.apigateway.security.JwtWebFilter  : JwtWebFilter: token valid, username=testuser
+2025-12-10T14:38:38.523+03:00 DEBUG 17972 --- [api-gateway] [boundedElastic-2] o.s.c.g.h.RoutePredicateHandlerMapping   : Route matched: order-service
+2025-12-10T14:38:38.526+03:00 DEBUG 17972 --- [api-gateway] [boundedElastic-2] o.s.c.g.h.RoutePredicateHandlerMapping   : Mapping [Exchange: POST http://localhost:8080/api/orders] to Route{id='order-service', uri=http://localhost:8081, order=0, predicate=Paths: [/api/orders/**, /api/users/**, /api/auth/**], match trailing slash: true, gatewayFilters=[[[RemoveRequestHeader name = 'Cookie'], order = 1]], metadata={}}
+2025-12-10T14:38:38.527+03:00 DEBUG 17972 --- [api-gateway] [boundedElastic-2] o.s.c.g.h.RoutePredicateHandlerMapping   : [3e9ed901] Mapped to org.springframework.cloud.gateway.handler.FilteringWebHandler@2f0a29f7
+2025-12-10T14:38:38.527+03:00 DEBUG 17972 --- [api-gateway] [boundedElastic-2] o.s.c.g.handler.FilteringWebHandler      : Sorted gatewayFilterFactories: [[GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.RemoveCachedBodyFilter@75381b61}, order = -2147483648], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.AdaptCachedBodyGlobalFilter@2a8eed58}, order = -2147482648], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.NettyWriteResponseFilter@628af295}, order = -1], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.ForwardPathFilter@5339cdc6}, order = 0], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.GatewayMetricsFilter@301434fb}, order = 0], [[RemoveRequestHeader name = 'Cookie'], order = 1], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.RouteToRequestUrlFilter@5896899d}, order = 10000], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.config.GatewayNoLoadBalancerClientAutoConfiguration$NoLoadBalancerClientFilter@3e7935f1}, order = 10150], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.WebsocketRoutingFilter@6e98fd10}, order = 2147483646], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.NettyRoutingFilter@5a740449}, order = 2147483647], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.ForwardRoutingFilter@89017e5}, order = 2147483647]]
+2025-12-10T14:38:38.542+03:00 DEBUG 17972 --- [api-gateway] [boundedElastic-2] g.f.h.o.ObservedRequestHttpHeadersFilter : Will instrument the HTTP request headers [host:"localhost:8080", user-agent:"curl/7.85.0", accept:"*/*", content-type:"application/json", authorization:"Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlciIsInR5cGUiOiJhY2Nlc3MiLCJpYXQiOjE3NjUzNjY2NzEsImV4cCI6MTc2NTM2NzU3MX0.UOEzg2E3oG6SIEnQncQ6-6Q68atM7_7uZ_A050Qcl0o", content-length:"108", Forwarded:"proto=http;host="localhost:8080";for="127.0.0.1:53952"", X-Forwarded-For:"127.0.0.1", X-Forwarded-Proto:"http", X-Forwarded-Port:"8080", X-Forwarded-Host:"localhost:8080"]
+2025-12-10T14:38:38.546+03:00 DEBUG 17972 --- [api-gateway] [boundedElastic-2] g.f.h.o.ObservedRequestHttpHeadersFilter : Client observation  {name=http.client.requests(null), error=null, context=name='http.client.requests', contextualName='null', error='null', lowCardinalityKeyValues=[http.method='POST', http.status_code='UNKNOWN', spring.cloud.gateway.route.id='order-service', spring.cloud.gateway.route.uri='http://localhost:8081'], highCardinalityKeyValues=[http.uri='http://localhost:8080/api/orders'], map=[class io.micrometer.core.instrument.Timer$Sample='io.micrometer.core.instrument.Timer$Sample@508c7568', class io.micrometer.core.instrument.LongTaskTimer$Sample='SampleImpl{duration(seconds)=9.665E-4, duration(nanos)=966500.0, startTimeNanos=179004502056000}'], parentObservation=org.springframework.security.web.server.ObservationWebFilterChainDecorator$PhasedObservation@18a7fc9a} created for the request. New headers are [host:"localhost:8080", user-agent:"curl/7.85.0", accept:"*/*", content-type:"application/json", authorization:"Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlciIsInR5cGUiOiJhY2Nlc3MiLCJpYXQiOjE3NjUzNjY2NzEsImV4cCI6MTc2NTM2NzU3MX0.UOEzg2E3oG6SIEnQncQ6-6Q68atM7_7uZ_A050Qcl0o", content-length:"108", Forwarded:"proto=http;host="localhost:8080";for="127.0.0.1:53952"", X-Forwarded-For:"127.0.0.1", X-Forwarded-Proto:"http", X-Forwarded-Port:"8080", X-Forwarded-Host:"localhost:8080"]
+2025-12-10T14:38:38.789+03:00 DEBUG 17972 --- [api-gateway] [reactor-http-nio-2] .o.ObservationClosingWebExceptionHandler : An exception occurred and observation was not previously stopped, will stop it. The exception was [io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/127.0.0.1:8081]
+2025-12-10T14:38:38.802+03:00 ERROR 17972 --- [api-gateway] [reactor-http-nio-2] a.w.r.e.AbstractErrorWebExceptionHandler : [3e9ed901]  500 Server Error for HTTP POST "/api/orders"
+
+io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/127.0.0.1:8081
+	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+Error has been observed at the following site(s):
+	*__checkpoint ? com.shop.apigateway.security.JwtWebFilter [DefaultWebFilterChain]
+	*__checkpoint ? org.springframework.cloud.gateway.filter.WeightCalculatorWebFilter [DefaultWebFilterChain]
+	*__checkpoint ? AuthorizationWebFilter [DefaultWebFilterChain]
+	*__checkpoint ? ExceptionTranslationWebFilter [DefaultWebFilterChain]
+	*__checkpoint ? LogoutWebFilter [DefaultWebFilterChain]
+	*__checkpoint ? ServerRequestCacheWebFilter [DefaultWebFilterChain]
+	*__checkpoint ? SecurityContextServerWebExchangeWebFilter [DefaultWebFilterChain]
+	*__checkpoint ? JwtWebFilter [DefaultWebFilterChain]
+	*__checkpoint ? ReactorContextWebFilter [DefaultWebFilterChain]
+	*__checkpoint ? HttpHeaderWriterWebFilter [DefaultWebFilterChain]
+	*__checkpoint ? ServerWebExchangeReactorContextWebFilter [DefaultWebFilterChain]
+	*__checkpoint ? org.springframework.security.web.server.WebFilterChainProxy [DefaultWebFilterChain]
+	*__checkpoint ? HTTP POST "/api/orders" [ExceptionHandlingWebHandler]
+Original Stack Trace:
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946) ~[na:na]
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:337) ~[netty-transport-4.1.105.Final.jar:4.1.105.Final]
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:335) ~[netty-transport-4.1.105.Final.jar:4.1.105.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776) ~[netty-transport-4.1.105.Final.jar:4.1.105.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.105.Final.jar:4.1.105.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.105.Final.jar:4.1.105.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.105.Final.jar:4.1.105.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.105.Final.jar:4.1.105.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.105.Final.jar:4.1.105.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.105.Final.jar:4.1.105.Final]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2025-12-10T14:44:22.354+03:00  INFO 17972 --- [api-gateway] [http-nio-8080-exec-5] c.shop.apigateway.security.JwtWebFilter  : JwtWebFilter: token valid, username=testuser
+2025-12-10T14:44:22.365+03:00  INFO 17972 --- [api-gateway] [parallel-3] c.shop.apigateway.security.JwtWebFilter  : JwtWebFilter: token valid, username=testuser
+2025-12-10T14:44:22.369+03:00 DEBUG 17972 --- [api-gateway] [boundedElastic-4] o.s.c.g.h.RoutePredicateHandlerMapping   : Route matched: order-service
+2025-12-10T14:44:22.369+03:00 DEBUG 17972 --- [api-gateway] [boundedElastic-4] o.s.c.g.h.RoutePredicateHandlerMapping   : Mapping [Exchange: POST http://localhost:8080/api/orders] to Route{id='order-service', uri=http://localhost:8081, order=0, predicate=Paths: [/api/orders/**, /api/users/**, /api/auth/**], match trailing slash: true, gatewayFilters=[[[RemoveRequestHeader name = 'Cookie'], order = 1]], metadata={}}
+2025-12-10T14:44:22.369+03:00 DEBUG 17972 --- [api-gateway] [boundedElastic-4] o.s.c.g.h.RoutePredicateHandlerMapping   : [1ac518be] Mapped to org.springframework.cloud.gateway.handler.FilteringWebHandler@2f0a29f7
+2025-12-10T14:44:22.370+03:00 DEBUG 17972 --- [api-gateway] [boundedElastic-4] o.s.c.g.handler.FilteringWebHandler      : Sorted gatewayFilterFactories: [[GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.RemoveCachedBodyFilter@75381b61}, order = -2147483648], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.AdaptCachedBodyGlobalFilter@2a8eed58}, order = -2147482648], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.NettyWriteResponseFilter@628af295}, order = -1], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.ForwardPathFilter@5339cdc6}, order = 0], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.GatewayMetricsFilter@301434fb}, order = 0], [[RemoveRequestHeader name = 'Cookie'], order = 1], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.RouteToRequestUrlFilter@5896899d}, order = 10000], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.config.GatewayNoLoadBalancerClientAutoConfiguration$NoLoadBalancerClientFilter@3e7935f1}, order = 10150], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.WebsocketRoutingFilter@6e98fd10}, order = 2147483646], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.NettyRoutingFilter@5a740449}, order = 2147483647], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.ForwardRoutingFilter@89017e5}, order = 2147483647]]
+2025-12-10T14:44:22.371+03:00 DEBUG 17972 --- [api-gateway] [boundedElastic-4] g.f.h.o.ObservedRequestHttpHeadersFilter : Will instrument the HTTP request headers [host:"localhost:8080", user-agent:"curl/7.85.0", accept:"*/*", content-type:"application/json", authorization:"Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlciIsInR5cGUiOiJhY2Nlc3MiLCJpYXQiOjE3NjUzNjY2NzEsImV4cCI6MTc2NTM2NzU3MX0.UOEzg2E3oG6SIEnQncQ6-6Q68atM7_7uZ_A050Qcl0o", content-length:"107", Forwarded:"proto=http;host="localhost:8080";for="127.0.0.1:54015"", X-Forwarded-For:"127.0.0.1", X-Forwarded-Proto:"http", X-Forwarded-Port:"8080", X-Forwarded-Host:"localhost:8080"]
+2025-12-10T14:44:22.371+03:00 DEBUG 17972 --- [api-gateway] [boundedElastic-4] g.f.h.o.ObservedRequestHttpHeadersFilter : Client observation  {name=http.client.requests(null), error=null, context=name='http.client.requests', contextualName='null', error='null', lowCardinalityKeyValues=[http.method='POST', http.status_code='UNKNOWN', spring.cloud.gateway.route.id='order-service', spring.cloud.gateway.route.uri='http://localhost:8081'], highCardinalityKeyValues=[http.uri='http://localhost:8080/api/orders'], map=[class io.micrometer.core.instrument.Timer$Sample='io.micrometer.core.instrument.Timer$Sample@213020fd', class io.micrometer.core.instrument.LongTaskTimer$Sample='SampleImpl{duration(seconds)=1.017E-4, duration(nanos)=101700.0, startTimeNanos=179348328666400}'], parentObservation=org.springframework.security.web.server.ObservationWebFilterChainDecorator$PhasedObservation@3a89db4e} created for the request. New headers are [host:"localhost:8080", user-agent:"curl/7.85.0", accept:"*/*", content-type:"application/json", authorization:"Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlciIsInR5cGUiOiJhY2Nlc3MiLCJpYXQiOjE3NjUzNjY2NzEsImV4cCI6MTc2NTM2NzU3MX0.UOEzg2E3oG6SIEnQncQ6-6Q68atM7_7uZ_A050Qcl0o", content-length:"107", Forwarded:"proto=http;host="localhost:8080";for="127.0.0.1:54015"", X-Forwarded-For:"127.0.0.1", X-Forwarded-Proto:"http", X-Forwarded-Port:"8080", X-Forwarded-Host:"localhost:8080"]
+2025-12-10T14:44:22.374+03:00 DEBUG 17972 --- [api-gateway] [reactor-http-nio-3] .o.ObservationClosingWebExceptionHandler : An exception occurred and observation was not previously stopped, will stop it. The exception was [io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/127.0.0.1:8081]
+2025-12-10T14:44:22.375+03:00 ERROR 17972 --- [api-gateway] [reactor-http-nio-3] a.w.r.e.AbstractErrorWebExceptionHandler : [1ac518be]  500 Server Error for HTTP POST "/api/orders"
+
+io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/127.0.0.1:8081
+	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+Error has been observed at the following site(s):
+	*__checkpoint ? com.shop.apigateway.security.JwtWebFilter [DefaultWebFilterChain]
+	*__checkpoint ? org.springframework.cloud.gateway.filter.WeightCalculatorWebFilter [DefaultWebFilterChain]
+	*__checkpoint ? AuthorizationWebFilter [DefaultWebFilterChain]
+	*__checkpoint ? ExceptionTranslationWebFilter [DefaultWebFilterChain]
+	*__checkpoint ? LogoutWebFilter [DefaultWebFilterChain]
+	*__checkpoint ? ServerRequestCacheWebFilter [DefaultWebFilterChain]
+	*__checkpoint ? SecurityContextServerWebExchangeWebFilter [DefaultWebFilterChain]
+	*__checkpoint ? JwtWebFilter [DefaultWebFilterChain]
+	*__checkpoint ? ReactorContextWebFilter [DefaultWebFilterChain]
+	*__checkpoint ? HttpHeaderWriterWebFilter [DefaultWebFilterChain]
+	*__checkpoint ? ServerWebExchangeReactorContextWebFilter [DefaultWebFilterChain]
+	*__checkpoint ? org.springframework.security.web.server.WebFilterChainProxy [DefaultWebFilterChain]
+	*__checkpoint ? HTTP POST "/api/orders" [ExceptionHandlingWebHandler]
+Original Stack Trace:
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946) ~[na:na]
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:337) ~[netty-transport-4.1.105.Final.jar:4.1.105.Final]
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:335) ~[netty-transport-4.1.105.Final.jar:4.1.105.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776) ~[netty-transport-4.1.105.Final.jar:4.1.105.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.105.Final.jar:4.1.105.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.105.Final.jar:4.1.105.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.105.Final.jar:4.1.105.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.105.Final.jar:4.1.105.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.105.Final.jar:4.1.105.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.105.Final.jar:4.1.105.Final]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2025-12-10T14:53:09.075+03:00  INFO 17972 --- [api-gateway] [http-nio-8080-exec-10] c.shop.apigateway.security.JwtWebFilter  : JwtWebFilter: token valid, username=testuser
+2025-12-10T14:53:09.084+03:00  INFO 17972 --- [api-gateway] [parallel-5] c.shop.apigateway.security.JwtWebFilter  : JwtWebFilter: token valid, username=testuser
+2025-12-10T14:53:09.088+03:00 DEBUG 17972 --- [api-gateway] [boundedElastic-6] o.s.c.g.h.RoutePredicateHandlerMapping   : Route matched: order-service
+2025-12-10T14:53:09.088+03:00 DEBUG 17972 --- [api-gateway] [boundedElastic-6] o.s.c.g.h.RoutePredicateHandlerMapping   : Mapping [Exchange: POST http://localhost:8080/api/orders] to Route{id='order-service', uri=http://localhost:8081, order=0, predicate=Paths: [/api/orders/**, /api/users/**, /api/auth/**], match trailing slash: true, gatewayFilters=[[[RemoveRequestHeader name = 'Cookie'], order = 1]], metadata={}}
+2025-12-10T14:53:09.088+03:00 DEBUG 17972 --- [api-gateway] [boundedElastic-6] o.s.c.g.h.RoutePredicateHandlerMapping   : [1754ef66] Mapped to org.springframework.cloud.gateway.handler.FilteringWebHandler@2f0a29f7
+2025-12-10T14:53:09.088+03:00 DEBUG 17972 --- [api-gateway] [boundedElastic-6] o.s.c.g.handler.FilteringWebHandler      : Sorted gatewayFilterFactories: [[GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.RemoveCachedBodyFilter@75381b61}, order = -2147483648], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.AdaptCachedBodyGlobalFilter@2a8eed58}, order = -2147482648], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.NettyWriteResponseFilter@628af295}, order = -1], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.ForwardPathFilter@5339cdc6}, order = 0], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.GatewayMetricsFilter@301434fb}, order = 0], [[RemoveRequestHeader name = 'Cookie'], order = 1], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.RouteToRequestUrlFilter@5896899d}, order = 10000], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.config.GatewayNoLoadBalancerClientAutoConfiguration$NoLoadBalancerClientFilter@3e7935f1}, order = 10150], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.WebsocketRoutingFilter@6e98fd10}, order = 2147483646], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.NettyRoutingFilter@5a740449}, order = 2147483647], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.ForwardRoutingFilter@89017e5}, order = 2147483647]]
+2025-12-10T14:53:09.089+03:00 DEBUG 17972 --- [api-gateway] [boundedElastic-6] g.f.h.o.ObservedRequestHttpHeadersFilter : Will instrument the HTTP request headers [host:"localhost:8080", user-agent:"curl/7.85.0", accept:"*/*", content-type:"application/json", authorization:"Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlciIsInR5cGUiOiJhY2Nlc3MiLCJpYXQiOjE3NjUzNjc1NzMsImV4cCI6MTc2NTM2ODQ3M30.T7ftYI-Upy6bdjQUMR-S8NF3sN7-5CxCNIUB0by8A4w", content-length:"107", Forwarded:"proto=http;host="localhost:8080";for="127.0.0.1:54247"", X-Forwarded-For:"127.0.0.1", X-Forwarded-Proto:"http", X-Forwarded-Port:"8080", X-Forwarded-Host:"localhost:8080"]
+2025-12-10T14:53:09.090+03:00 DEBUG 17972 --- [api-gateway] [boundedElastic-6] g.f.h.o.ObservedRequestHttpHeadersFilter : Client observation  {name=http.client.requests(null), error=null, context=name='http.client.requests', contextualName='null', error='null', lowCardinalityKeyValues=[http.method='POST', http.status_code='UNKNOWN', spring.cloud.gateway.route.id='order-service', spring.cloud.gateway.route.uri='http://localhost:8081'], highCardinalityKeyValues=[http.uri='http://localhost:8080/api/orders'], map=[class io.micrometer.core.instrument.Timer$Sample='io.micrometer.core.instrument.Timer$Sample@7bd23fae', class io.micrometer.core.instrument.LongTaskTimer$Sample='SampleImpl{duration(seconds)=1.325E-4, duration(nanos)=132500.0, startTimeNanos=179875046427000}'], parentObservation=org.springframework.security.web.server.ObservationWebFilterChainDecorator$PhasedObservation@13284d76} created for the request. New headers are [host:"localhost:8080", user-agent:"curl/7.85.0", accept:"*/*", content-type:"application/json", authorization:"Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlciIsInR5cGUiOiJhY2Nlc3MiLCJpYXQiOjE3NjUzNjc1NzMsImV4cCI6MTc2NTM2ODQ3M30.T7ftYI-Upy6bdjQUMR-S8NF3sN7-5CxCNIUB0by8A4w", content-length:"107", Forwarded:"proto=http;host="localhost:8080";for="127.0.0.1:54247"", X-Forwarded-For:"127.0.0.1", X-Forwarded-Proto:"http", X-Forwarded-Port:"8080", X-Forwarded-Host:"localhost:8080"]
+2025-12-10T14:53:09.949+03:00 DEBUG 17972 --- [api-gateway] [reactor-http-nio-4] .f.h.o.ObservedResponseHttpHeadersFilter : Will instrument the response
+2025-12-10T14:53:09.950+03:00 DEBUG 17972 --- [api-gateway] [reactor-http-nio-4] .f.h.o.ObservedResponseHttpHeadersFilter : The response was handled for observation {name=http.client.requests(null), error=null, context=name='http.client.requests', contextualName='null', error='null', lowCardinalityKeyValues=[http.method='POST', http.status_code='UNKNOWN', spring.cloud.gateway.route.id='order-service', spring.cloud.gateway.route.uri='http://localhost:8081'], highCardinalityKeyValues=[http.uri='http://localhost:8080/api/orders'], map=[class io.micrometer.core.instrument.Timer$Sample='io.micrometer.core.instrument.Timer$Sample@7bd23fae', class io.micrometer.core.instrument.LongTaskTimer$Sample='SampleImpl{duration(seconds)=0.8607803, duration(nanos)=8.607803E8, startTimeNanos=179875046427000}'], parentObservation=org.springframework.security.web.server.ObservationWebFilterChainDecorator$PhasedObservation@13284d76}

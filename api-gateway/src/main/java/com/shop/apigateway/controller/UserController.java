@@ -1,8 +1,8 @@
-package com.shop.orderservice.controller;
+package com.shop.apigateway.controller;
 
-import com.shop.orderservice.dto.UserDto;
-import com.shop.orderservice.entity.User;
-import com.shop.orderservice.service.UserService;
+import com.shop.apigateway.dto.UserDto;
+import com.shop.apigateway.entity.User;
+import com.shop.apigateway.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

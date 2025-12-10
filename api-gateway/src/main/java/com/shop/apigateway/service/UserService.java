@@ -1,8 +1,8 @@
-package com.shop.orderservice.service;
+package com.shop.apigateway.service;
 
-import com.shop.orderservice.dto.UserDto;
-import com.shop.orderservice.entity.User;
-import com.shop.orderservice.repository.UserRepository;
+import com.shop.apigateway.dto.UserDto;
+import com.shop.apigateway.entity.User;
+import com.shop.apigateway.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
