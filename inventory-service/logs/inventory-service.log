@@ -1,25 +1,25 @@
-2025-12-10T02:37:43.330+03:00  INFO 11756 --- [inventory-service] [main] c.s.i.InventoryServiceApplication        : Starting InventoryServiceApplication using Java 17.0.2 with PID 11756 (D:\DeskTop\Reposit\shop-microservices\inventory-service\target\classes started by Павел in D:\DeskTop\Reposit\shop-microservices\inventory-service)
-2025-12-10T02:37:43.332+03:00  INFO 11756 --- [inventory-service] [main] c.s.i.InventoryServiceApplication        : No active profile set, falling back to 1 default profile: "default"
-2025-12-10T02:37:43.848+03:00  INFO 11756 --- [inventory-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-12-10T02:37:43.892+03:00  INFO 11756 --- [inventory-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38 ms. Found 1 JPA repository interface.
-2025-12-10T02:37:44.385+03:00  INFO 11756 --- [inventory-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
-2025-12-10T02:37:44.395+03:00  INFO 11756 --- [inventory-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-12-10T02:37:44.395+03:00  INFO 11756 --- [inventory-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
-2025-12-10T02:37:44.466+03:00  INFO 11756 --- [inventory-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-12-10T02:37:44.466+03:00  INFO 11756 --- [inventory-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1096 ms
-2025-12-10T02:37:44.587+03:00  INFO 11756 --- [inventory-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-12-10T02:37:44.636+03:00  INFO 11756 --- [inventory-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
-2025-12-10T02:37:44.665+03:00  INFO 11756 --- [inventory-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-12-10T02:37:44.861+03:00  INFO 11756 --- [inventory-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-12-10T02:37:44.884+03:00  INFO 11756 --- [inventory-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-12-10T02:37:45.013+03:00  INFO 11756 --- [inventory-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@9d99851
-2025-12-10T02:37:45.015+03:00  INFO 11756 --- [inventory-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-12-10T02:37:45.759+03:00  INFO 11756 --- [inventory-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-12-10T02:37:45.800+03:00  INFO 11756 --- [inventory-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-12-10T02:37:46.112+03:00  WARN 11756 --- [inventory-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-12-10T02:37:46.286+03:00  INFO 11756 --- [inventory-service] [main] g.s.a.GrpcServerFactoryAutoConfiguration : Detected grpc-netty-shaded: Creating ShadedNettyGrpcServerFactory
-2025-12-10T02:37:46.506+03:00  INFO 11756 --- [inventory-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path ''
-2025-12-10T02:37:46.541+03:00  INFO 11756 --- [inventory-service] [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+2025-12-11T17:42:31.619+03:00  INFO 5032 --- [inventory-service] [main] c.s.i.InventoryServiceApplication        : Starting InventoryServiceApplication using Java 17.0.2 with PID 5032 (D:\DeskTop\Reposit\shop-microservices\inventory-service\target\classes started by Павел in D:\DeskTop\Reposit\shop-microservices\inventory-service)
+2025-12-11T17:42:31.625+03:00  INFO 5032 --- [inventory-service] [main] c.s.i.InventoryServiceApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-12-11T17:42:32.261+03:00  INFO 5032 --- [inventory-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-11T17:42:32.318+03:00  INFO 5032 --- [inventory-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47 ms. Found 1 JPA repository interface.
+2025-12-11T17:42:32.995+03:00  INFO 5032 --- [inventory-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2025-12-11T17:42:33.015+03:00  INFO 5032 --- [inventory-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-11T17:42:33.016+03:00  INFO 5032 --- [inventory-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2025-12-11T17:42:33.137+03:00  INFO 5032 --- [inventory-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-12-11T17:42:33.139+03:00  INFO 5032 --- [inventory-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1464 ms
+2025-12-11T17:42:33.346+03:00  INFO 5032 --- [inventory-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-11T17:42:33.451+03:00  INFO 5032 --- [inventory-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2025-12-11T17:42:33.492+03:00  INFO 5032 --- [inventory-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-12-11T17:42:33.741+03:00  INFO 5032 --- [inventory-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-11T17:42:33.770+03:00  INFO 5032 --- [inventory-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-12-11T17:42:33.946+03:00  INFO 5032 --- [inventory-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@21a6a494
+2025-12-11T17:42:33.950+03:00  INFO 5032 --- [inventory-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-12-11T17:42:34.822+03:00  INFO 5032 --- [inventory-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-11T17:42:34.914+03:00  INFO 5032 --- [inventory-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-11T17:42:35.218+03:00  WARN 5032 --- [inventory-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-11T17:42:35.441+03:00  INFO 5032 --- [inventory-service] [main] g.s.a.GrpcServerFactoryAutoConfiguration : Detected grpc-netty-shaded: Creating ShadedNettyGrpcServerFactory
+2025-12-11T17:42:35.689+03:00  INFO 5032 --- [inventory-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path ''
+2025-12-11T17:42:35.732+03:00  INFO 5032 --- [inventory-service] [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
 	allow.auto.create.topics = true
 	auto.commit.interval.ms = 5000
 	auto.include.jmx.reporter = true
@@ -113,373 +113,34 @@
 	ssl.truststore.type = JKS
 	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
 
-2025-12-10T02:37:46.654+03:00  INFO 11756 --- [inventory-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
-2025-12-10T02:37:46.655+03:00  INFO 11756 --- [inventory-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
-2025-12-10T02:37:46.655+03:00  INFO 11756 --- [inventory-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1765323466653
-2025-12-10T02:37:46.658+03:00  INFO 11756 --- [inventory-service] [main] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=consumer-inventory-service-1, groupId=inventory-service] Subscribed to topic(s): orders
-2025-12-10T02:37:46.735+03:00  INFO 11756 --- [inventory-service] [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: inventory.InventoryService, bean: inventoryGrpcService, class: com.shop.inventoryservice.grpc.InventoryGrpcService
-2025-12-10T02:37:46.735+03:00  INFO 11756 --- [inventory-service] [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: grpc.health.v1.Health, bean: grpcHealthService, class: io.grpc.protobuf.services.HealthServiceImpl
-2025-12-10T02:37:46.735+03:00  INFO 11756 --- [inventory-service] [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: grpc.reflection.v1alpha.ServerReflection, bean: protoReflectionService, class: io.grpc.protobuf.services.ProtoReflectionService
-2025-12-10T02:37:46.871+03:00  INFO 11756 --- [inventory-service] [main] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC Server started, listening on address: *, port: 9091
-2025-12-10T02:37:46.883+03:00  INFO 11756 --- [inventory-service] [main] c.s.i.InventoryServiceApplication        : Started InventoryServiceApplication in 3.988 seconds (process running for 4.306)
-2025-12-10T02:37:46.951+03:00  INFO 11756 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-inventory-service-1, groupId=inventory-service] Cluster ID: 1gJd-S3mSVaBVIEDusvs6w
-2025-12-10T02:37:46.953+03:00  INFO 11756 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-inventory-service-1, groupId=inventory-service] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
-2025-12-10T02:37:46.954+03:00  INFO 11756 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-inventory-service-1, groupId=inventory-service] (Re-)joining group
-2025-12-10T02:37:46.968+03:00  INFO 11756 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-inventory-service-1, groupId=inventory-service] Request joining group due to: need to re-join with the given member-id: consumer-inventory-service-1-48b21a07-ff30-470d-9b33-d26c5f61eb33
-2025-12-10T02:37:46.968+03:00  INFO 11756 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-inventory-service-1, groupId=inventory-service] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
-2025-12-10T02:37:46.969+03:00  INFO 11756 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-inventory-service-1, groupId=inventory-service] (Re-)joining group
-2025-12-10T02:37:49.972+03:00  INFO 11756 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-inventory-service-1, groupId=inventory-service] Successfully joined group with generation Generation{generationId=4, memberId='consumer-inventory-service-1-48b21a07-ff30-470d-9b33-d26c5f61eb33', protocol='range'}
-2025-12-10T02:37:49.980+03:00  INFO 11756 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-inventory-service-1, groupId=inventory-service] Finished assignment for group at generation 4: {consumer-inventory-service-1-48b21a07-ff30-470d-9b33-d26c5f61eb33=Assignment(partitions=[orders-0])}
-2025-12-10T02:37:49.988+03:00  INFO 11756 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-inventory-service-1, groupId=inventory-service] Successfully synced group in generation Generation{generationId=4, memberId='consumer-inventory-service-1-48b21a07-ff30-470d-9b33-d26c5f61eb33', protocol='range'}
-2025-12-10T02:37:49.989+03:00  INFO 11756 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-inventory-service-1, groupId=inventory-service] Notifying assignor about the new Assignment(partitions=[orders-0])
-2025-12-10T02:37:49.992+03:00  INFO 11756 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-inventory-service-1, groupId=inventory-service] Adding newly assigned partitions: orders-0
-2025-12-10T02:37:50.008+03:00  INFO 11756 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-inventory-service-1, groupId=inventory-service] Setting offset for partition orders-0 to the committed offset FetchPosition{offset=10, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}
-2025-12-10T02:37:50.039+03:00  INFO 11756 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : inventory-service: partitions assigned: [orders-0]
-2025-12-10T02:37:54.372+03:00 ERROR 11756 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.kafka.listener.DefaultErrorHandler   : Backoff FixedBackOff{interval=0, currentAttempts=1, maxAttempts=0} exhausted for orders-0@10
-
-org.springframework.kafka.listener.ListenerExecutionFailedException: Listener method could not be invoked with the incoming message
-Endpoint handler details:
-Method [public void com.shop.inventoryservice.kafka.InventoryOrderListener.handleOrderCreated(java.lang.String)]
-Bean [com.shop.inventoryservice.kafka.InventoryOrderListener@c4ca86a]
-	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.decorateException(KafkaMessageListenerContainer.java:2917) ~[spring-kafka-3.1.1.jar:3.1.1]
-	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2862) ~[spring-kafka-3.1.1.jar:3.1.1]
-	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeOnMessage(KafkaMessageListenerContainer.java:2826) ~[spring-kafka-3.1.1.jar:3.1.1]
-	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.lambda$doInvokeRecordListener$56(KafkaMessageListenerContainer.java:2744) ~[spring-kafka-3.1.1.jar:3.1.1]
-	at io.micrometer.observation.Observation.observe(Observation.java:565) ~[micrometer-observation-1.12.2.jar:1.12.2]
-	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2742) ~[spring-kafka-3.1.1.jar:3.1.1]
-	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeWithRecords(KafkaMessageListenerContainer.java:2595) ~[spring-kafka-3.1.1.jar:3.1.1]
-	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:2481) ~[spring-kafka-3.1.1.jar:3.1.1]
-	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2123) ~[spring-kafka-3.1.1.jar:3.1.1]
-	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1478) ~[spring-kafka-3.1.1.jar:3.1.1]
-	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1442) ~[spring-kafka-3.1.1.jar:3.1.1]
-	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1313) ~[spring-kafka-3.1.1.jar:3.1.1]
-	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804) ~[na:na]
-	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
-	Suppressed: org.springframework.kafka.listener.ListenerExecutionFailedException: Restored Stack Trace
-		at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.checkAckArg(MessagingMessageListenerAdapter.java:403) ~[spring-kafka-3.1.1.jar:3.1.1]
-		at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:381) ~[spring-kafka-3.1.1.jar:3.1.1]
-		at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:92) ~[spring-kafka-3.1.1.jar:3.1.1]
-		at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:53) ~[spring-kafka-3.1.1.jar:3.1.1]
-		at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2848) ~[spring-kafka-3.1.1.jar:3.1.1]
-Caused by: org.springframework.messaging.converter.MessageConversionException: Cannot handle message
-	at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:381) ~[spring-kafka-3.1.1.jar:3.1.1]
-	at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:92) ~[spring-kafka-3.1.1.jar:3.1.1]
-	at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:53) ~[spring-kafka-3.1.1.jar:3.1.1]
-	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2848) ~[spring-kafka-3.1.1.jar:3.1.1]
-	... 12 common frames omitted
-Caused by: org.springframework.messaging.converter.MessageConversionException: Cannot convert from [com.shop.inventoryservice.kafka.OrderCreatedEvent] to [java.lang.String] for GenericMessage [payload=OrderCreatedEvent(orderId=32, userId=3, createdAt=2025-12-09T23:37:53.513698700Z, totalPrice=11394.00, items=[OrderCreatedEvent.Item(productId=1, quantity=4, price=1500.0, sale=0.1, totalPrice=5994.00), OrderCreatedEvent.Item(productId=2, quantity=4, price=1500.0, sale=10.0, totalPrice=5400.00)]), headers={kafka_offset=10, kafka_consumer=org.springframework.kafka.core.DefaultKafkaConsumerFactory$ExtendedKafkaConsumer@2e865470, kafka_timestampType=CREATE_TIME, kafka_receivedPartitionId=0, kafka_receivedMessageKey=32, kafka_receivedTopic=orders, kafka_receivedTimestamp=1765323474332, kafka_groupId=inventory-service}]
-	at org.springframework.messaging.handler.annotation.support.PayloadMethodArgumentResolver.resolveArgument(PayloadMethodArgumentResolver.java:151) ~[spring-messaging-6.1.3.jar:6.1.3]
-	at org.springframework.kafka.annotation.KafkaNullAwarePayloadArgumentResolver.resolveArgument(KafkaNullAwarePayloadArgumentResolver.java:47) ~[spring-kafka-3.1.1.jar:3.1.1]
-	at org.springframework.messaging.handler.invocation.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:118) ~[spring-messaging-6.1.3.jar:6.1.3]
-	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:147) ~[spring-messaging-6.1.3.jar:6.1.3]
-	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:115) ~[spring-messaging-6.1.3.jar:6.1.3]
-	at org.springframework.kafka.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:56) ~[spring-kafka-3.1.1.jar:3.1.1]
-	at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:376) ~[spring-kafka-3.1.1.jar:3.1.1]
-	... 15 common frames omitted
-
-2025-12-10T02:46:46.956+03:00  INFO 11756 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-inventory-service-1, groupId=inventory-service] Node -1 disconnected.
-2025-12-10T02:49:39.761+03:00  INFO 11756 --- [inventory-service] [SpringApplicationShutdownHook] n.d.b.g.s.s.GrpcServerLifecycle          : Completed gRPC server shutdown
-2025-12-10T02:49:39.764+03:00  INFO 11756 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-inventory-service-1, groupId=inventory-service] Revoke previously assigned partitions orders-0
-2025-12-10T02:49:39.764+03:00  INFO 11756 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : inventory-service: partitions revoked: [orders-0]
-2025-12-10T02:49:39.765+03:00  INFO 11756 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-inventory-service-1, groupId=inventory-service] Member consumer-inventory-service-1-48b21a07-ff30-470d-9b33-d26c5f61eb33 sending LeaveGroup request to coordinator localhost:9092 (id: 2147483646 rack: null) due to the consumer unsubscribed from all topics
-2025-12-10T02:49:39.766+03:00  INFO 11756 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-inventory-service-1, groupId=inventory-service] Resetting generation and member id due to: consumer pro-actively leaving the group
-2025-12-10T02:49:39.766+03:00  INFO 11756 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-inventory-service-1, groupId=inventory-service] Request joining group due to: consumer pro-actively leaving the group
-2025-12-10T02:49:39.766+03:00  INFO 11756 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=consumer-inventory-service-1, groupId=inventory-service] Unsubscribed all topics or patterns and assigned partitions
-2025-12-10T02:49:39.768+03:00  INFO 11756 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-inventory-service-1, groupId=inventory-service] Resetting generation and member id due to: consumer pro-actively leaving the group
-2025-12-10T02:49:39.768+03:00  INFO 11756 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-inventory-service-1, groupId=inventory-service] Request joining group due to: consumer pro-actively leaving the group
-2025-12-10T02:49:40.172+03:00  INFO 11756 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
-2025-12-10T02:49:40.172+03:00  INFO 11756 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
-2025-12-10T02:49:40.172+03:00  INFO 11756 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
-2025-12-10T02:49:40.176+03:00  INFO 11756 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-inventory-service-1 unregistered
-2025-12-10T02:49:40.177+03:00  INFO 11756 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : inventory-service: Consumer stopped
-2025-12-10T02:49:40.192+03:00  INFO 11756 --- [inventory-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-12-10T02:49:40.193+03:00  INFO 11756 --- [inventory-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-12-10T02:49:40.199+03:00  INFO 11756 --- [inventory-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-12-10T02:50:00.514+03:00  INFO 1532 --- [inventory-service] [main] c.s.i.InventoryServiceApplication        : Starting InventoryServiceApplication using Java 17.0.2 with PID 1532 (D:\DeskTop\Reposit\shop-microservices\inventory-service\target\classes started by Павел in D:\DeskTop\Reposit\shop-microservices\inventory-service)
-2025-12-10T02:50:00.517+03:00  INFO 1532 --- [inventory-service] [main] c.s.i.InventoryServiceApplication        : No active profile set, falling back to 1 default profile: "default"
-2025-12-10T02:50:01.019+03:00  INFO 1532 --- [inventory-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-12-10T02:50:01.064+03:00  INFO 1532 --- [inventory-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38 ms. Found 1 JPA repository interface.
-2025-12-10T02:50:01.547+03:00  INFO 1532 --- [inventory-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
-2025-12-10T02:50:01.557+03:00  INFO 1532 --- [inventory-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-12-10T02:50:01.558+03:00  INFO 1532 --- [inventory-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
-2025-12-10T02:50:01.629+03:00  INFO 1532 --- [inventory-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-12-10T02:50:01.630+03:00  INFO 1532 --- [inventory-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1073 ms
-2025-12-10T02:50:01.745+03:00  INFO 1532 --- [inventory-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-12-10T02:50:01.792+03:00  INFO 1532 --- [inventory-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
-2025-12-10T02:50:01.822+03:00  INFO 1532 --- [inventory-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-12-10T02:50:02.023+03:00  INFO 1532 --- [inventory-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-12-10T02:50:02.048+03:00  INFO 1532 --- [inventory-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-12-10T02:50:02.179+03:00  INFO 1532 --- [inventory-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2ae3235e
-2025-12-10T02:50:02.181+03:00  INFO 1532 --- [inventory-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-12-10T02:50:02.929+03:00  INFO 1532 --- [inventory-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-12-10T02:50:02.968+03:00  INFO 1532 --- [inventory-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-12-10T02:50:03.261+03:00  WARN 1532 --- [inventory-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-12-10T02:50:03.466+03:00  INFO 1532 --- [inventory-service] [main] g.s.a.GrpcServerFactoryAutoConfiguration : Detected grpc-netty-shaded: Creating ShadedNettyGrpcServerFactory
-2025-12-10T02:50:03.738+03:00  INFO 1532 --- [inventory-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path ''
-2025-12-10T02:50:03.776+03:00  INFO 1532 --- [inventory-service] [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
-	allow.auto.create.topics = true
-	auto.commit.interval.ms = 5000
-	auto.include.jmx.reporter = true
-	auto.offset.reset = latest
-	bootstrap.servers = [localhost:9092]
-	check.crcs = true
-	client.dns.lookup = use_all_dns_ips
-	client.id = consumer-inventory-service-1
-	client.rack = 
-	connections.max.idle.ms = 540000
-	default.api.timeout.ms = 60000
-	enable.auto.commit = false
-	exclude.internal.topics = true
-	fetch.max.bytes = 52428800
-	fetch.max.wait.ms = 500
-	fetch.min.bytes = 1
-	group.id = inventory-service
-	group.instance.id = null
-	heartbeat.interval.ms = 3000
-	interceptor.classes = []
-	internal.leave.group.on.close = true
-	internal.throw.on.fetch.stable.offset.unsupported = false
-	isolation.level = read_uncommitted
-	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
-	max.partition.fetch.bytes = 1048576
-	max.poll.interval.ms = 300000
-	max.poll.records = 500
-	metadata.max.age.ms = 300000
-	metric.reporters = []
-	metrics.num.samples = 2
-	metrics.recording.level = INFO
-	metrics.sample.window.ms = 30000
-	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
-	receive.buffer.bytes = 65536
-	reconnect.backoff.max.ms = 1000
-	reconnect.backoff.ms = 50
-	request.timeout.ms = 30000
-	retry.backoff.ms = 100
-	sasl.client.callback.handler.class = null
-	sasl.jaas.config = null
-	sasl.kerberos.kinit.cmd = /usr/bin/kinit
-	sasl.kerberos.min.time.before.relogin = 60000
-	sasl.kerberos.service.name = null
-	sasl.kerberos.ticket.renew.jitter = 0.05
-	sasl.kerberos.ticket.renew.window.factor = 0.8
-	sasl.login.callback.handler.class = null
-	sasl.login.class = null
-	sasl.login.connect.timeout.ms = null
-	sasl.login.read.timeout.ms = null
-	sasl.login.refresh.buffer.seconds = 300
-	sasl.login.refresh.min.period.seconds = 60
-	sasl.login.refresh.window.factor = 0.8
-	sasl.login.refresh.window.jitter = 0.05
-	sasl.login.retry.backoff.max.ms = 10000
-	sasl.login.retry.backoff.ms = 100
-	sasl.mechanism = GSSAPI
-	sasl.oauthbearer.clock.skew.seconds = 30
-	sasl.oauthbearer.expected.audience = null
-	sasl.oauthbearer.expected.issuer = null
-	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
-	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
-	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
-	sasl.oauthbearer.jwks.endpoint.url = null
-	sasl.oauthbearer.scope.claim.name = scope
-	sasl.oauthbearer.sub.claim.name = sub
-	sasl.oauthbearer.token.endpoint.url = null
-	security.protocol = PLAINTEXT
-	security.providers = null
-	send.buffer.bytes = 131072
-	session.timeout.ms = 45000
-	socket.connection.setup.timeout.max.ms = 30000
-	socket.connection.setup.timeout.ms = 10000
-	ssl.cipher.suites = null
-	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
-	ssl.endpoint.identification.algorithm = https
-	ssl.engine.factory.class = null
-	ssl.key.password = null
-	ssl.keymanager.algorithm = SunX509
-	ssl.keystore.certificate.chain = null
-	ssl.keystore.key = null
-	ssl.keystore.location = null
-	ssl.keystore.password = null
-	ssl.keystore.type = JKS
-	ssl.protocol = TLSv1.3
-	ssl.provider = null
-	ssl.secure.random.implementation = null
-	ssl.trustmanager.algorithm = PKIX
-	ssl.truststore.certificates = null
-	ssl.truststore.location = null
-	ssl.truststore.password = null
-	ssl.truststore.type = JKS
-	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
-
-2025-12-10T02:50:03.881+03:00  INFO 1532 --- [inventory-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
-2025-12-10T02:50:03.882+03:00  INFO 1532 --- [inventory-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
-2025-12-10T02:50:03.882+03:00  INFO 1532 --- [inventory-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1765324203880
-2025-12-10T02:50:03.883+03:00  INFO 1532 --- [inventory-service] [main] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=consumer-inventory-service-1, groupId=inventory-service] Subscribed to topic(s): orders
-2025-12-10T02:50:03.963+03:00  INFO 1532 --- [inventory-service] [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: inventory.InventoryService, bean: inventoryGrpcService, class: com.shop.inventoryservice.grpc.InventoryGrpcService
-2025-12-10T02:50:03.964+03:00  INFO 1532 --- [inventory-service] [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: grpc.health.v1.Health, bean: grpcHealthService, class: io.grpc.protobuf.services.HealthServiceImpl
-2025-12-10T02:50:03.964+03:00  INFO 1532 --- [inventory-service] [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: grpc.reflection.v1alpha.ServerReflection, bean: protoReflectionService, class: io.grpc.protobuf.services.ProtoReflectionService
-2025-12-10T02:50:04.104+03:00  INFO 1532 --- [inventory-service] [main] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC Server started, listening on address: *, port: 9091
-2025-12-10T02:50:04.112+03:00  INFO 1532 --- [inventory-service] [main] c.s.i.InventoryServiceApplication        : Started InventoryServiceApplication in 3.986 seconds (process running for 4.293)
-2025-12-10T02:50:04.184+03:00  INFO 1532 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-inventory-service-1, groupId=inventory-service] Cluster ID: 1gJd-S3mSVaBVIEDusvs6w
-2025-12-10T02:50:04.185+03:00  INFO 1532 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-inventory-service-1, groupId=inventory-service] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
-2025-12-10T02:50:04.188+03:00  INFO 1532 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-inventory-service-1, groupId=inventory-service] (Re-)joining group
-2025-12-10T02:50:04.201+03:00  INFO 1532 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-inventory-service-1, groupId=inventory-service] Request joining group due to: need to re-join with the given member-id: consumer-inventory-service-1-4d2d8806-d085-4207-8e74-d616b6da476e
-2025-12-10T02:50:04.201+03:00  INFO 1532 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-inventory-service-1, groupId=inventory-service] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
-2025-12-10T02:50:04.202+03:00  INFO 1532 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-inventory-service-1, groupId=inventory-service] (Re-)joining group
-2025-12-10T02:50:07.205+03:00  INFO 1532 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-inventory-service-1, groupId=inventory-service] Successfully joined group with generation Generation{generationId=6, memberId='consumer-inventory-service-1-4d2d8806-d085-4207-8e74-d616b6da476e', protocol='range'}
-2025-12-10T02:50:07.211+03:00  INFO 1532 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-inventory-service-1, groupId=inventory-service] Finished assignment for group at generation 6: {consumer-inventory-service-1-4d2d8806-d085-4207-8e74-d616b6da476e=Assignment(partitions=[orders-0])}
-2025-12-10T02:50:07.225+03:00  INFO 1532 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-inventory-service-1, groupId=inventory-service] Successfully synced group in generation Generation{generationId=6, memberId='consumer-inventory-service-1-4d2d8806-d085-4207-8e74-d616b6da476e', protocol='range'}
-2025-12-10T02:50:07.226+03:00  INFO 1532 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-inventory-service-1, groupId=inventory-service] Notifying assignor about the new Assignment(partitions=[orders-0])
-2025-12-10T02:50:07.229+03:00  INFO 1532 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-inventory-service-1, groupId=inventory-service] Adding newly assigned partitions: orders-0
-2025-12-10T02:50:07.241+03:00  INFO 1532 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-inventory-service-1, groupId=inventory-service] Setting offset for partition orders-0 to the committed offset FetchPosition{offset=11, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}
-2025-12-10T02:50:07.243+03:00  INFO 1532 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : inventory-service: partitions assigned: [orders-0]
-2025-12-10T02:50:25.498+03:00  INFO 1532 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.s.i.kafka.InventoryOrderListener       : InventoryOrderListener: received OrderCreatedEvent, orderId=33, itemsCount=2
-2025-12-10T02:50:25.506+03:00  INFO 1532 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.s.i.kafka.InventoryOrderListener       : InventoryOrderListener: productId=1 quantity 10 -> 6 (reserved 4) for orderId=33
-2025-12-10T02:50:25.513+03:00  INFO 1532 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.s.i.kafka.InventoryOrderListener       : InventoryOrderListener: productId=2 quantity 10 -> 6 (reserved 4) for orderId=33
-2025-12-10T02:50:25.513+03:00  INFO 1532 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.s.i.kafka.InventoryOrderListener       : InventoryOrderListener: successfully reserved items for orderId=33
-2025-12-10T02:51:11.957+03:00  INFO 1532 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.s.i.kafka.InventoryOrderListener       : InventoryOrderListener: received OrderCreatedEvent, orderId=34, itemsCount=2
-2025-12-10T02:51:11.961+03:00  INFO 1532 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.s.i.kafka.InventoryOrderListener       : InventoryOrderListener: productId=1 quantity 6 -> 2 (reserved 4) for orderId=34
-2025-12-10T02:51:11.963+03:00  INFO 1532 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.s.i.kafka.InventoryOrderListener       : InventoryOrderListener: productId=2 quantity 6 -> 2 (reserved 4) for orderId=34
-2025-12-10T02:51:11.963+03:00  INFO 1532 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.s.i.kafka.InventoryOrderListener       : InventoryOrderListener: successfully reserved items for orderId=34
-2025-12-10T02:59:04.401+03:00  INFO 1532 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-inventory-service-1, groupId=inventory-service] Node -1 disconnected.
-2025-12-10T14:52:21.306+03:00  INFO 14864 --- [inventory-service] [main] c.s.i.InventoryServiceApplication        : Starting InventoryServiceApplication using Java 17.0.2 with PID 14864 (D:\DeskTop\Reposit\shop-microservices\inventory-service\target\classes started by Павел in D:\DeskTop\Reposit\shop-microservices\inventory-service)
-2025-12-10T14:52:21.308+03:00  INFO 14864 --- [inventory-service] [main] c.s.i.InventoryServiceApplication        : No active profile set, falling back to 1 default profile: "default"
-2025-12-10T14:52:21.871+03:00  INFO 14864 --- [inventory-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-12-10T14:52:21.920+03:00  INFO 14864 --- [inventory-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42 ms. Found 1 JPA repository interface.
-2025-12-10T14:52:22.457+03:00  INFO 14864 --- [inventory-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
-2025-12-10T14:52:22.468+03:00  INFO 14864 --- [inventory-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-12-10T14:52:22.468+03:00  INFO 14864 --- [inventory-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
-2025-12-10T14:52:22.539+03:00  INFO 14864 --- [inventory-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-12-10T14:52:22.540+03:00  INFO 14864 --- [inventory-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1190 ms
-2025-12-10T14:52:22.689+03:00  INFO 14864 --- [inventory-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-12-10T14:52:22.740+03:00  INFO 14864 --- [inventory-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
-2025-12-10T14:52:22.771+03:00  INFO 14864 --- [inventory-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-12-10T14:52:22.968+03:00  INFO 14864 --- [inventory-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-12-10T14:52:22.992+03:00  INFO 14864 --- [inventory-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-12-10T14:52:23.123+03:00  INFO 14864 --- [inventory-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4cd7d5e1
-2025-12-10T14:52:23.125+03:00  INFO 14864 --- [inventory-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-12-10T14:52:23.960+03:00  INFO 14864 --- [inventory-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-12-10T14:52:24.036+03:00  INFO 14864 --- [inventory-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-12-10T14:52:24.344+03:00  WARN 14864 --- [inventory-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-12-10T14:52:24.570+03:00  INFO 14864 --- [inventory-service] [main] g.s.a.GrpcServerFactoryAutoConfiguration : Detected grpc-netty-shaded: Creating ShadedNettyGrpcServerFactory
-2025-12-10T14:52:24.805+03:00  INFO 14864 --- [inventory-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path ''
-2025-12-10T14:52:24.845+03:00  INFO 14864 --- [inventory-service] [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
-	allow.auto.create.topics = true
-	auto.commit.interval.ms = 5000
-	auto.include.jmx.reporter = true
-	auto.offset.reset = latest
-	bootstrap.servers = [localhost:9092]
-	check.crcs = true
-	client.dns.lookup = use_all_dns_ips
-	client.id = consumer-inventory-service-1
-	client.rack = 
-	connections.max.idle.ms = 540000
-	default.api.timeout.ms = 60000
-	enable.auto.commit = false
-	exclude.internal.topics = true
-	fetch.max.bytes = 52428800
-	fetch.max.wait.ms = 500
-	fetch.min.bytes = 1
-	group.id = inventory-service
-	group.instance.id = null
-	heartbeat.interval.ms = 3000
-	interceptor.classes = []
-	internal.leave.group.on.close = true
-	internal.throw.on.fetch.stable.offset.unsupported = false
-	isolation.level = read_uncommitted
-	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
-	max.partition.fetch.bytes = 1048576
-	max.poll.interval.ms = 300000
-	max.poll.records = 500
-	metadata.max.age.ms = 300000
-	metric.reporters = []
-	metrics.num.samples = 2
-	metrics.recording.level = INFO
-	metrics.sample.window.ms = 30000
-	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
-	receive.buffer.bytes = 65536
-	reconnect.backoff.max.ms = 1000
-	reconnect.backoff.ms = 50
-	request.timeout.ms = 30000
-	retry.backoff.ms = 100
-	sasl.client.callback.handler.class = null
-	sasl.jaas.config = null
-	sasl.kerberos.kinit.cmd = /usr/bin/kinit
-	sasl.kerberos.min.time.before.relogin = 60000
-	sasl.kerberos.service.name = null
-	sasl.kerberos.ticket.renew.jitter = 0.05
-	sasl.kerberos.ticket.renew.window.factor = 0.8
-	sasl.login.callback.handler.class = null
-	sasl.login.class = null
-	sasl.login.connect.timeout.ms = null
-	sasl.login.read.timeout.ms = null
-	sasl.login.refresh.buffer.seconds = 300
-	sasl.login.refresh.min.period.seconds = 60
-	sasl.login.refresh.window.factor = 0.8
-	sasl.login.refresh.window.jitter = 0.05
-	sasl.login.retry.backoff.max.ms = 10000
-	sasl.login.retry.backoff.ms = 100
-	sasl.mechanism = GSSAPI
-	sasl.oauthbearer.clock.skew.seconds = 30
-	sasl.oauthbearer.expected.audience = null
-	sasl.oauthbearer.expected.issuer = null
-	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
-	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
-	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
-	sasl.oauthbearer.jwks.endpoint.url = null
-	sasl.oauthbearer.scope.claim.name = scope
-	sasl.oauthbearer.sub.claim.name = sub
-	sasl.oauthbearer.token.endpoint.url = null
-	security.protocol = PLAINTEXT
-	security.providers = null
-	send.buffer.bytes = 131072
-	session.timeout.ms = 45000
-	socket.connection.setup.timeout.max.ms = 30000
-	socket.connection.setup.timeout.ms = 10000
-	ssl.cipher.suites = null
-	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
-	ssl.endpoint.identification.algorithm = https
-	ssl.engine.factory.class = null
-	ssl.key.password = null
-	ssl.keymanager.algorithm = SunX509
-	ssl.keystore.certificate.chain = null
-	ssl.keystore.key = null
-	ssl.keystore.location = null
-	ssl.keystore.password = null
-	ssl.keystore.type = JKS
-	ssl.protocol = TLSv1.3
-	ssl.provider = null
-	ssl.secure.random.implementation = null
-	ssl.trustmanager.algorithm = PKIX
-	ssl.truststore.certificates = null
-	ssl.truststore.location = null
-	ssl.truststore.password = null
-	ssl.truststore.type = JKS
-	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
-
-2025-12-10T14:52:24.961+03:00  INFO 14864 --- [inventory-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
-2025-12-10T14:52:24.962+03:00  INFO 14864 --- [inventory-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
-2025-12-10T14:52:24.962+03:00  INFO 14864 --- [inventory-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1765367544960
-2025-12-10T14:52:24.965+03:00  INFO 14864 --- [inventory-service] [main] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=consumer-inventory-service-1, groupId=inventory-service] Subscribed to topic(s): orders
-2025-12-10T14:52:25.042+03:00  INFO 14864 --- [inventory-service] [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: inventory.InventoryService, bean: inventoryGrpcService, class: com.shop.inventoryservice.grpc.InventoryGrpcService
-2025-12-10T14:52:25.043+03:00  INFO 14864 --- [inventory-service] [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: grpc.health.v1.Health, bean: grpcHealthService, class: io.grpc.protobuf.services.HealthServiceImpl
-2025-12-10T14:52:25.043+03:00  INFO 14864 --- [inventory-service] [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: grpc.reflection.v1alpha.ServerReflection, bean: protoReflectionService, class: io.grpc.protobuf.services.ProtoReflectionService
-2025-12-10T14:52:25.197+03:00  INFO 14864 --- [inventory-service] [main] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC Server started, listening on address: *, port: 9091
-2025-12-10T14:52:25.205+03:00  INFO 14864 --- [inventory-service] [main] c.s.i.InventoryServiceApplication        : Started InventoryServiceApplication in 4.321 seconds (process running for 4.677)
-2025-12-10T14:52:25.275+03:00  INFO 14864 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-inventory-service-1, groupId=inventory-service] Cluster ID: 1gJd-S3mSVaBVIEDusvs6w
-2025-12-10T14:52:25.276+03:00  INFO 14864 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-inventory-service-1, groupId=inventory-service] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
-2025-12-10T14:52:25.278+03:00  INFO 14864 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-inventory-service-1, groupId=inventory-service] (Re-)joining group
-2025-12-10T14:52:25.292+03:00  INFO 14864 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-inventory-service-1, groupId=inventory-service] Request joining group due to: need to re-join with the given member-id: consumer-inventory-service-1-3b380440-2d04-4660-8bf1-e0a8a2292447
-2025-12-10T14:52:25.293+03:00  INFO 14864 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-inventory-service-1, groupId=inventory-service] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
-2025-12-10T14:52:25.293+03:00  INFO 14864 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-inventory-service-1, groupId=inventory-service] (Re-)joining group
-2025-12-10T14:52:28.298+03:00  INFO 14864 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-inventory-service-1, groupId=inventory-service] Successfully joined group with generation Generation{generationId=8, memberId='consumer-inventory-service-1-3b380440-2d04-4660-8bf1-e0a8a2292447', protocol='range'}
-2025-12-10T14:52:28.304+03:00  INFO 14864 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-inventory-service-1, groupId=inventory-service] Finished assignment for group at generation 8: {consumer-inventory-service-1-3b380440-2d04-4660-8bf1-e0a8a2292447=Assignment(partitions=[orders-0])}
-2025-12-10T14:52:28.312+03:00  INFO 14864 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-inventory-service-1, groupId=inventory-service] Successfully synced group in generation Generation{generationId=8, memberId='consumer-inventory-service-1-3b380440-2d04-4660-8bf1-e0a8a2292447', protocol='range'}
-2025-12-10T14:52:28.312+03:00  INFO 14864 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-inventory-service-1, groupId=inventory-service] Notifying assignor about the new Assignment(partitions=[orders-0])
-2025-12-10T14:52:28.314+03:00  INFO 14864 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-inventory-service-1, groupId=inventory-service] Adding newly assigned partitions: orders-0
-2025-12-10T14:52:28.328+03:00  INFO 14864 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-inventory-service-1, groupId=inventory-service] Setting offset for partition orders-0 to the committed offset FetchPosition{offset=13, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}
-2025-12-10T14:52:28.329+03:00  INFO 14864 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : inventory-service: partitions assigned: [orders-0]
-2025-12-10T14:53:10.370+03:00  INFO 14864 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.s.i.kafka.InventoryOrderListener       : InventoryOrderListener: received OrderCreatedEvent, orderId=35, itemsCount=2
-2025-12-10T14:53:10.379+03:00  INFO 14864 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.s.i.kafka.InventoryOrderListener       : InventoryOrderListener: productId=1 quantity 2 -> 1 (reserved 1) for orderId=35
-2025-12-10T14:53:10.382+03:00  INFO 14864 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.s.i.kafka.InventoryOrderListener       : InventoryOrderListener: productId=2 quantity 2 -> 1 (reserved 1) for orderId=35
-2025-12-10T14:53:10.382+03:00  INFO 14864 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.s.i.kafka.InventoryOrderListener       : InventoryOrderListener: successfully reserved items for orderId=35
-2025-12-10T15:01:25.344+03:00  INFO 14864 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-inventory-service-1, groupId=inventory-service] Node -1 disconnected.
+2025-12-11T17:42:35.902+03:00  INFO 5032 --- [inventory-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
+2025-12-11T17:42:35.903+03:00  INFO 5032 --- [inventory-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
+2025-12-11T17:42:35.903+03:00  INFO 5032 --- [inventory-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1765464155901
+2025-12-11T17:42:35.906+03:00  INFO 5032 --- [inventory-service] [main] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=consumer-inventory-service-1, groupId=inventory-service] Subscribed to topic(s): orders
+2025-12-11T17:42:36.022+03:00  INFO 5032 --- [inventory-service] [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: inventory.InventoryService, bean: inventoryGrpcService, class: com.shop.inventoryservice.grpc.InventoryGrpcService
+2025-12-11T17:42:36.022+03:00  INFO 5032 --- [inventory-service] [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: grpc.health.v1.Health, bean: grpcHealthService, class: io.grpc.protobuf.services.HealthServiceImpl
+2025-12-11T17:42:36.022+03:00  INFO 5032 --- [inventory-service] [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: grpc.reflection.v1alpha.ServerReflection, bean: protoReflectionService, class: io.grpc.protobuf.services.ProtoReflectionService
+2025-12-11T17:42:36.203+03:00  INFO 5032 --- [inventory-service] [main] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC Server started, listening on address: *, port: 9091
+2025-12-11T17:42:36.212+03:00  INFO 5032 --- [inventory-service] [main] c.s.i.InventoryServiceApplication        : Started InventoryServiceApplication in 5.684 seconds (process running for 6.064)
+2025-12-11T17:42:36.309+03:00  INFO 5032 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-inventory-service-1, groupId=inventory-service] Cluster ID: 1gJd-S3mSVaBVIEDusvs6w
+2025-12-11T17:42:36.311+03:00  INFO 5032 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-inventory-service-1, groupId=inventory-service] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-12-11T17:42:36.313+03:00  INFO 5032 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-inventory-service-1, groupId=inventory-service] (Re-)joining group
+2025-12-11T17:42:36.334+03:00  INFO 5032 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-inventory-service-1, groupId=inventory-service] Request joining group due to: need to re-join with the given member-id: consumer-inventory-service-1-d79f001b-fa05-4a83-9451-ff775a03e9a7
+2025-12-11T17:42:36.334+03:00  INFO 5032 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-inventory-service-1, groupId=inventory-service] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2025-12-11T17:42:36.334+03:00  INFO 5032 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-inventory-service-1, groupId=inventory-service] (Re-)joining group
+2025-12-11T17:42:39.347+03:00  INFO 5032 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-inventory-service-1, groupId=inventory-service] Successfully joined group with generation Generation{generationId=10, memberId='consumer-inventory-service-1-d79f001b-fa05-4a83-9451-ff775a03e9a7', protocol='range'}
+2025-12-11T17:42:39.352+03:00  INFO 5032 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-inventory-service-1, groupId=inventory-service] Finished assignment for group at generation 10: {consumer-inventory-service-1-d79f001b-fa05-4a83-9451-ff775a03e9a7=Assignment(partitions=[orders-0])}
+2025-12-11T17:42:39.372+03:00  INFO 5032 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-inventory-service-1, groupId=inventory-service] Successfully synced group in generation Generation{generationId=10, memberId='consumer-inventory-service-1-d79f001b-fa05-4a83-9451-ff775a03e9a7', protocol='range'}
+2025-12-11T17:42:39.373+03:00  INFO 5032 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-inventory-service-1, groupId=inventory-service] Notifying assignor about the new Assignment(partitions=[orders-0])
+2025-12-11T17:42:39.376+03:00  INFO 5032 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-inventory-service-1, groupId=inventory-service] Adding newly assigned partitions: orders-0
+2025-12-11T17:42:39.397+03:00  INFO 5032 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-inventory-service-1, groupId=inventory-service] Setting offset for partition orders-0 to the committed offset FetchPosition{offset=14, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}
+2025-12-11T17:42:39.399+03:00  INFO 5032 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : inventory-service: partitions assigned: [orders-0]
+2025-12-11T17:51:36.407+03:00  INFO 5032 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-inventory-service-1, groupId=inventory-service] Node -1 disconnected.
+2025-12-11T18:03:48.945+03:00  INFO 5032 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.s.i.kafka.InventoryOrderListener       : InventoryOrderListener: received OrderCreatedEvent, orderId=36, itemsCount=2
+2025-12-11T18:03:48.954+03:00  INFO 5032 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.s.i.kafka.InventoryOrderListener       : InventoryOrderListener: productId=3 quantity 7 -> 6 (reserved 1) for orderId=36
+2025-12-11T18:03:48.957+03:00  INFO 5032 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.s.i.kafka.InventoryOrderListener       : InventoryOrderListener: productId=4 quantity 10 -> 9 (reserved 1) for orderId=36
+2025-12-11T18:03:48.957+03:00  INFO 5032 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.s.i.kafka.InventoryOrderListener       : InventoryOrderListener: successfully reserved items for orderId=36
+2025-12-11T18:03:56.978+03:00  INFO 5032 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.s.i.kafka.InventoryOrderListener       : InventoryOrderListener: received OrderCreatedEvent, orderId=37, itemsCount=2
+2025-12-11T18:03:56.979+03:00  INFO 5032 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.s.i.kafka.InventoryOrderListener       : InventoryOrderListener: productId=1 quantity 1 -> 0 (reserved 1) for orderId=37
+2025-12-11T18:03:56.981+03:00  INFO 5032 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.s.i.kafka.InventoryOrderListener       : InventoryOrderListener: productId=2 quantity 1 -> 0 (reserved 1) for orderId=37
+2025-12-11T18:03:56.982+03:00  INFO 5032 --- [inventory-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.s.i.kafka.InventoryOrderListener       : InventoryOrderListener: successfully reserved items for orderId=37

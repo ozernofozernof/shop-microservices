@@ -1,26 +1,25 @@
-2025-12-10T02:10:22.927+03:00  INFO 6720 --- [order-service] [main] c.s.o.OrderServiceApplication            : Starting OrderServiceApplication using Java 17.0.2 with PID 6720 (D:\DeskTop\Reposit\shop-microservices\order-service\target\classes started by Павел in D:\DeskTop\Reposit\shop-microservices\order-service)
-2025-12-10T02:10:22.930+03:00  INFO 6720 --- [order-service] [main] c.s.o.OrderServiceApplication            : No active profile set, falling back to 1 default profile: "default"
-2025-12-10T02:10:23.460+03:00  INFO 6720 --- [order-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-12-10T02:10:23.515+03:00  INFO 6720 --- [order-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46 ms. Found 4 JPA repository interfaces.
-2025-12-10T02:10:24.075+03:00  INFO 6720 --- [order-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
-2025-12-10T02:10:24.085+03:00  INFO 6720 --- [order-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-12-10T02:10:24.086+03:00  INFO 6720 --- [order-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
-2025-12-10T02:10:24.159+03:00  INFO 6720 --- [order-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-12-10T02:10:24.160+03:00  INFO 6720 --- [order-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1190 ms
-2025-12-10T02:10:24.264+03:00  INFO 6720 --- [order-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-12-10T02:10:24.313+03:00  INFO 6720 --- [order-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
-2025-12-10T02:10:24.342+03:00  INFO 6720 --- [order-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-12-10T02:10:24.537+03:00  INFO 6720 --- [order-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-12-10T02:10:24.561+03:00  INFO 6720 --- [order-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-12-10T02:10:24.697+03:00  INFO 6720 --- [order-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4fe2dd02
-2025-12-10T02:10:24.699+03:00  INFO 6720 --- [order-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-12-10T02:10:25.765+03:00  INFO 6720 --- [order-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-12-10T02:10:25.960+03:00  INFO 6720 --- [order-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-12-10T02:10:26.458+03:00  INFO 6720 --- [order-service] [main] n.d.b.g.c.a.GrpcClientAutoConfiguration  : Detected grpc-netty-shaded: Creating ShadedNettyChannelFactory + InProcessChannelFactory
-2025-12-10T02:10:26.772+03:00  WARN 6720 --- [order-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-12-10T02:10:26.918+03:00  INFO 6720 --- [order-service] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@18bab95b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@70e07ef8, org.springframework.security.web.context.SecurityContextHolderFilter@1407b93f, org.springframework.security.web.header.HeaderWriterFilter@64e680c5, org.springframework.web.filter.CorsFilter@34114276, org.springframework.security.web.authentication.logout.LogoutFilter@5dfd4fac, com.shop.orderservice.security.JwtAuthenticationFilter@4fea23d6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6a5a99d9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@278df226, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@771b2b5b, org.springframework.security.web.session.SessionManagementFilter@170b27a7, org.springframework.security.web.access.ExceptionTranslationFilter@235b4aea, org.springframework.security.web.access.intercept.AuthorizationFilter@2044f708]
-2025-12-10T02:10:27.207+03:00  INFO 6720 --- [order-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path ''
-2025-12-10T02:10:27.240+03:00  INFO 6720 --- [order-service] [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+2025-12-11T17:43:03.038+03:00  INFO 18236 --- [order-service] [main] c.s.o.OrderServiceApplication            : Starting OrderServiceApplication using Java 17.0.2 with PID 18236 (D:\DeskTop\Reposit\shop-microservices\order-service\target\classes started by Павел in D:\DeskTop\Reposit\shop-microservices\order-service)
+2025-12-11T17:43:03.044+03:00  INFO 18236 --- [order-service] [main] c.s.o.OrderServiceApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-12-11T17:43:03.549+03:00  INFO 18236 --- [order-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-11T17:43:03.599+03:00  INFO 18236 --- [order-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43 ms. Found 4 JPA repository interfaces.
+2025-12-11T17:43:04.087+03:00  INFO 18236 --- [order-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-12-11T17:43:04.104+03:00  INFO 18236 --- [order-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-11T17:43:04.105+03:00  INFO 18236 --- [order-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2025-12-11T17:43:04.169+03:00  INFO 18236 --- [order-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-12-11T17:43:04.169+03:00  INFO 18236 --- [order-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1081 ms
+2025-12-11T17:43:04.286+03:00  INFO 18236 --- [order-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-11T17:43:04.335+03:00  INFO 18236 --- [order-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2025-12-11T17:43:04.368+03:00  INFO 18236 --- [order-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-12-11T17:43:04.559+03:00  INFO 18236 --- [order-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-11T17:43:04.583+03:00  INFO 18236 --- [order-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-12-11T17:43:04.716+03:00  INFO 18236 --- [order-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@75839695
+2025-12-11T17:43:04.718+03:00  INFO 18236 --- [order-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-12-11T17:43:05.557+03:00  INFO 18236 --- [order-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-11T17:43:05.681+03:00  INFO 18236 --- [order-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-11T17:43:05.961+03:00  INFO 18236 --- [order-service] [main] n.d.b.g.c.a.GrpcClientAutoConfiguration  : Detected grpc-netty-shaded: Creating ShadedNettyChannelFactory + InProcessChannelFactory
+2025-12-11T17:43:06.277+03:00  WARN 18236 --- [order-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-11T17:43:06.598+03:00  INFO 18236 --- [order-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path ''
+2025-12-11T17:43:06.632+03:00  INFO 18236 --- [order-service] [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
 	allow.auto.create.topics = true
 	auto.commit.interval.ms = 5000
 	auto.include.jmx.reporter = true
@@ -114,45 +113,302 @@
 	ssl.truststore.type = JKS
 	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
 
-2025-12-10T02:10:27.341+03:00  INFO 6720 --- [order-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
-2025-12-10T02:10:27.341+03:00  INFO 6720 --- [order-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
-2025-12-10T02:10:27.342+03:00  INFO 6720 --- [order-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1765321827340
-2025-12-10T02:10:27.344+03:00  INFO 6720 --- [order-service] [main] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=consumer-order-service-1, groupId=order-service] Subscribed to topic(s): order-status
-2025-12-10T02:10:27.358+03:00  INFO 6720 --- [order-service] [main] c.s.o.OrderServiceApplication            : Started OrderServiceApplication in 4.816 seconds (process running for 5.127)
-2025-12-10T02:10:27.635+03:00  INFO 6720 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-order-service-1, groupId=order-service] Cluster ID: 1gJd-S3mSVaBVIEDusvs6w
-2025-12-10T02:10:27.636+03:00  INFO 6720 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
-2025-12-10T02:10:27.637+03:00  INFO 6720 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] (Re-)joining group
-2025-12-10T02:10:27.650+03:00  INFO 6720 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Request joining group due to: need to re-join with the given member-id: consumer-order-service-1-49912e81-607a-4a54-89f0-cf3d6374bd6b
-2025-12-10T02:10:27.651+03:00  INFO 6720 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
-2025-12-10T02:10:27.651+03:00  INFO 6720 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] (Re-)joining group
-2025-12-10T02:10:30.655+03:00  INFO 6720 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Successfully joined group with generation Generation{generationId=4, memberId='consumer-order-service-1-49912e81-607a-4a54-89f0-cf3d6374bd6b', protocol='range'}
-2025-12-10T02:10:30.660+03:00  INFO 6720 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Finished assignment for group at generation 4: {consumer-order-service-1-49912e81-607a-4a54-89f0-cf3d6374bd6b=Assignment(partitions=[order-status-0])}
-2025-12-10T02:10:30.667+03:00  INFO 6720 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Successfully synced group in generation Generation{generationId=4, memberId='consumer-order-service-1-49912e81-607a-4a54-89f0-cf3d6374bd6b', protocol='range'}
-2025-12-10T02:10:30.668+03:00  INFO 6720 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Notifying assignor about the new Assignment(partitions=[order-status-0])
-2025-12-10T02:10:30.670+03:00  INFO 6720 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Adding newly assigned partitions: order-status-0
-2025-12-10T02:10:30.681+03:00  INFO 6720 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Setting offset for partition order-status-0 to the committed offset FetchPosition{offset=1, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}
-2025-12-10T02:10:30.682+03:00  INFO 6720 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : order-service: partitions assigned: [order-status-0]
-2025-12-10T02:11:00.078+03:00  INFO 6720 --- [order-service] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-12-10T02:11:00.079+03:00  INFO 6720 --- [order-service] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-12-10T02:11:00.080+03:00  INFO 6720 --- [order-service] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2025-12-10T02:11:00.099+03:00  INFO 6720 --- [order-service] [http-nio-8081-exec-1] c.s.o.security.JwtAuthenticationFilter   : FILTER ACTIVE: /api/orders
-2025-12-10T02:11:05.517+03:00  INFO 6720 --- [order-service] [http-nio-8081-exec-3] c.s.o.security.JwtAuthenticationFilter   : FILTER ACTIVE: /api/auth/login
-2025-12-10T02:11:10.898+03:00  INFO 6720 --- [order-service] [http-nio-8081-exec-2] c.s.o.security.JwtAuthenticationFilter   : FILTER ACTIVE: /api/orders
-2025-12-10T02:11:24.941+03:00  INFO 6720 --- [order-service] [http-nio-8081-exec-5] c.s.o.security.JwtAuthenticationFilter   : FILTER ACTIVE: /api/orders
-2025-12-10T02:11:24.972+03:00  INFO 6720 --- [order-service] [http-nio-8081-exec-5] c.s.o.controller.OrderController         : OrderController: POST /api/orders called, itemsCount=2
-2025-12-10T02:11:24.973+03:00  INFO 6720 --- [order-service] [http-nio-8081-exec-5] c.s.orderservice.service.OrderService    : OrderService: createOrder started, username=testuser, itemsCount=2
-2025-12-10T02:11:24.976+03:00  INFO 6720 --- [order-service] [http-nio-8081-exec-5] c.s.orderservice.service.OrderService    : OrderService: sending inventory check for 2 items
-2025-12-10T02:11:24.992+03:00  INFO 6720 --- [order-service] [http-nio-8081-exec-5] c.s.orderservice.grpc.InventoryClient    : Calling InventoryService.checkAvailability for 2 items
-2025-12-10T02:11:25.232+03:00  INFO 6720 --- [order-service] [http-nio-8081-exec-5] c.s.orderservice.grpc.InventoryClient    : Received inventory response with 2 products
-2025-12-10T02:11:25.233+03:00  INFO 6720 --- [order-service] [http-nio-8081-exec-5] c.s.orderservice.service.OrderService    : OrderService: inventory response contains 2 products
-2025-12-10T02:11:25.233+03:00  INFO 6720 --- [order-service] [http-nio-8081-exec-5] c.s.orderservice.service.OrderService    : OrderService: saving order (PENDING), username=testuser, totalPrice=11394.00, itemsCount=2
-2025-12-10T02:11:25.270+03:00  INFO 6720 --- [order-service] [http-nio-8081-exec-5] c.s.orderservice.service.OrderService    : OrderService: order saved, orderId=24, status=PENDING, totalPrice=11394.00
-2025-12-10T02:11:25.294+03:00  INFO 6720 --- [order-service] [http-nio-8081-exec-5] c.s.orderservice.service.OrderService    : OrderService: outbox message created, outboxId=20, orderId=24, status=NEW
-2025-12-10T02:11:25.295+03:00  INFO 6720 --- [order-service] [http-nio-8081-exec-5] c.s.orderservice.service.OrderService    : OrderService: createOrder finished, orderId=24, userId=3, totalPrice=11394.00
-2025-12-10T02:11:25.307+03:00  INFO 6720 --- [order-service] [http-nio-8081-exec-5] c.s.o.controller.OrderController         : OrderController: order created successfully, orderId=24, userId=3, totalPrice=11394.00, itemsCount=2
-2025-12-10T02:11:26.146+03:00  INFO 6720 --- [order-service] [scheduling-1] c.s.orderservice.kafka.OutboxPublisher   : OutboxPublisher: found 1 NEW messages to send
-2025-12-10T02:11:26.146+03:00  INFO 6720 --- [order-service] [scheduling-1] c.s.orderservice.kafka.OutboxPublisher   : OutboxPublisher: sending outboxId=20 for orderId=24 to topic=orders
-2025-12-10T02:11:26.152+03:00  INFO 6720 --- [order-service] [scheduling-1] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+2025-12-11T17:43:06.737+03:00  INFO 18236 --- [order-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
+2025-12-11T17:43:06.737+03:00  INFO 18236 --- [order-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
+2025-12-11T17:43:06.737+03:00  INFO 18236 --- [order-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1765464186736
+2025-12-11T17:43:06.740+03:00  INFO 18236 --- [order-service] [main] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=consumer-order-service-1, groupId=order-service] Subscribed to topic(s): order-status
+2025-12-11T17:43:06.754+03:00  INFO 18236 --- [order-service] [main] c.s.o.OrderServiceApplication            : Started OrderServiceApplication in 4.152 seconds (process running for 4.45)
+2025-12-11T17:43:07.058+03:00  INFO 18236 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-order-service-1, groupId=order-service] Cluster ID: 1gJd-S3mSVaBVIEDusvs6w
+2025-12-11T17:43:07.059+03:00  INFO 18236 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-12-11T17:43:07.061+03:00  INFO 18236 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] (Re-)joining group
+2025-12-11T17:43:07.074+03:00  INFO 18236 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Request joining group due to: need to re-join with the given member-id: consumer-order-service-1-848d793c-79ea-4b21-a39b-bdc8003b460c
+2025-12-11T17:43:07.074+03:00  INFO 18236 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2025-12-11T17:43:07.075+03:00  INFO 18236 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] (Re-)joining group
+2025-12-11T17:43:10.079+03:00  INFO 18236 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Successfully joined group with generation Generation{generationId=15, memberId='consumer-order-service-1-848d793c-79ea-4b21-a39b-bdc8003b460c', protocol='range'}
+2025-12-11T17:43:10.084+03:00  INFO 18236 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Finished assignment for group at generation 15: {consumer-order-service-1-848d793c-79ea-4b21-a39b-bdc8003b460c=Assignment(partitions=[order-status-0])}
+2025-12-11T17:43:10.091+03:00  INFO 18236 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Successfully synced group in generation Generation{generationId=15, memberId='consumer-order-service-1-848d793c-79ea-4b21-a39b-bdc8003b460c', protocol='range'}
+2025-12-11T17:43:10.091+03:00  INFO 18236 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Notifying assignor about the new Assignment(partitions=[order-status-0])
+2025-12-11T17:43:10.094+03:00  INFO 18236 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Adding newly assigned partitions: order-status-0
+2025-12-11T17:43:10.107+03:00  INFO 18236 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Setting offset for partition order-status-0 to the committed offset FetchPosition{offset=1, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}
+2025-12-11T17:43:10.108+03:00  INFO 18236 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : order-service: partitions assigned: [order-status-0]
+2025-12-11T17:44:26.592+03:00  INFO 18236 --- [order-service] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-11T17:44:26.592+03:00  INFO 18236 --- [order-service] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-12-11T17:44:26.593+03:00  INFO 18236 --- [order-service] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-12-11T17:44:26.680+03:00 ERROR 18236 --- [order-service] [http-nio-8081-exec-1] c.s.o.exception.GlobalExceptionHandler   : Unhandled exception:
+
+org.springframework.web.bind.MissingRequestHeaderException: Required request header 'X-User-Name' for method parameter type String is not present
+	at org.springframework.web.method.annotation.RequestHeaderMethodArgumentResolver.handleMissingValue(RequestHeaderMethodArgumentResolver.java:87) ~[spring-web-6.1.3.jar:6.1.3]
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.handleMissingValue(AbstractNamedValueMethodArgumentResolver.java:233) ~[spring-web-6.1.3.jar:6.1.3]
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:124) ~[spring-web-6.1.3.jar:6.1.3]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122) ~[spring-web-6.1.3.jar:6.1.3]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:225) ~[spring-web-6.1.3.jar:6.1.3]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:178) ~[spring-web-6.1.3.jar:6.1.3]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.3.jar:6.1.3]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:917) ~[spring-webmvc-6.1.3.jar:6.1.3]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:829) ~[spring-webmvc-6.1.3.jar:6.1.3]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.3.jar:6.1.3]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.3.jar:6.1.3]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.3.jar:6.1.3]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.3.jar:6.1.3]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.1.3.jar:6.1.3]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.18.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.3.jar:6.1.3]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.18.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.18.jar:10.1.18]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.3.jar:6.1.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.3.jar:6.1.3]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.3.jar:6.1.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.3.jar:6.1.3]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.3.jar:6.1.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.3.jar:6.1.3]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2025-12-11T17:44:48.182+03:00 ERROR 18236 --- [order-service] [http-nio-8081-exec-4] c.s.o.exception.GlobalExceptionHandler   : Unhandled exception:
+
+org.springframework.web.bind.MissingRequestHeaderException: Required request header 'X-User-Name' for method parameter type String is not present
+	at org.springframework.web.method.annotation.RequestHeaderMethodArgumentResolver.handleMissingValue(RequestHeaderMethodArgumentResolver.java:87) ~[spring-web-6.1.3.jar:6.1.3]
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.handleMissingValue(AbstractNamedValueMethodArgumentResolver.java:233) ~[spring-web-6.1.3.jar:6.1.3]
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:124) ~[spring-web-6.1.3.jar:6.1.3]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122) ~[spring-web-6.1.3.jar:6.1.3]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:225) ~[spring-web-6.1.3.jar:6.1.3]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:178) ~[spring-web-6.1.3.jar:6.1.3]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.3.jar:6.1.3]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:917) ~[spring-webmvc-6.1.3.jar:6.1.3]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:829) ~[spring-webmvc-6.1.3.jar:6.1.3]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.3.jar:6.1.3]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.3.jar:6.1.3]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.3.jar:6.1.3]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.3.jar:6.1.3]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.1.3.jar:6.1.3]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.18.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.3.jar:6.1.3]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.18.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.18.jar:10.1.18]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.3.jar:6.1.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.3.jar:6.1.3]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.3.jar:6.1.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.3.jar:6.1.3]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.3.jar:6.1.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.3.jar:6.1.3]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2025-12-11T17:52:07.542+03:00  INFO 18236 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-order-service-1, groupId=order-service] Node -1 disconnected.
+2025-12-11T18:02:21.870+03:00  INFO 18236 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Revoke previously assigned partitions order-status-0
+2025-12-11T18:02:21.871+03:00  INFO 18236 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : order-service: partitions revoked: [order-status-0]
+2025-12-11T18:02:21.871+03:00  INFO 18236 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Member consumer-order-service-1-848d793c-79ea-4b21-a39b-bdc8003b460c sending LeaveGroup request to coordinator localhost:9092 (id: 2147483646 rack: null) due to the consumer unsubscribed from all topics
+2025-12-11T18:02:21.872+03:00  INFO 18236 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-12-11T18:02:21.872+03:00  INFO 18236 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Request joining group due to: consumer pro-actively leaving the group
+2025-12-11T18:02:21.873+03:00  INFO 18236 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=consumer-order-service-1, groupId=order-service] Unsubscribed all topics or patterns and assigned partitions
+2025-12-11T18:02:21.874+03:00  INFO 18236 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-12-11T18:02:21.874+03:00  INFO 18236 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Request joining group due to: consumer pro-actively leaving the group
+2025-12-11T18:02:22.367+03:00  INFO 18236 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2025-12-11T18:02:22.367+03:00  INFO 18236 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-12-11T18:02:22.367+03:00  INFO 18236 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2025-12-11T18:02:22.371+03:00  INFO 18236 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-order-service-1 unregistered
+2025-12-11T18:02:22.372+03:00  INFO 18236 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : order-service: Consumer stopped
+2025-12-11T18:02:22.388+03:00  INFO 18236 --- [order-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-11T18:02:22.390+03:00  INFO 18236 --- [order-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-12-11T18:02:22.393+03:00  INFO 18236 --- [order-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-12-11T18:02:45.213+03:00  INFO 9696 --- [order-service] [main] c.s.o.OrderServiceApplication            : Starting OrderServiceApplication using Java 17.0.2 with PID 9696 (D:\DeskTop\Reposit\shop-microservices\order-service\target\classes started by Павел in D:\DeskTop\Reposit\shop-microservices\order-service)
+2025-12-11T18:02:45.216+03:00  INFO 9696 --- [order-service] [main] c.s.o.OrderServiceApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-12-11T18:02:45.706+03:00  INFO 9696 --- [order-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-11T18:02:45.756+03:00  INFO 9696 --- [order-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43 ms. Found 4 JPA repository interfaces.
+2025-12-11T18:02:46.243+03:00  INFO 9696 --- [order-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-12-11T18:02:46.261+03:00  INFO 9696 --- [order-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-11T18:02:46.261+03:00  INFO 9696 --- [order-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2025-12-11T18:02:46.325+03:00  INFO 9696 --- [order-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-12-11T18:02:46.326+03:00  INFO 9696 --- [order-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1069 ms
+2025-12-11T18:02:46.443+03:00  INFO 9696 --- [order-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-11T18:02:46.493+03:00  INFO 9696 --- [order-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2025-12-11T18:02:46.522+03:00  INFO 9696 --- [order-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-12-11T18:02:46.717+03:00  INFO 9696 --- [order-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-11T18:02:46.740+03:00  INFO 9696 --- [order-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-12-11T18:02:46.878+03:00  INFO 9696 --- [order-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@46b6701e
+2025-12-11T18:02:46.879+03:00  INFO 9696 --- [order-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-12-11T18:02:47.725+03:00  INFO 9696 --- [order-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-11T18:02:47.804+03:00  INFO 9696 --- [order-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-11T18:02:48.134+03:00  INFO 9696 --- [order-service] [main] n.d.b.g.c.a.GrpcClientAutoConfiguration  : Detected grpc-netty-shaded: Creating ShadedNettyChannelFactory + InProcessChannelFactory
+2025-12-11T18:02:48.521+03:00  WARN 9696 --- [order-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-11T18:02:48.859+03:00  INFO 9696 --- [order-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path ''
+2025-12-11T18:02:48.893+03:00  INFO 9696 --- [order-service] [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-order-service-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = order-service
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2025-12-11T18:02:48.997+03:00  INFO 9696 --- [order-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
+2025-12-11T18:02:48.997+03:00  INFO 9696 --- [order-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
+2025-12-11T18:02:48.998+03:00  INFO 9696 --- [order-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1765465368996
+2025-12-11T18:02:49.000+03:00  INFO 9696 --- [order-service] [main] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=consumer-order-service-1, groupId=order-service] Subscribed to topic(s): order-status
+2025-12-11T18:02:49.014+03:00  INFO 9696 --- [order-service] [main] c.s.o.OrderServiceApplication            : Started OrderServiceApplication in 4.195 seconds (process running for 4.493)
+2025-12-11T18:02:49.301+03:00  INFO 9696 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-order-service-1, groupId=order-service] Cluster ID: 1gJd-S3mSVaBVIEDusvs6w
+2025-12-11T18:02:49.303+03:00  INFO 9696 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-12-11T18:02:49.305+03:00  INFO 9696 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] (Re-)joining group
+2025-12-11T18:02:49.318+03:00  INFO 9696 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Request joining group due to: need to re-join with the given member-id: consumer-order-service-1-7b730f82-7ed1-4713-9e0a-3c2f075006ac
+2025-12-11T18:02:49.318+03:00  INFO 9696 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2025-12-11T18:02:49.319+03:00  INFO 9696 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] (Re-)joining group
+2025-12-11T18:02:52.322+03:00  INFO 9696 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Successfully joined group with generation Generation{generationId=17, memberId='consumer-order-service-1-7b730f82-7ed1-4713-9e0a-3c2f075006ac', protocol='range'}
+2025-12-11T18:02:52.327+03:00  INFO 9696 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Finished assignment for group at generation 17: {consumer-order-service-1-7b730f82-7ed1-4713-9e0a-3c2f075006ac=Assignment(partitions=[order-status-0])}
+2025-12-11T18:02:52.333+03:00  INFO 9696 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Successfully synced group in generation Generation{generationId=17, memberId='consumer-order-service-1-7b730f82-7ed1-4713-9e0a-3c2f075006ac', protocol='range'}
+2025-12-11T18:02:52.335+03:00  INFO 9696 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Notifying assignor about the new Assignment(partitions=[order-status-0])
+2025-12-11T18:02:52.336+03:00  INFO 9696 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Adding newly assigned partitions: order-status-0
+2025-12-11T18:02:52.348+03:00  INFO 9696 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Setting offset for partition order-status-0 to the committed offset FetchPosition{offset=1, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}
+2025-12-11T18:02:52.349+03:00  INFO 9696 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : order-service: partitions assigned: [order-status-0]
+2025-12-11T18:03:47.536+03:00  INFO 9696 --- [order-service] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-11T18:03:47.537+03:00  INFO 9696 --- [order-service] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-12-11T18:03:47.538+03:00  INFO 9696 --- [order-service] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-12-11T18:03:47.623+03:00  INFO 9696 --- [order-service] [http-nio-8081-exec-1] c.s.o.controller.OrderController         : OrderController: POST /api/orders called, user=testuser, itemsCount=2
+2025-12-11T18:03:47.625+03:00  INFO 9696 --- [order-service] [http-nio-8081-exec-1] c.s.orderservice.service.OrderService    : OrderService: createOrder started, username=testuser, itemsCount=2
+2025-12-11T18:03:47.637+03:00  INFO 9696 --- [order-service] [http-nio-8081-exec-1] c.s.orderservice.service.OrderService    : OrderService: sending inventory check for 2 items
+2025-12-11T18:03:47.652+03:00  INFO 9696 --- [order-service] [http-nio-8081-exec-1] c.s.orderservice.grpc.InventoryClient    : Calling InventoryService.checkAvailability for 2 items
+2025-12-11T18:03:48.142+03:00  INFO 9696 --- [order-service] [http-nio-8081-exec-1] c.s.orderservice.grpc.InventoryClient    : Received inventory response with 2 products
+2025-12-11T18:03:48.142+03:00  INFO 9696 --- [order-service] [http-nio-8081-exec-1] c.s.orderservice.service.OrderService    : OrderService: inventory response contains 2 products
+2025-12-11T18:03:48.143+03:00  INFO 9696 --- [order-service] [http-nio-8081-exec-1] c.s.orderservice.service.OrderService    : OrderService: saving order (PENDING), username=testuser, totalPrice=2848.50, itemsCount=2
+2025-12-11T18:03:48.187+03:00  INFO 9696 --- [order-service] [http-nio-8081-exec-1] c.s.orderservice.service.OrderService    : OrderService: order saved, orderId=36, status=PENDING, totalPrice=2848.50
+2025-12-11T18:03:48.235+03:00  INFO 9696 --- [order-service] [http-nio-8081-exec-1] c.s.orderservice.service.OrderService    : OrderService: outbox message created, outboxId=32, orderId=36, status=NEW
+2025-12-11T18:03:48.236+03:00  INFO 9696 --- [order-service] [http-nio-8081-exec-1] c.s.orderservice.service.OrderService    : OrderService: createOrder finished, orderId=36, userId=3, totalPrice=2848.50
+2025-12-11T18:03:48.247+03:00  INFO 9696 --- [order-service] [http-nio-8081-exec-1] c.s.o.controller.OrderController         : OrderController: order created successfully, orderId=36, userId=3, totalPrice=2848.50, itemsCount=2
+2025-12-11T18:03:48.796+03:00  INFO 9696 --- [order-service] [scheduling-1] c.s.orderservice.kafka.OutboxPublisher   : OutboxPublisher: found 1 NEW messages to send
+2025-12-11T18:03:48.796+03:00  INFO 9696 --- [order-service] [scheduling-1] c.s.orderservice.kafka.OutboxPublisher   : OutboxPublisher: sending outboxId=32 for orderId=36 to topic=orders
+2025-12-11T18:03:48.810+03:00  INFO 9696 --- [order-service] [scheduling-1] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
 	acks = -1
 	auto.include.jmx.reporter = true
 	batch.size = 16384
@@ -242,1196 +498,32 @@
 	transactional.id = null
 	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
 
-2025-12-10T02:11:26.162+03:00  INFO 6720 --- [order-service] [scheduling-1] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
-2025-12-10T02:11:26.174+03:00  INFO 6720 --- [order-service] [scheduling-1] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
-2025-12-10T02:11:26.174+03:00  INFO 6720 --- [order-service] [scheduling-1] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
-2025-12-10T02:11:26.174+03:00  INFO 6720 --- [order-service] [scheduling-1] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1765321886174
-2025-12-10T02:11:26.182+03:00  INFO 6720 --- [order-service] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: 1gJd-S3mSVaBVIEDusvs6w
-2025-12-10T02:11:26.182+03:00  INFO 6720 --- [order-service] [kafka-producer-network-thread | producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 1001 with epoch 0
-2025-12-10T02:11:26.190+03:00  INFO 6720 --- [order-service] [scheduling-1] c.s.orderservice.kafka.OutboxPublisher   : OutboxPublisher: message sent successfully, outboxId=20, orderId=24, newStatus=SENT
-2025-12-10T02:11:58.933+03:00  INFO 17968 --- [order-service] [main] c.s.o.OrderServiceApplication            : Starting OrderServiceApplication using Java 17.0.2 with PID 17968 (D:\DeskTop\Reposit\shop-microservices\order-service\target\classes started by Павел in D:\DeskTop\Reposit\shop-microservices\order-service)
-2025-12-10T02:11:58.935+03:00  INFO 17968 --- [order-service] [main] c.s.o.OrderServiceApplication            : No active profile set, falling back to 1 default profile: "default"
-2025-12-10T02:11:59.457+03:00  INFO 17968 --- [order-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-12-10T02:11:59.511+03:00  INFO 17968 --- [order-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47 ms. Found 4 JPA repository interfaces.
-2025-12-10T02:12:00.050+03:00  INFO 17968 --- [order-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
-2025-12-10T02:12:00.068+03:00  INFO 17968 --- [order-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-12-10T02:12:00.068+03:00  INFO 17968 --- [order-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
-2025-12-10T02:12:00.133+03:00  INFO 17968 --- [order-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-12-10T02:12:00.133+03:00  INFO 17968 --- [order-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1159 ms
-2025-12-10T02:12:00.239+03:00  INFO 17968 --- [order-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-12-10T02:12:00.287+03:00  INFO 17968 --- [order-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
-2025-12-10T02:12:00.316+03:00  INFO 17968 --- [order-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-12-10T02:12:00.510+03:00  INFO 17968 --- [order-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-12-10T02:12:00.533+03:00  INFO 17968 --- [order-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-12-10T02:12:00.667+03:00  INFO 17968 --- [order-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5817f1ca
-2025-12-10T02:12:00.669+03:00  INFO 17968 --- [order-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-12-10T02:12:01.509+03:00  INFO 17968 --- [order-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-12-10T02:12:01.583+03:00  INFO 17968 --- [order-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-12-10T02:12:01.943+03:00  INFO 17968 --- [order-service] [main] n.d.b.g.c.a.GrpcClientAutoConfiguration  : Detected grpc-netty-shaded: Creating ShadedNettyChannelFactory + InProcessChannelFactory
-2025-12-10T02:12:02.303+03:00  WARN 17968 --- [order-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-12-10T02:12:02.451+03:00  INFO 17968 --- [order-service] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@70e07ef8, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@771b2b5b, org.springframework.security.web.context.SecurityContextHolderFilter@5aff8207, org.springframework.security.web.header.HeaderWriterFilter@1dcf5f38, org.springframework.web.filter.CorsFilter@5923210, org.springframework.security.web.authentication.logout.LogoutFilter@1d2aa638, com.shop.orderservice.security.JwtAuthenticationFilter@7a689979, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@278df226, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@eea69a9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1aa64998, org.springframework.security.web.session.SessionManagementFilter@79392584, org.springframework.security.web.access.ExceptionTranslationFilter@31f4fdc5, org.springframework.security.web.access.intercept.AuthorizationFilter@4bb4cc8c]
-2025-12-10T02:12:02.713+03:00  INFO 17968 --- [order-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path ''
-2025-12-10T02:12:02.746+03:00  INFO 17968 --- [order-service] [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
-	allow.auto.create.topics = true
-	auto.commit.interval.ms = 5000
-	auto.include.jmx.reporter = true
-	auto.offset.reset = latest
-	bootstrap.servers = [localhost:9092]
-	check.crcs = true
-	client.dns.lookup = use_all_dns_ips
-	client.id = consumer-order-service-1
-	client.rack = 
-	connections.max.idle.ms = 540000
-	default.api.timeout.ms = 60000
-	enable.auto.commit = false
-	exclude.internal.topics = true
-	fetch.max.bytes = 52428800
-	fetch.max.wait.ms = 500
-	fetch.min.bytes = 1
-	group.id = order-service
-	group.instance.id = null
-	heartbeat.interval.ms = 3000
-	interceptor.classes = []
-	internal.leave.group.on.close = true
-	internal.throw.on.fetch.stable.offset.unsupported = false
-	isolation.level = read_uncommitted
-	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
-	max.partition.fetch.bytes = 1048576
-	max.poll.interval.ms = 300000
-	max.poll.records = 500
-	metadata.max.age.ms = 300000
-	metric.reporters = []
-	metrics.num.samples = 2
-	metrics.recording.level = INFO
-	metrics.sample.window.ms = 30000
-	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
-	receive.buffer.bytes = 65536
-	reconnect.backoff.max.ms = 1000
-	reconnect.backoff.ms = 50
-	request.timeout.ms = 30000
-	retry.backoff.ms = 100
-	sasl.client.callback.handler.class = null
-	sasl.jaas.config = null
-	sasl.kerberos.kinit.cmd = /usr/bin/kinit
-	sasl.kerberos.min.time.before.relogin = 60000
-	sasl.kerberos.service.name = null
-	sasl.kerberos.ticket.renew.jitter = 0.05
-	sasl.kerberos.ticket.renew.window.factor = 0.8
-	sasl.login.callback.handler.class = null
-	sasl.login.class = null
-	sasl.login.connect.timeout.ms = null
-	sasl.login.read.timeout.ms = null
-	sasl.login.refresh.buffer.seconds = 300
-	sasl.login.refresh.min.period.seconds = 60
-	sasl.login.refresh.window.factor = 0.8
-	sasl.login.refresh.window.jitter = 0.05
-	sasl.login.retry.backoff.max.ms = 10000
-	sasl.login.retry.backoff.ms = 100
-	sasl.mechanism = GSSAPI
-	sasl.oauthbearer.clock.skew.seconds = 30
-	sasl.oauthbearer.expected.audience = null
-	sasl.oauthbearer.expected.issuer = null
-	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
-	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
-	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
-	sasl.oauthbearer.jwks.endpoint.url = null
-	sasl.oauthbearer.scope.claim.name = scope
-	sasl.oauthbearer.sub.claim.name = sub
-	sasl.oauthbearer.token.endpoint.url = null
-	security.protocol = PLAINTEXT
-	security.providers = null
-	send.buffer.bytes = 131072
-	session.timeout.ms = 45000
-	socket.connection.setup.timeout.max.ms = 30000
-	socket.connection.setup.timeout.ms = 10000
-	ssl.cipher.suites = null
-	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
-	ssl.endpoint.identification.algorithm = https
-	ssl.engine.factory.class = null
-	ssl.key.password = null
-	ssl.keymanager.algorithm = SunX509
-	ssl.keystore.certificate.chain = null
-	ssl.keystore.key = null
-	ssl.keystore.location = null
-	ssl.keystore.password = null
-	ssl.keystore.type = JKS
-	ssl.protocol = TLSv1.3
-	ssl.provider = null
-	ssl.secure.random.implementation = null
-	ssl.trustmanager.algorithm = PKIX
-	ssl.truststore.certificates = null
-	ssl.truststore.location = null
-	ssl.truststore.password = null
-	ssl.truststore.type = JKS
-	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
-
-2025-12-10T02:12:02.850+03:00  INFO 17968 --- [order-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
-2025-12-10T02:12:02.850+03:00  INFO 17968 --- [order-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
-2025-12-10T02:12:02.851+03:00  INFO 17968 --- [order-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1765321922849
-2025-12-10T02:12:02.854+03:00  INFO 17968 --- [order-service] [main] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=consumer-order-service-1, groupId=order-service] Subscribed to topic(s): order-status
-2025-12-10T02:12:02.868+03:00  INFO 17968 --- [order-service] [main] c.s.o.OrderServiceApplication            : Started OrderServiceApplication in 4.32 seconds (process running for 4.625)
-2025-12-10T02:12:03.139+03:00  INFO 17968 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-order-service-1, groupId=order-service] Cluster ID: 1gJd-S3mSVaBVIEDusvs6w
-2025-12-10T02:12:03.140+03:00  INFO 17968 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
-2025-12-10T02:12:03.141+03:00  INFO 17968 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] (Re-)joining group
-2025-12-10T02:12:03.154+03:00  INFO 17968 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Request joining group due to: need to re-join with the given member-id: consumer-order-service-1-ded9b0fb-14f4-4c7c-83e7-850f81c5a5a7
-2025-12-10T02:12:03.155+03:00  INFO 17968 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
-2025-12-10T02:12:03.155+03:00  INFO 17968 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] (Re-)joining group
-2025-12-10T02:12:08.819+03:00  INFO 17968 --- [order-service] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-12-10T02:12:08.820+03:00  INFO 17968 --- [order-service] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-12-10T02:12:08.821+03:00  INFO 17968 --- [order-service] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2025-12-10T02:12:08.837+03:00  INFO 17968 --- [order-service] [http-nio-8081-exec-1] c.s.o.security.JwtAuthenticationFilter   : FILTER ACTIVE: /api/orders
-2025-12-10T02:12:08.972+03:00  INFO 17968 --- [order-service] [http-nio-8081-exec-1] c.s.o.controller.OrderController         : OrderController: POST /api/orders called, itemsCount=2
-2025-12-10T02:12:08.973+03:00  INFO 17968 --- [order-service] [http-nio-8081-exec-1] c.s.orderservice.service.OrderService    : OrderService: createOrder started, username=testuser, itemsCount=2
-2025-12-10T02:12:08.976+03:00  INFO 17968 --- [order-service] [http-nio-8081-exec-1] c.s.orderservice.service.OrderService    : OrderService: sending inventory check for 2 items
-2025-12-10T02:12:08.991+03:00  INFO 17968 --- [order-service] [http-nio-8081-exec-1] c.s.orderservice.grpc.InventoryClient    : Calling InventoryService.checkAvailability for 2 items
-2025-12-10T02:12:09.215+03:00  INFO 17968 --- [order-service] [http-nio-8081-exec-1] c.s.orderservice.grpc.InventoryClient    : Received inventory response with 2 products
-2025-12-10T02:12:09.216+03:00  INFO 17968 --- [order-service] [http-nio-8081-exec-1] c.s.orderservice.service.OrderService    : OrderService: inventory response contains 2 products
-2025-12-10T02:12:09.216+03:00  INFO 17968 --- [order-service] [http-nio-8081-exec-1] c.s.orderservice.service.OrderService    : OrderService: saving order (PENDING), username=testuser, totalPrice=11394.00, itemsCount=2
-2025-12-10T02:12:09.254+03:00  INFO 17968 --- [order-service] [http-nio-8081-exec-1] c.s.orderservice.service.OrderService    : OrderService: order saved, orderId=25, status=PENDING, totalPrice=11394.00
-2025-12-10T02:12:09.289+03:00  INFO 17968 --- [order-service] [http-nio-8081-exec-1] c.s.orderservice.service.OrderService    : OrderService: outbox message created, outboxId=21, orderId=25, status=NEW
-2025-12-10T02:12:09.290+03:00  INFO 17968 --- [order-service] [http-nio-8081-exec-1] c.s.orderservice.service.OrderService    : OrderService: createOrder finished, orderId=25, userId=3, totalPrice=11394.00
-2025-12-10T02:12:09.300+03:00  INFO 17968 --- [order-service] [http-nio-8081-exec-1] c.s.o.controller.OrderController         : OrderController: order created successfully, orderId=25, userId=3, totalPrice=11394.00, itemsCount=2
-2025-12-10T02:12:10.108+03:00  INFO 17968 --- [order-service] [scheduling-1] c.s.orderservice.kafka.OutboxPublisher   : OutboxPublisher: found 1 NEW messages to send
-2025-12-10T02:12:10.108+03:00  INFO 17968 --- [order-service] [scheduling-1] c.s.orderservice.kafka.OutboxPublisher   : OutboxPublisher: sending outboxId=21 for orderId=25 to topic=orders
-2025-12-10T02:12:10.115+03:00  INFO 17968 --- [order-service] [scheduling-1] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
-	acks = -1
-	auto.include.jmx.reporter = true
-	batch.size = 16384
-	bootstrap.servers = [localhost:9092]
-	buffer.memory = 33554432
-	client.dns.lookup = use_all_dns_ips
-	client.id = producer-1
-	compression.type = none
-	connections.max.idle.ms = 540000
-	delivery.timeout.ms = 120000
-	enable.idempotence = true
-	interceptor.classes = []
-	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
-	linger.ms = 0
-	max.block.ms = 60000
-	max.in.flight.requests.per.connection = 5
-	max.request.size = 1048576
-	metadata.max.age.ms = 300000
-	metadata.max.idle.ms = 300000
-	metric.reporters = []
-	metrics.num.samples = 2
-	metrics.recording.level = INFO
-	metrics.sample.window.ms = 30000
-	partitioner.adaptive.partitioning.enable = true
-	partitioner.availability.timeout.ms = 0
-	partitioner.class = null
-	partitioner.ignore.keys = false
-	receive.buffer.bytes = 32768
-	reconnect.backoff.max.ms = 1000
-	reconnect.backoff.ms = 50
-	request.timeout.ms = 30000
-	retries = 2147483647
-	retry.backoff.ms = 100
-	sasl.client.callback.handler.class = null
-	sasl.jaas.config = null
-	sasl.kerberos.kinit.cmd = /usr/bin/kinit
-	sasl.kerberos.min.time.before.relogin = 60000
-	sasl.kerberos.service.name = null
-	sasl.kerberos.ticket.renew.jitter = 0.05
-	sasl.kerberos.ticket.renew.window.factor = 0.8
-	sasl.login.callback.handler.class = null
-	sasl.login.class = null
-	sasl.login.connect.timeout.ms = null
-	sasl.login.read.timeout.ms = null
-	sasl.login.refresh.buffer.seconds = 300
-	sasl.login.refresh.min.period.seconds = 60
-	sasl.login.refresh.window.factor = 0.8
-	sasl.login.refresh.window.jitter = 0.05
-	sasl.login.retry.backoff.max.ms = 10000
-	sasl.login.retry.backoff.ms = 100
-	sasl.mechanism = GSSAPI
-	sasl.oauthbearer.clock.skew.seconds = 30
-	sasl.oauthbearer.expected.audience = null
-	sasl.oauthbearer.expected.issuer = null
-	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
-	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
-	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
-	sasl.oauthbearer.jwks.endpoint.url = null
-	sasl.oauthbearer.scope.claim.name = scope
-	sasl.oauthbearer.sub.claim.name = sub
-	sasl.oauthbearer.token.endpoint.url = null
-	security.protocol = PLAINTEXT
-	security.providers = null
-	send.buffer.bytes = 131072
-	socket.connection.setup.timeout.max.ms = 30000
-	socket.connection.setup.timeout.ms = 10000
-	ssl.cipher.suites = null
-	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
-	ssl.endpoint.identification.algorithm = https
-	ssl.engine.factory.class = null
-	ssl.key.password = null
-	ssl.keymanager.algorithm = SunX509
-	ssl.keystore.certificate.chain = null
-	ssl.keystore.key = null
-	ssl.keystore.location = null
-	ssl.keystore.password = null
-	ssl.keystore.type = JKS
-	ssl.protocol = TLSv1.3
-	ssl.provider = null
-	ssl.secure.random.implementation = null
-	ssl.trustmanager.algorithm = PKIX
-	ssl.truststore.certificates = null
-	ssl.truststore.location = null
-	ssl.truststore.password = null
-	ssl.truststore.type = JKS
-	transaction.timeout.ms = 60000
-	transactional.id = null
-	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
-
-2025-12-10T02:12:10.124+03:00  INFO 17968 --- [order-service] [scheduling-1] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
-2025-12-10T02:12:10.136+03:00  INFO 17968 --- [order-service] [scheduling-1] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
-2025-12-10T02:12:10.136+03:00  INFO 17968 --- [order-service] [scheduling-1] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
-2025-12-10T02:12:10.136+03:00  INFO 17968 --- [order-service] [scheduling-1] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1765321930136
-2025-12-10T02:12:10.143+03:00  INFO 17968 --- [order-service] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: 1gJd-S3mSVaBVIEDusvs6w
-2025-12-10T02:12:10.143+03:00  INFO 17968 --- [order-service] [kafka-producer-network-thread | producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 1002 with epoch 0
-2025-12-10T02:12:10.154+03:00  INFO 17968 --- [order-service] [scheduling-1] c.s.orderservice.kafka.OutboxPublisher   : OutboxPublisher: message sent successfully, outboxId=21, orderId=25, newStatus=SENT
-2025-12-10T02:12:18.816+03:00  INFO 17968 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Successfully joined group with generation Generation{generationId=5, memberId='consumer-order-service-1-ded9b0fb-14f4-4c7c-83e7-850f81c5a5a7', protocol='range'}
-2025-12-10T02:12:18.821+03:00  INFO 17968 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Finished assignment for group at generation 5: {consumer-order-service-1-ded9b0fb-14f4-4c7c-83e7-850f81c5a5a7=Assignment(partitions=[order-status-0])}
-2025-12-10T02:12:18.827+03:00  INFO 17968 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Successfully synced group in generation Generation{generationId=5, memberId='consumer-order-service-1-ded9b0fb-14f4-4c7c-83e7-850f81c5a5a7', protocol='range'}
-2025-12-10T02:12:18.828+03:00  INFO 17968 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Notifying assignor about the new Assignment(partitions=[order-status-0])
-2025-12-10T02:12:18.830+03:00  INFO 17968 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Adding newly assigned partitions: order-status-0
-2025-12-10T02:12:18.840+03:00  INFO 17968 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Setting offset for partition order-status-0 to the committed offset FetchPosition{offset=1, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}
-2025-12-10T02:12:18.841+03:00  INFO 17968 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : order-service: partitions assigned: [order-status-0]
-2025-12-10T02:15:53.917+03:00  INFO 4628 --- [order-service] [main] c.s.o.OrderServiceApplication            : Starting OrderServiceApplication using Java 17.0.2 with PID 4628 (D:\DeskTop\Reposit\shop-microservices\order-service\target\classes started by Павел in D:\DeskTop\Reposit\shop-microservices\order-service)
-2025-12-10T02:15:53.919+03:00  INFO 4628 --- [order-service] [main] c.s.o.OrderServiceApplication            : No active profile set, falling back to 1 default profile: "default"
-2025-12-10T02:15:54.480+03:00  INFO 4628 --- [order-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-12-10T02:15:54.536+03:00  INFO 4628 --- [order-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49 ms. Found 4 JPA repository interfaces.
-2025-12-10T02:15:55.119+03:00  INFO 4628 --- [order-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
-2025-12-10T02:15:55.129+03:00  INFO 4628 --- [order-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-12-10T02:15:55.130+03:00  INFO 4628 --- [order-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
-2025-12-10T02:15:55.204+03:00  INFO 4628 --- [order-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-12-10T02:15:55.205+03:00  INFO 4628 --- [order-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1242 ms
-2025-12-10T02:15:55.313+03:00  INFO 4628 --- [order-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-12-10T02:15:55.365+03:00  INFO 4628 --- [order-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
-2025-12-10T02:15:55.400+03:00  INFO 4628 --- [order-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-12-10T02:15:55.590+03:00  INFO 4628 --- [order-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-12-10T02:15:55.614+03:00  INFO 4628 --- [order-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-12-10T02:15:55.758+03:00  INFO 4628 --- [order-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@542c65d9
-2025-12-10T02:15:55.759+03:00  INFO 4628 --- [order-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-12-10T02:15:56.605+03:00  INFO 4628 --- [order-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-12-10T02:15:56.687+03:00  INFO 4628 --- [order-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-12-10T02:15:57.052+03:00  INFO 4628 --- [order-service] [main] n.d.b.g.c.a.GrpcClientAutoConfiguration  : Detected grpc-netty-shaded: Creating ShadedNettyChannelFactory + InProcessChannelFactory
-2025-12-10T02:15:57.363+03:00  WARN 4628 --- [order-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-12-10T02:15:57.509+03:00  INFO 4628 --- [order-service] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5dfd4fac, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1d2aa638, org.springframework.security.web.context.SecurityContextHolderFilter@21dbd651, org.springframework.security.web.header.HeaderWriterFilter@6b578779, org.springframework.web.filter.CorsFilter@54fd5759, org.springframework.security.web.authentication.logout.LogoutFilter@5c8859b4, com.shop.orderservice.security.JwtAuthenticationFilter@28befd62, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6a577564, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@67915454, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2f08e6d3, org.springframework.security.web.session.SessionManagementFilter@4557723a, org.springframework.security.web.access.ExceptionTranslationFilter@46c92d27, org.springframework.security.web.access.intercept.AuthorizationFilter@534c3b9d]
-2025-12-10T02:15:57.775+03:00  INFO 4628 --- [order-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path ''
-2025-12-10T02:15:57.808+03:00  INFO 4628 --- [order-service] [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
-	allow.auto.create.topics = true
-	auto.commit.interval.ms = 5000
-	auto.include.jmx.reporter = true
-	auto.offset.reset = latest
-	bootstrap.servers = [localhost:9092]
-	check.crcs = true
-	client.dns.lookup = use_all_dns_ips
-	client.id = consumer-order-service-1
-	client.rack = 
-	connections.max.idle.ms = 540000
-	default.api.timeout.ms = 60000
-	enable.auto.commit = false
-	exclude.internal.topics = true
-	fetch.max.bytes = 52428800
-	fetch.max.wait.ms = 500
-	fetch.min.bytes = 1
-	group.id = order-service
-	group.instance.id = null
-	heartbeat.interval.ms = 3000
-	interceptor.classes = []
-	internal.leave.group.on.close = true
-	internal.throw.on.fetch.stable.offset.unsupported = false
-	isolation.level = read_uncommitted
-	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
-	max.partition.fetch.bytes = 1048576
-	max.poll.interval.ms = 300000
-	max.poll.records = 500
-	metadata.max.age.ms = 300000
-	metric.reporters = []
-	metrics.num.samples = 2
-	metrics.recording.level = INFO
-	metrics.sample.window.ms = 30000
-	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
-	receive.buffer.bytes = 65536
-	reconnect.backoff.max.ms = 1000
-	reconnect.backoff.ms = 50
-	request.timeout.ms = 30000
-	retry.backoff.ms = 100
-	sasl.client.callback.handler.class = null
-	sasl.jaas.config = null
-	sasl.kerberos.kinit.cmd = /usr/bin/kinit
-	sasl.kerberos.min.time.before.relogin = 60000
-	sasl.kerberos.service.name = null
-	sasl.kerberos.ticket.renew.jitter = 0.05
-	sasl.kerberos.ticket.renew.window.factor = 0.8
-	sasl.login.callback.handler.class = null
-	sasl.login.class = null
-	sasl.login.connect.timeout.ms = null
-	sasl.login.read.timeout.ms = null
-	sasl.login.refresh.buffer.seconds = 300
-	sasl.login.refresh.min.period.seconds = 60
-	sasl.login.refresh.window.factor = 0.8
-	sasl.login.refresh.window.jitter = 0.05
-	sasl.login.retry.backoff.max.ms = 10000
-	sasl.login.retry.backoff.ms = 100
-	sasl.mechanism = GSSAPI
-	sasl.oauthbearer.clock.skew.seconds = 30
-	sasl.oauthbearer.expected.audience = null
-	sasl.oauthbearer.expected.issuer = null
-	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
-	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
-	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
-	sasl.oauthbearer.jwks.endpoint.url = null
-	sasl.oauthbearer.scope.claim.name = scope
-	sasl.oauthbearer.sub.claim.name = sub
-	sasl.oauthbearer.token.endpoint.url = null
-	security.protocol = PLAINTEXT
-	security.providers = null
-	send.buffer.bytes = 131072
-	session.timeout.ms = 45000
-	socket.connection.setup.timeout.max.ms = 30000
-	socket.connection.setup.timeout.ms = 10000
-	ssl.cipher.suites = null
-	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
-	ssl.endpoint.identification.algorithm = https
-	ssl.engine.factory.class = null
-	ssl.key.password = null
-	ssl.keymanager.algorithm = SunX509
-	ssl.keystore.certificate.chain = null
-	ssl.keystore.key = null
-	ssl.keystore.location = null
-	ssl.keystore.password = null
-	ssl.keystore.type = JKS
-	ssl.protocol = TLSv1.3
-	ssl.provider = null
-	ssl.secure.random.implementation = null
-	ssl.trustmanager.algorithm = PKIX
-	ssl.truststore.certificates = null
-	ssl.truststore.location = null
-	ssl.truststore.password = null
-	ssl.truststore.type = JKS
-	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
-
-2025-12-10T02:15:57.914+03:00  INFO 4628 --- [order-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
-2025-12-10T02:15:57.915+03:00  INFO 4628 --- [order-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
-2025-12-10T02:15:57.915+03:00  INFO 4628 --- [order-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1765322157913
-2025-12-10T02:15:57.918+03:00  INFO 4628 --- [order-service] [main] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=consumer-order-service-1, groupId=order-service] Subscribed to topic(s): order-status
-2025-12-10T02:15:57.933+03:00  INFO 4628 --- [order-service] [main] c.s.o.OrderServiceApplication            : Started OrderServiceApplication in 4.4 seconds (process running for 4.752)
-2025-12-10T02:15:58.211+03:00  INFO 4628 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-order-service-1, groupId=order-service] Cluster ID: 1gJd-S3mSVaBVIEDusvs6w
-2025-12-10T02:15:58.212+03:00  INFO 4628 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
-2025-12-10T02:15:58.214+03:00  INFO 4628 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] (Re-)joining group
-2025-12-10T02:15:58.227+03:00  INFO 4628 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Request joining group due to: need to re-join with the given member-id: consumer-order-service-1-a2b9f700-8981-484e-a5da-f4ee3728e55e
-2025-12-10T02:15:58.228+03:00  INFO 4628 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
-2025-12-10T02:15:58.228+03:00  INFO 4628 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] (Re-)joining group
-2025-12-10T02:16:01.232+03:00  INFO 4628 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Successfully joined group with generation Generation{generationId=7, memberId='consumer-order-service-1-a2b9f700-8981-484e-a5da-f4ee3728e55e', protocol='range'}
-2025-12-10T02:16:01.236+03:00  INFO 4628 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Finished assignment for group at generation 7: {consumer-order-service-1-a2b9f700-8981-484e-a5da-f4ee3728e55e=Assignment(partitions=[order-status-0])}
-2025-12-10T02:16:01.243+03:00  INFO 4628 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Successfully synced group in generation Generation{generationId=7, memberId='consumer-order-service-1-a2b9f700-8981-484e-a5da-f4ee3728e55e', protocol='range'}
-2025-12-10T02:16:01.244+03:00  INFO 4628 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Notifying assignor about the new Assignment(partitions=[order-status-0])
-2025-12-10T02:16:01.247+03:00  INFO 4628 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Adding newly assigned partitions: order-status-0
-2025-12-10T02:16:01.258+03:00  INFO 4628 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Setting offset for partition order-status-0 to the committed offset FetchPosition{offset=1, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}
-2025-12-10T02:16:01.259+03:00  INFO 4628 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : order-service: partitions assigned: [order-status-0]
-2025-12-10T02:16:43.676+03:00  INFO 4628 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Revoke previously assigned partitions order-status-0
-2025-12-10T02:16:43.676+03:00  INFO 4628 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : order-service: partitions revoked: [order-status-0]
-2025-12-10T02:16:43.677+03:00  INFO 4628 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Member consumer-order-service-1-a2b9f700-8981-484e-a5da-f4ee3728e55e sending LeaveGroup request to coordinator localhost:9092 (id: 2147483646 rack: null) due to the consumer unsubscribed from all topics
-2025-12-10T02:16:43.678+03:00  INFO 4628 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Resetting generation and member id due to: consumer pro-actively leaving the group
-2025-12-10T02:16:43.678+03:00  INFO 4628 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Request joining group due to: consumer pro-actively leaving the group
-2025-12-10T02:16:43.678+03:00  INFO 4628 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=consumer-order-service-1, groupId=order-service] Unsubscribed all topics or patterns and assigned partitions
-2025-12-10T02:16:43.679+03:00  INFO 4628 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Resetting generation and member id due to: consumer pro-actively leaving the group
-2025-12-10T02:16:43.679+03:00  INFO 4628 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Request joining group due to: consumer pro-actively leaving the group
-2025-12-10T02:16:43.986+03:00  INFO 4628 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
-2025-12-10T02:16:43.986+03:00  INFO 4628 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
-2025-12-10T02:16:43.987+03:00  INFO 4628 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
-2025-12-10T02:16:43.990+03:00  INFO 4628 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-order-service-1 unregistered
-2025-12-10T02:16:43.991+03:00  INFO 4628 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : order-service: Consumer stopped
-2025-12-10T02:16:44.006+03:00  INFO 4628 --- [order-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-12-10T02:16:44.008+03:00  INFO 4628 --- [order-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-12-10T02:16:44.014+03:00  INFO 4628 --- [order-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-12-10T02:18:38.998+03:00  INFO 17460 --- [order-service] [main] c.s.o.OrderServiceApplication            : Starting OrderServiceApplication using Java 17.0.2 with PID 17460 (D:\DeskTop\Reposit\shop-microservices\order-service\target\classes started by Павел in D:\DeskTop\Reposit\shop-microservices\order-service)
-2025-12-10T02:18:39.001+03:00  INFO 17460 --- [order-service] [main] c.s.o.OrderServiceApplication            : No active profile set, falling back to 1 default profile: "default"
-2025-12-10T02:18:39.527+03:00  INFO 17460 --- [order-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-12-10T02:18:39.581+03:00  INFO 17460 --- [order-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47 ms. Found 4 JPA repository interfaces.
-2025-12-10T02:18:40.113+03:00  INFO 17460 --- [order-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
-2025-12-10T02:18:40.124+03:00  INFO 17460 --- [order-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-12-10T02:18:40.124+03:00  INFO 17460 --- [order-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
-2025-12-10T02:18:40.195+03:00  INFO 17460 --- [order-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-12-10T02:18:40.196+03:00  INFO 17460 --- [order-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1149 ms
-2025-12-10T02:18:40.297+03:00  INFO 17460 --- [order-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-12-10T02:18:40.346+03:00  INFO 17460 --- [order-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
-2025-12-10T02:18:40.375+03:00  INFO 17460 --- [order-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-12-10T02:18:40.570+03:00  INFO 17460 --- [order-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-12-10T02:18:40.594+03:00  INFO 17460 --- [order-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-12-10T02:18:40.728+03:00  INFO 17460 --- [order-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5817f1ca
-2025-12-10T02:18:40.729+03:00  INFO 17460 --- [order-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-12-10T02:18:41.578+03:00  INFO 17460 --- [order-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-12-10T02:18:41.658+03:00  INFO 17460 --- [order-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-12-10T02:18:41.999+03:00  INFO 17460 --- [order-service] [main] n.d.b.g.c.a.GrpcClientAutoConfiguration  : Detected grpc-netty-shaded: Creating ShadedNettyChannelFactory + InProcessChannelFactory
-2025-12-10T02:18:42.337+03:00  WARN 17460 --- [order-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-12-10T02:18:42.481+03:00  INFO 17460 --- [order-service] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@70e07ef8, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@771b2b5b, org.springframework.security.web.context.SecurityContextHolderFilter@5aff8207, org.springframework.security.web.header.HeaderWriterFilter@1dcf5f38, org.springframework.web.filter.CorsFilter@5923210, org.springframework.security.web.authentication.logout.LogoutFilter@1d2aa638, com.shop.orderservice.security.JwtAuthenticationFilter@7a689979, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@278df226, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@eea69a9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1aa64998, org.springframework.security.web.session.SessionManagementFilter@79392584, org.springframework.security.web.access.ExceptionTranslationFilter@31f4fdc5, org.springframework.security.web.access.intercept.AuthorizationFilter@4bb4cc8c]
-2025-12-10T02:18:42.745+03:00  INFO 17460 --- [order-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path ''
-2025-12-10T02:18:42.778+03:00  INFO 17460 --- [order-service] [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
-	allow.auto.create.topics = true
-	auto.commit.interval.ms = 5000
-	auto.include.jmx.reporter = true
-	auto.offset.reset = latest
-	bootstrap.servers = [localhost:9092]
-	check.crcs = true
-	client.dns.lookup = use_all_dns_ips
-	client.id = consumer-order-service-1
-	client.rack = 
-	connections.max.idle.ms = 540000
-	default.api.timeout.ms = 60000
-	enable.auto.commit = false
-	exclude.internal.topics = true
-	fetch.max.bytes = 52428800
-	fetch.max.wait.ms = 500
-	fetch.min.bytes = 1
-	group.id = order-service
-	group.instance.id = null
-	heartbeat.interval.ms = 3000
-	interceptor.classes = []
-	internal.leave.group.on.close = true
-	internal.throw.on.fetch.stable.offset.unsupported = false
-	isolation.level = read_uncommitted
-	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
-	max.partition.fetch.bytes = 1048576
-	max.poll.interval.ms = 300000
-	max.poll.records = 500
-	metadata.max.age.ms = 300000
-	metric.reporters = []
-	metrics.num.samples = 2
-	metrics.recording.level = INFO
-	metrics.sample.window.ms = 30000
-	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
-	receive.buffer.bytes = 65536
-	reconnect.backoff.max.ms = 1000
-	reconnect.backoff.ms = 50
-	request.timeout.ms = 30000
-	retry.backoff.ms = 100
-	sasl.client.callback.handler.class = null
-	sasl.jaas.config = null
-	sasl.kerberos.kinit.cmd = /usr/bin/kinit
-	sasl.kerberos.min.time.before.relogin = 60000
-	sasl.kerberos.service.name = null
-	sasl.kerberos.ticket.renew.jitter = 0.05
-	sasl.kerberos.ticket.renew.window.factor = 0.8
-	sasl.login.callback.handler.class = null
-	sasl.login.class = null
-	sasl.login.connect.timeout.ms = null
-	sasl.login.read.timeout.ms = null
-	sasl.login.refresh.buffer.seconds = 300
-	sasl.login.refresh.min.period.seconds = 60
-	sasl.login.refresh.window.factor = 0.8
-	sasl.login.refresh.window.jitter = 0.05
-	sasl.login.retry.backoff.max.ms = 10000
-	sasl.login.retry.backoff.ms = 100
-	sasl.mechanism = GSSAPI
-	sasl.oauthbearer.clock.skew.seconds = 30
-	sasl.oauthbearer.expected.audience = null
-	sasl.oauthbearer.expected.issuer = null
-	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
-	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
-	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
-	sasl.oauthbearer.jwks.endpoint.url = null
-	sasl.oauthbearer.scope.claim.name = scope
-	sasl.oauthbearer.sub.claim.name = sub
-	sasl.oauthbearer.token.endpoint.url = null
-	security.protocol = PLAINTEXT
-	security.providers = null
-	send.buffer.bytes = 131072
-	session.timeout.ms = 45000
-	socket.connection.setup.timeout.max.ms = 30000
-	socket.connection.setup.timeout.ms = 10000
-	ssl.cipher.suites = null
-	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
-	ssl.endpoint.identification.algorithm = https
-	ssl.engine.factory.class = null
-	ssl.key.password = null
-	ssl.keymanager.algorithm = SunX509
-	ssl.keystore.certificate.chain = null
-	ssl.keystore.key = null
-	ssl.keystore.location = null
-	ssl.keystore.password = null
-	ssl.keystore.type = JKS
-	ssl.protocol = TLSv1.3
-	ssl.provider = null
-	ssl.secure.random.implementation = null
-	ssl.trustmanager.algorithm = PKIX
-	ssl.truststore.certificates = null
-	ssl.truststore.location = null
-	ssl.truststore.password = null
-	ssl.truststore.type = JKS
-	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
-
-2025-12-10T02:18:42.876+03:00  INFO 17460 --- [order-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
-2025-12-10T02:18:42.876+03:00  INFO 17460 --- [order-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
-2025-12-10T02:18:42.876+03:00  INFO 17460 --- [order-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1765322322875
-2025-12-10T02:18:42.879+03:00  INFO 17460 --- [order-service] [main] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=consumer-order-service-1, groupId=order-service] Subscribed to topic(s): order-status
-2025-12-10T02:18:42.893+03:00  INFO 17460 --- [order-service] [main] c.s.o.OrderServiceApplication            : Started OrderServiceApplication in 4.288 seconds (process running for 4.597)
-2025-12-10T02:18:43.171+03:00  INFO 17460 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-order-service-1, groupId=order-service] Cluster ID: 1gJd-S3mSVaBVIEDusvs6w
-2025-12-10T02:18:43.172+03:00  INFO 17460 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
-2025-12-10T02:18:43.174+03:00  INFO 17460 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] (Re-)joining group
-2025-12-10T02:18:43.187+03:00  INFO 17460 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Request joining group due to: need to re-join with the given member-id: consumer-order-service-1-8c512c3f-63d5-4b33-ad45-442b2fa997bf
-2025-12-10T02:18:43.188+03:00  INFO 17460 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
-2025-12-10T02:18:43.188+03:00  INFO 17460 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] (Re-)joining group
-2025-12-10T02:18:46.192+03:00  INFO 17460 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Successfully joined group with generation Generation{generationId=9, memberId='consumer-order-service-1-8c512c3f-63d5-4b33-ad45-442b2fa997bf', protocol='range'}
-2025-12-10T02:18:46.197+03:00  INFO 17460 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Finished assignment for group at generation 9: {consumer-order-service-1-8c512c3f-63d5-4b33-ad45-442b2fa997bf=Assignment(partitions=[order-status-0])}
-2025-12-10T02:18:46.203+03:00  INFO 17460 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Successfully synced group in generation Generation{generationId=9, memberId='consumer-order-service-1-8c512c3f-63d5-4b33-ad45-442b2fa997bf', protocol='range'}
-2025-12-10T02:18:46.205+03:00  INFO 17460 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Notifying assignor about the new Assignment(partitions=[order-status-0])
-2025-12-10T02:18:46.207+03:00  INFO 17460 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Adding newly assigned partitions: order-status-0
-2025-12-10T02:18:46.218+03:00  INFO 17460 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Setting offset for partition order-status-0 to the committed offset FetchPosition{offset=1, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}
-2025-12-10T02:18:46.219+03:00  INFO 17460 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : order-service: partitions assigned: [order-status-0]
-2025-12-10T02:21:11.853+03:00  INFO 17460 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Revoke previously assigned partitions order-status-0
-2025-12-10T02:21:11.854+03:00  INFO 17460 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : order-service: partitions revoked: [order-status-0]
-2025-12-10T02:21:11.854+03:00  INFO 17460 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Member consumer-order-service-1-8c512c3f-63d5-4b33-ad45-442b2fa997bf sending LeaveGroup request to coordinator localhost:9092 (id: 2147483646 rack: null) due to the consumer unsubscribed from all topics
-2025-12-10T02:21:11.855+03:00  INFO 17460 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Resetting generation and member id due to: consumer pro-actively leaving the group
-2025-12-10T02:21:11.855+03:00  INFO 17460 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Request joining group due to: consumer pro-actively leaving the group
-2025-12-10T02:21:11.855+03:00  INFO 17460 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=consumer-order-service-1, groupId=order-service] Unsubscribed all topics or patterns and assigned partitions
-2025-12-10T02:21:11.856+03:00  INFO 17460 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Resetting generation and member id due to: consumer pro-actively leaving the group
-2025-12-10T02:21:11.857+03:00  INFO 17460 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Request joining group due to: consumer pro-actively leaving the group
-2025-12-10T02:21:12.051+03:00  INFO 17460 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
-2025-12-10T02:21:12.051+03:00  INFO 17460 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
-2025-12-10T02:21:12.052+03:00  INFO 17460 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
-2025-12-10T02:21:12.056+03:00  INFO 17460 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-order-service-1 unregistered
-2025-12-10T02:21:12.056+03:00  INFO 17460 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : order-service: Consumer stopped
-2025-12-10T02:21:12.072+03:00  INFO 17460 --- [order-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-12-10T02:21:12.074+03:00  INFO 17460 --- [order-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-12-10T02:21:12.080+03:00  INFO 17460 --- [order-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-12-10T02:21:36.710+03:00  INFO 13208 --- [order-service] [main] c.s.o.OrderServiceApplication            : Starting OrderServiceApplication using Java 17.0.2 with PID 13208 (D:\DeskTop\Reposit\shop-microservices\order-service\target\classes started by Павел in D:\DeskTop\Reposit\shop-microservices\order-service)
-2025-12-10T02:21:36.712+03:00  INFO 13208 --- [order-service] [main] c.s.o.OrderServiceApplication            : No active profile set, falling back to 1 default profile: "default"
-2025-12-10T02:21:37.236+03:00  INFO 13208 --- [order-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-12-10T02:21:37.289+03:00  INFO 13208 --- [order-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48 ms. Found 4 JPA repository interfaces.
-2025-12-10T02:21:37.816+03:00  INFO 13208 --- [order-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
-2025-12-10T02:21:37.826+03:00  INFO 13208 --- [order-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-12-10T02:21:37.827+03:00  INFO 13208 --- [order-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
-2025-12-10T02:21:37.899+03:00  INFO 13208 --- [order-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-12-10T02:21:37.900+03:00  INFO 13208 --- [order-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1146 ms
-2025-12-10T02:21:38.007+03:00  INFO 13208 --- [order-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-12-10T02:21:38.055+03:00  INFO 13208 --- [order-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
-2025-12-10T02:21:38.083+03:00  INFO 13208 --- [order-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-12-10T02:21:38.276+03:00  INFO 13208 --- [order-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-12-10T02:21:38.299+03:00  INFO 13208 --- [order-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-12-10T02:21:38.435+03:00  INFO 13208 --- [order-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5817f1ca
-2025-12-10T02:21:38.436+03:00  INFO 13208 --- [order-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-12-10T02:21:39.266+03:00  INFO 13208 --- [order-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-12-10T02:21:39.344+03:00  INFO 13208 --- [order-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-12-10T02:21:39.700+03:00  INFO 13208 --- [order-service] [main] n.d.b.g.c.a.GrpcClientAutoConfiguration  : Detected grpc-netty-shaded: Creating ShadedNettyChannelFactory + InProcessChannelFactory
-2025-12-10T02:21:40.041+03:00  WARN 13208 --- [order-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-12-10T02:21:40.197+03:00  INFO 13208 --- [order-service] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@70e07ef8, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@771b2b5b, org.springframework.security.web.context.SecurityContextHolderFilter@5aff8207, org.springframework.security.web.header.HeaderWriterFilter@1dcf5f38, org.springframework.web.filter.CorsFilter@5923210, org.springframework.security.web.authentication.logout.LogoutFilter@1d2aa638, com.shop.orderservice.security.JwtAuthenticationFilter@7a689979, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@278df226, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@eea69a9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1aa64998, org.springframework.security.web.session.SessionManagementFilter@79392584, org.springframework.security.web.access.ExceptionTranslationFilter@31f4fdc5, org.springframework.security.web.access.intercept.AuthorizationFilter@4bb4cc8c]
-2025-12-10T02:21:40.469+03:00  INFO 13208 --- [order-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path ''
-2025-12-10T02:21:40.509+03:00  INFO 13208 --- [order-service] [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
-	allow.auto.create.topics = true
-	auto.commit.interval.ms = 5000
-	auto.include.jmx.reporter = true
-	auto.offset.reset = latest
-	bootstrap.servers = [localhost:9092]
-	check.crcs = true
-	client.dns.lookup = use_all_dns_ips
-	client.id = consumer-order-service-1
-	client.rack = 
-	connections.max.idle.ms = 540000
-	default.api.timeout.ms = 60000
-	enable.auto.commit = false
-	exclude.internal.topics = true
-	fetch.max.bytes = 52428800
-	fetch.max.wait.ms = 500
-	fetch.min.bytes = 1
-	group.id = order-service
-	group.instance.id = null
-	heartbeat.interval.ms = 3000
-	interceptor.classes = []
-	internal.leave.group.on.close = true
-	internal.throw.on.fetch.stable.offset.unsupported = false
-	isolation.level = read_uncommitted
-	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
-	max.partition.fetch.bytes = 1048576
-	max.poll.interval.ms = 300000
-	max.poll.records = 500
-	metadata.max.age.ms = 300000
-	metric.reporters = []
-	metrics.num.samples = 2
-	metrics.recording.level = INFO
-	metrics.sample.window.ms = 30000
-	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
-	receive.buffer.bytes = 65536
-	reconnect.backoff.max.ms = 1000
-	reconnect.backoff.ms = 50
-	request.timeout.ms = 30000
-	retry.backoff.ms = 100
-	sasl.client.callback.handler.class = null
-	sasl.jaas.config = null
-	sasl.kerberos.kinit.cmd = /usr/bin/kinit
-	sasl.kerberos.min.time.before.relogin = 60000
-	sasl.kerberos.service.name = null
-	sasl.kerberos.ticket.renew.jitter = 0.05
-	sasl.kerberos.ticket.renew.window.factor = 0.8
-	sasl.login.callback.handler.class = null
-	sasl.login.class = null
-	sasl.login.connect.timeout.ms = null
-	sasl.login.read.timeout.ms = null
-	sasl.login.refresh.buffer.seconds = 300
-	sasl.login.refresh.min.period.seconds = 60
-	sasl.login.refresh.window.factor = 0.8
-	sasl.login.refresh.window.jitter = 0.05
-	sasl.login.retry.backoff.max.ms = 10000
-	sasl.login.retry.backoff.ms = 100
-	sasl.mechanism = GSSAPI
-	sasl.oauthbearer.clock.skew.seconds = 30
-	sasl.oauthbearer.expected.audience = null
-	sasl.oauthbearer.expected.issuer = null
-	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
-	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
-	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
-	sasl.oauthbearer.jwks.endpoint.url = null
-	sasl.oauthbearer.scope.claim.name = scope
-	sasl.oauthbearer.sub.claim.name = sub
-	sasl.oauthbearer.token.endpoint.url = null
-	security.protocol = PLAINTEXT
-	security.providers = null
-	send.buffer.bytes = 131072
-	session.timeout.ms = 45000
-	socket.connection.setup.timeout.max.ms = 30000
-	socket.connection.setup.timeout.ms = 10000
-	ssl.cipher.suites = null
-	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
-	ssl.endpoint.identification.algorithm = https
-	ssl.engine.factory.class = null
-	ssl.key.password = null
-	ssl.keymanager.algorithm = SunX509
-	ssl.keystore.certificate.chain = null
-	ssl.keystore.key = null
-	ssl.keystore.location = null
-	ssl.keystore.password = null
-	ssl.keystore.type = JKS
-	ssl.protocol = TLSv1.3
-	ssl.provider = null
-	ssl.secure.random.implementation = null
-	ssl.trustmanager.algorithm = PKIX
-	ssl.truststore.certificates = null
-	ssl.truststore.location = null
-	ssl.truststore.password = null
-	ssl.truststore.type = JKS
-	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
-
-2025-12-10T02:21:40.612+03:00  INFO 13208 --- [order-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
-2025-12-10T02:21:40.613+03:00  INFO 13208 --- [order-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
-2025-12-10T02:21:40.613+03:00  INFO 13208 --- [order-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1765322500611
-2025-12-10T02:21:40.615+03:00  INFO 13208 --- [order-service] [main] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=consumer-order-service-1, groupId=order-service] Subscribed to topic(s): order-status
-2025-12-10T02:21:40.629+03:00  INFO 13208 --- [order-service] [main] c.s.o.OrderServiceApplication            : Started OrderServiceApplication in 4.298 seconds (process running for 4.608)
-2025-12-10T02:21:40.904+03:00  INFO 13208 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-order-service-1, groupId=order-service] Cluster ID: 1gJd-S3mSVaBVIEDusvs6w
-2025-12-10T02:21:40.905+03:00  INFO 13208 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
-2025-12-10T02:21:40.907+03:00  INFO 13208 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] (Re-)joining group
-2025-12-10T02:21:40.920+03:00  INFO 13208 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Request joining group due to: need to re-join with the given member-id: consumer-order-service-1-2bea2ddb-6912-41ea-891d-67c7554cf67f
-2025-12-10T02:21:40.921+03:00  INFO 13208 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
-2025-12-10T02:21:40.921+03:00  INFO 13208 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] (Re-)joining group
-2025-12-10T02:21:43.924+03:00  INFO 13208 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Successfully joined group with generation Generation{generationId=11, memberId='consumer-order-service-1-2bea2ddb-6912-41ea-891d-67c7554cf67f', protocol='range'}
-2025-12-10T02:21:43.929+03:00  INFO 13208 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Finished assignment for group at generation 11: {consumer-order-service-1-2bea2ddb-6912-41ea-891d-67c7554cf67f=Assignment(partitions=[order-status-0])}
-2025-12-10T02:21:43.934+03:00  INFO 13208 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Successfully synced group in generation Generation{generationId=11, memberId='consumer-order-service-1-2bea2ddb-6912-41ea-891d-67c7554cf67f', protocol='range'}
-2025-12-10T02:21:43.935+03:00  INFO 13208 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Notifying assignor about the new Assignment(partitions=[order-status-0])
-2025-12-10T02:21:43.937+03:00  INFO 13208 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Adding newly assigned partitions: order-status-0
-2025-12-10T02:21:43.947+03:00  INFO 13208 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Setting offset for partition order-status-0 to the committed offset FetchPosition{offset=1, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}
-2025-12-10T02:21:43.948+03:00  INFO 13208 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : order-service: partitions assigned: [order-status-0]
-2025-12-10T02:21:55.484+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-12-10T02:21:55.485+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-12-10T02:21:55.486+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2025-12-10T02:21:55.505+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-1] c.s.o.security.JwtAuthenticationFilter   : FILTER ACTIVE: /api/auth/login
-2025-12-10T02:22:09.265+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-2] c.s.o.security.JwtAuthenticationFilter   : FILTER ACTIVE: /api/orders
-2025-12-10T02:22:09.311+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-2] c.s.o.controller.OrderController         : OrderController: POST /api/orders called, itemsCount=2
-2025-12-10T02:22:09.312+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-2] c.s.orderservice.service.OrderService    : OrderService: createOrder started, username=testuser, itemsCount=2
-2025-12-10T02:22:09.315+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-2] c.s.orderservice.service.OrderService    : OrderService: sending inventory check for 2 items
-2025-12-10T02:22:09.333+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-2] c.s.orderservice.grpc.InventoryClient    : Calling InventoryService.checkAvailability for 2 items
-2025-12-10T02:22:09.563+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-2] c.s.orderservice.grpc.InventoryClient    : Received inventory response with 2 products
-2025-12-10T02:22:09.564+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-2] c.s.orderservice.service.OrderService    : OrderService: inventory response contains 2 products
-2025-12-10T02:22:09.565+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-2] c.s.orderservice.service.OrderService    : OrderService: saving order (PENDING), username=testuser, totalPrice=11394.00, itemsCount=2
-2025-12-10T02:22:09.602+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-2] c.s.orderservice.service.OrderService    : OrderService: order saved, orderId=26, status=PENDING, totalPrice=11394.00
-2025-12-10T02:22:09.629+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-2] c.s.orderservice.service.OrderService    : OrderService: outbox message created, outboxId=22, orderId=26, status=NEW
-2025-12-10T02:22:09.630+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-2] c.s.orderservice.service.OrderService    : OrderService: createOrder finished, orderId=26, userId=3, totalPrice=11394.00
-2025-12-10T02:22:09.642+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-2] c.s.o.controller.OrderController         : OrderController: order created successfully, orderId=26, userId=3, totalPrice=11394.00, itemsCount=2
-2025-12-10T02:22:10.112+03:00  INFO 13208 --- [order-service] [scheduling-1] c.s.orderservice.kafka.OutboxPublisher   : OutboxPublisher: found 1 NEW messages to send
-2025-12-10T02:22:10.112+03:00  INFO 13208 --- [order-service] [scheduling-1] c.s.orderservice.kafka.OutboxPublisher   : OutboxPublisher: sending outboxId=22 for orderId=26 to topic=orders
-2025-12-10T02:22:10.119+03:00  INFO 13208 --- [order-service] [scheduling-1] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
-	acks = -1
-	auto.include.jmx.reporter = true
-	batch.size = 16384
-	bootstrap.servers = [localhost:9092]
-	buffer.memory = 33554432
-	client.dns.lookup = use_all_dns_ips
-	client.id = producer-1
-	compression.type = none
-	connections.max.idle.ms = 540000
-	delivery.timeout.ms = 120000
-	enable.idempotence = true
-	interceptor.classes = []
-	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
-	linger.ms = 0
-	max.block.ms = 60000
-	max.in.flight.requests.per.connection = 5
-	max.request.size = 1048576
-	metadata.max.age.ms = 300000
-	metadata.max.idle.ms = 300000
-	metric.reporters = []
-	metrics.num.samples = 2
-	metrics.recording.level = INFO
-	metrics.sample.window.ms = 30000
-	partitioner.adaptive.partitioning.enable = true
-	partitioner.availability.timeout.ms = 0
-	partitioner.class = null
-	partitioner.ignore.keys = false
-	receive.buffer.bytes = 32768
-	reconnect.backoff.max.ms = 1000
-	reconnect.backoff.ms = 50
-	request.timeout.ms = 30000
-	retries = 2147483647
-	retry.backoff.ms = 100
-	sasl.client.callback.handler.class = null
-	sasl.jaas.config = null
-	sasl.kerberos.kinit.cmd = /usr/bin/kinit
-	sasl.kerberos.min.time.before.relogin = 60000
-	sasl.kerberos.service.name = null
-	sasl.kerberos.ticket.renew.jitter = 0.05
-	sasl.kerberos.ticket.renew.window.factor = 0.8
-	sasl.login.callback.handler.class = null
-	sasl.login.class = null
-	sasl.login.connect.timeout.ms = null
-	sasl.login.read.timeout.ms = null
-	sasl.login.refresh.buffer.seconds = 300
-	sasl.login.refresh.min.period.seconds = 60
-	sasl.login.refresh.window.factor = 0.8
-	sasl.login.refresh.window.jitter = 0.05
-	sasl.login.retry.backoff.max.ms = 10000
-	sasl.login.retry.backoff.ms = 100
-	sasl.mechanism = GSSAPI
-	sasl.oauthbearer.clock.skew.seconds = 30
-	sasl.oauthbearer.expected.audience = null
-	sasl.oauthbearer.expected.issuer = null
-	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
-	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
-	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
-	sasl.oauthbearer.jwks.endpoint.url = null
-	sasl.oauthbearer.scope.claim.name = scope
-	sasl.oauthbearer.sub.claim.name = sub
-	sasl.oauthbearer.token.endpoint.url = null
-	security.protocol = PLAINTEXT
-	security.providers = null
-	send.buffer.bytes = 131072
-	socket.connection.setup.timeout.max.ms = 30000
-	socket.connection.setup.timeout.ms = 10000
-	ssl.cipher.suites = null
-	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
-	ssl.endpoint.identification.algorithm = https
-	ssl.engine.factory.class = null
-	ssl.key.password = null
-	ssl.keymanager.algorithm = SunX509
-	ssl.keystore.certificate.chain = null
-	ssl.keystore.key = null
-	ssl.keystore.location = null
-	ssl.keystore.password = null
-	ssl.keystore.type = JKS
-	ssl.protocol = TLSv1.3
-	ssl.provider = null
-	ssl.secure.random.implementation = null
-	ssl.trustmanager.algorithm = PKIX
-	ssl.truststore.certificates = null
-	ssl.truststore.location = null
-	ssl.truststore.password = null
-	ssl.truststore.type = JKS
-	transaction.timeout.ms = 60000
-	transactional.id = null
-	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
-
-2025-12-10T02:22:10.128+03:00  INFO 13208 --- [order-service] [scheduling-1] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
-2025-12-10T02:22:10.146+03:00  INFO 13208 --- [order-service] [scheduling-1] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
-2025-12-10T02:22:10.146+03:00  INFO 13208 --- [order-service] [scheduling-1] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
-2025-12-10T02:22:10.146+03:00  INFO 13208 --- [order-service] [scheduling-1] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1765322530145
-2025-12-10T02:22:10.153+03:00  INFO 13208 --- [order-service] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: 1gJd-S3mSVaBVIEDusvs6w
-2025-12-10T02:22:10.153+03:00  INFO 13208 --- [order-service] [kafka-producer-network-thread | producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 1003 with epoch 0
-2025-12-10T02:22:10.161+03:00  INFO 13208 --- [order-service] [scheduling-1] c.s.orderservice.kafka.OutboxPublisher   : OutboxPublisher: message sent successfully, outboxId=22, orderId=26, newStatus=SENT
-2025-12-10T02:27:40.150+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-5] c.s.o.security.JwtAuthenticationFilter   : FILTER ACTIVE: /api/orders
-2025-12-10T02:27:40.158+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-5] c.s.o.controller.OrderController         : OrderController: POST /api/orders called, itemsCount=2
-2025-12-10T02:27:40.158+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-5] c.s.orderservice.service.OrderService    : OrderService: createOrder started, username=testuser, itemsCount=2
-2025-12-10T02:27:40.161+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-5] c.s.orderservice.service.OrderService    : OrderService: sending inventory check for 2 items
-2025-12-10T02:27:40.161+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-5] c.s.orderservice.grpc.InventoryClient    : Calling InventoryService.checkAvailability for 2 items
-2025-12-10T02:27:40.174+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-5] c.s.orderservice.grpc.InventoryClient    : Received inventory response with 2 products
-2025-12-10T02:27:40.174+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-5] c.s.orderservice.service.OrderService    : OrderService: inventory response contains 2 products
-2025-12-10T02:27:40.174+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-5] c.s.orderservice.service.OrderService    : OrderService: saving order (PENDING), username=testuser, totalPrice=11394.00, itemsCount=2
-2025-12-10T02:27:40.189+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-5] c.s.orderservice.service.OrderService    : OrderService: order saved, orderId=27, status=PENDING, totalPrice=11394.00
-2025-12-10T02:27:40.195+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-5] c.s.orderservice.service.OrderService    : OrderService: outbox message created, outboxId=23, orderId=27, status=NEW
-2025-12-10T02:27:40.196+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-5] c.s.orderservice.service.OrderService    : OrderService: createOrder finished, orderId=27, userId=3, totalPrice=11394.00
-2025-12-10T02:27:40.199+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-5] c.s.o.controller.OrderController         : OrderController: order created successfully, orderId=27, userId=3, totalPrice=11394.00, itemsCount=2
-2025-12-10T02:27:40.702+03:00  INFO 13208 --- [order-service] [scheduling-1] c.s.orderservice.kafka.OutboxPublisher   : OutboxPublisher: found 1 NEW messages to send
-2025-12-10T02:27:40.702+03:00  INFO 13208 --- [order-service] [scheduling-1] c.s.orderservice.kafka.OutboxPublisher   : OutboxPublisher: sending outboxId=23 for orderId=27 to topic=orders
-2025-12-10T02:27:40.706+03:00  INFO 13208 --- [order-service] [scheduling-1] c.s.orderservice.kafka.OutboxPublisher   : OutboxPublisher: message sent successfully, outboxId=23, orderId=27, newStatus=SENT
-2025-12-10T02:27:58.381+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-3] c.s.o.security.JwtAuthenticationFilter   : FILTER ACTIVE: /api/orders
-2025-12-10T02:27:58.387+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-3] c.s.o.controller.OrderController         : OrderController: POST /api/orders called, itemsCount=2
-2025-12-10T02:27:58.387+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-3] c.s.orderservice.service.OrderService    : OrderService: createOrder started, username=testuser, itemsCount=2
-2025-12-10T02:27:58.390+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-3] c.s.orderservice.service.OrderService    : OrderService: sending inventory check for 2 items
-2025-12-10T02:27:58.391+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-3] c.s.orderservice.grpc.InventoryClient    : Calling InventoryService.checkAvailability for 2 items
-2025-12-10T02:27:58.401+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-3] c.s.orderservice.grpc.InventoryClient    : Received inventory response with 2 products
-2025-12-10T02:27:58.401+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-3] c.s.orderservice.service.OrderService    : OrderService: inventory response contains 2 products
-2025-12-10T02:27:58.401+03:00  WARN 13208 --- [order-service] [http-nio-8081-exec-3] c.s.orderservice.service.OrderService    : OrderService: not enough stock, productId=1, requested=20, available=4
-2025-12-10T02:30:41.097+03:00  INFO 13208 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-order-service-1, groupId=order-service] Node -1 disconnected.
-2025-12-10T02:31:10.757+03:00  INFO 13208 --- [order-service] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
-2025-12-10T02:31:52.048+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-6] c.s.o.security.JwtAuthenticationFilter   : FILTER ACTIVE: /api/auth/login
-2025-12-10T02:32:05.651+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-7] c.s.o.security.JwtAuthenticationFilter   : FILTER ACTIVE: /api/orders
-2025-12-10T02:32:05.657+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-7] c.s.o.controller.OrderController         : OrderController: POST /api/orders called, itemsCount=2
-2025-12-10T02:32:05.657+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-7] c.s.orderservice.service.OrderService    : OrderService: createOrder started, username=testuser, itemsCount=2
-2025-12-10T02:32:05.660+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-7] c.s.orderservice.service.OrderService    : OrderService: sending inventory check for 2 items
-2025-12-10T02:32:05.660+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-7] c.s.orderservice.grpc.InventoryClient    : Calling InventoryService.checkAvailability for 2 items
-2025-12-10T02:32:05.673+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-7] c.s.orderservice.grpc.InventoryClient    : Received inventory response with 2 products
-2025-12-10T02:32:05.673+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-7] c.s.orderservice.service.OrderService    : OrderService: inventory response contains 2 products
-2025-12-10T02:32:05.673+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-7] c.s.orderservice.service.OrderService    : OrderService: saving order (PENDING), username=testuser, totalPrice=11394.00, itemsCount=2
-2025-12-10T02:32:05.679+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-7] c.s.orderservice.service.OrderService    : OrderService: order saved, orderId=28, status=PENDING, totalPrice=11394.00
-2025-12-10T02:32:05.685+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-7] c.s.orderservice.service.OrderService    : OrderService: outbox message created, outboxId=24, orderId=28, status=NEW
-2025-12-10T02:32:05.685+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-7] c.s.orderservice.service.OrderService    : OrderService: createOrder finished, orderId=28, userId=3, totalPrice=11394.00
-2025-12-10T02:32:05.689+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-7] c.s.o.controller.OrderController         : OrderController: order created successfully, orderId=28, userId=3, totalPrice=11394.00, itemsCount=2
-2025-12-10T02:32:06.578+03:00  INFO 13208 --- [order-service] [scheduling-1] c.s.orderservice.kafka.OutboxPublisher   : OutboxPublisher: found 1 NEW messages to send
-2025-12-10T02:32:06.579+03:00  INFO 13208 --- [order-service] [scheduling-1] c.s.orderservice.kafka.OutboxPublisher   : OutboxPublisher: sending outboxId=24 for orderId=28 to topic=orders
-2025-12-10T02:32:06.579+03:00  INFO 13208 --- [order-service] [scheduling-1] c.s.orderservice.kafka.OutboxPublisher   : OutboxPublisher: message sent successfully, outboxId=24, orderId=28, newStatus=SENT
-2025-12-10T02:33:01.812+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-8] c.s.o.security.JwtAuthenticationFilter   : FILTER ACTIVE: /api/orders
-2025-12-10T02:33:01.820+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-8] c.s.o.controller.OrderController         : OrderController: POST /api/orders called, itemsCount=2
-2025-12-10T02:33:01.821+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-8] c.s.orderservice.service.OrderService    : OrderService: createOrder started, username=testuser, itemsCount=2
-2025-12-10T02:33:01.824+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-8] c.s.orderservice.service.OrderService    : OrderService: sending inventory check for 2 items
-2025-12-10T02:33:01.824+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-8] c.s.orderservice.grpc.InventoryClient    : Calling InventoryService.checkAvailability for 2 items
-2025-12-10T02:33:01.836+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-8] c.s.orderservice.grpc.InventoryClient    : Received inventory response with 2 products
-2025-12-10T02:33:01.836+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-8] c.s.orderservice.service.OrderService    : OrderService: inventory response contains 2 products
-2025-12-10T02:33:01.837+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-8] c.s.orderservice.service.OrderService    : OrderService: saving order (PENDING), username=testuser, totalPrice=11394.00, itemsCount=2
-2025-12-10T02:33:01.842+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-8] c.s.orderservice.service.OrderService    : OrderService: order saved, orderId=29, status=PENDING, totalPrice=11394.00
-2025-12-10T02:33:01.846+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-8] c.s.orderservice.service.OrderService    : OrderService: outbox message created, outboxId=25, orderId=29, status=NEW
-2025-12-10T02:33:01.847+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-8] c.s.orderservice.service.OrderService    : OrderService: createOrder finished, orderId=29, userId=3, totalPrice=11394.00
-2025-12-10T02:33:01.849+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-8] c.s.o.controller.OrderController         : OrderController: order created successfully, orderId=29, userId=3, totalPrice=11394.00, itemsCount=2
-2025-12-10T02:33:02.133+03:00  INFO 13208 --- [order-service] [scheduling-1] c.s.orderservice.kafka.OutboxPublisher   : OutboxPublisher: found 1 NEW messages to send
-2025-12-10T02:33:02.134+03:00  INFO 13208 --- [order-service] [scheduling-1] c.s.orderservice.kafka.OutboxPublisher   : OutboxPublisher: sending outboxId=25 for orderId=29 to topic=orders
-2025-12-10T02:33:02.134+03:00  INFO 13208 --- [order-service] [scheduling-1] c.s.orderservice.kafka.OutboxPublisher   : OutboxPublisher: message sent successfully, outboxId=25, orderId=29, newStatus=SENT
-2025-12-10T02:33:47.268+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-9] c.s.o.security.JwtAuthenticationFilter   : FILTER ACTIVE: /api/orders
-2025-12-10T02:33:47.275+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-9] c.s.o.controller.OrderController         : OrderController: POST /api/orders called, itemsCount=2
-2025-12-10T02:33:47.276+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-9] c.s.orderservice.service.OrderService    : OrderService: createOrder started, username=testuser, itemsCount=2
-2025-12-10T02:33:47.278+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-9] c.s.orderservice.service.OrderService    : OrderService: sending inventory check for 2 items
-2025-12-10T02:33:47.278+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-9] c.s.orderservice.grpc.InventoryClient    : Calling InventoryService.checkAvailability for 2 items
-2025-12-10T02:33:47.289+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-9] c.s.orderservice.grpc.InventoryClient    : Received inventory response with 2 products
-2025-12-10T02:33:47.290+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-9] c.s.orderservice.service.OrderService    : OrderService: inventory response contains 2 products
-2025-12-10T02:33:47.290+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-9] c.s.orderservice.service.OrderService    : OrderService: saving order (PENDING), username=testuser, totalPrice=11394.00, itemsCount=2
-2025-12-10T02:33:47.295+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-9] c.s.orderservice.service.OrderService    : OrderService: order saved, orderId=30, status=PENDING, totalPrice=11394.00
-2025-12-10T02:33:47.301+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-9] c.s.orderservice.service.OrderService    : OrderService: outbox message created, outboxId=26, orderId=30, status=NEW
-2025-12-10T02:33:47.301+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-9] c.s.orderservice.service.OrderService    : OrderService: createOrder finished, orderId=30, userId=3, totalPrice=11394.00
-2025-12-10T02:33:47.304+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-9] c.s.o.controller.OrderController         : OrderController: order created successfully, orderId=30, userId=3, totalPrice=11394.00, itemsCount=2
-2025-12-10T02:33:47.604+03:00  INFO 13208 --- [order-service] [scheduling-1] c.s.orderservice.kafka.OutboxPublisher   : OutboxPublisher: found 1 NEW messages to send
-2025-12-10T02:33:47.604+03:00  INFO 13208 --- [order-service] [scheduling-1] c.s.orderservice.kafka.OutboxPublisher   : OutboxPublisher: sending outboxId=26 for orderId=30 to topic=orders
-2025-12-10T02:33:47.623+03:00  INFO 13208 --- [order-service] [scheduling-1] c.s.orderservice.kafka.OutboxPublisher   : OutboxPublisher: message sent successfully, outboxId=26, orderId=30, newStatus=SENT
-2025-12-10T02:36:51.720+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-1] c.s.o.security.JwtAuthenticationFilter   : FILTER ACTIVE: /api/orders
-2025-12-10T02:36:51.727+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-1] c.s.o.controller.OrderController         : OrderController: POST /api/orders called, itemsCount=2
-2025-12-10T02:36:51.728+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-1] c.s.orderservice.service.OrderService    : OrderService: createOrder started, username=testuser, itemsCount=2
-2025-12-10T02:36:51.730+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-1] c.s.orderservice.service.OrderService    : OrderService: sending inventory check for 2 items
-2025-12-10T02:36:51.730+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-1] c.s.orderservice.grpc.InventoryClient    : Calling InventoryService.checkAvailability for 2 items
-2025-12-10T02:36:51.744+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-1] c.s.orderservice.grpc.InventoryClient    : Received inventory response with 2 products
-2025-12-10T02:36:51.744+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-1] c.s.orderservice.service.OrderService    : OrderService: inventory response contains 2 products
-2025-12-10T02:36:51.744+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-1] c.s.orderservice.service.OrderService    : OrderService: saving order (PENDING), username=testuser, totalPrice=11394.00, itemsCount=2
-2025-12-10T02:36:51.751+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-1] c.s.orderservice.service.OrderService    : OrderService: order saved, orderId=31, status=PENDING, totalPrice=11394.00
-2025-12-10T02:36:51.756+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-1] c.s.orderservice.service.OrderService    : OrderService: outbox message created, outboxId=27, orderId=31, status=NEW
-2025-12-10T02:36:51.756+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-1] c.s.orderservice.service.OrderService    : OrderService: createOrder finished, orderId=31, userId=3, totalPrice=11394.00
-2025-12-10T02:36:51.759+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-1] c.s.o.controller.OrderController         : OrderController: order created successfully, orderId=31, userId=3, totalPrice=11394.00, itemsCount=2
-2025-12-10T02:36:52.659+03:00  INFO 13208 --- [order-service] [scheduling-1] c.s.orderservice.kafka.OutboxPublisher   : OutboxPublisher: found 1 NEW messages to send
-2025-12-10T02:36:52.659+03:00  INFO 13208 --- [order-service] [scheduling-1] c.s.orderservice.kafka.OutboxPublisher   : OutboxPublisher: sending outboxId=27 for orderId=31 to topic=orders
-2025-12-10T02:36:52.660+03:00  INFO 13208 --- [order-service] [scheduling-1] c.s.orderservice.kafka.OutboxPublisher   : OutboxPublisher: message sent successfully, outboxId=27, orderId=31, newStatus=SENT
-2025-12-10T02:37:53.387+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-4] c.s.o.security.JwtAuthenticationFilter   : FILTER ACTIVE: /api/orders
-2025-12-10T02:37:53.395+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-4] c.s.o.controller.OrderController         : OrderController: POST /api/orders called, itemsCount=2
-2025-12-10T02:37:53.395+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-4] c.s.orderservice.service.OrderService    : OrderService: createOrder started, username=testuser, itemsCount=2
-2025-12-10T02:37:53.397+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-4] c.s.orderservice.service.OrderService    : OrderService: sending inventory check for 2 items
-2025-12-10T02:37:53.398+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-4] c.s.orderservice.grpc.InventoryClient    : Calling InventoryService.checkAvailability for 2 items
-2025-12-10T02:37:53.513+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-4] c.s.orderservice.grpc.InventoryClient    : Received inventory response with 2 products
-2025-12-10T02:37:53.513+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-4] c.s.orderservice.service.OrderService    : OrderService: inventory response contains 2 products
-2025-12-10T02:37:53.513+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-4] c.s.orderservice.service.OrderService    : OrderService: saving order (PENDING), username=testuser, totalPrice=11394.00, itemsCount=2
-2025-12-10T02:37:53.520+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-4] c.s.orderservice.service.OrderService    : OrderService: order saved, orderId=32, status=PENDING, totalPrice=11394.00
-2025-12-10T02:37:53.525+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-4] c.s.orderservice.service.OrderService    : OrderService: outbox message created, outboxId=28, orderId=32, status=NEW
-2025-12-10T02:37:53.525+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-4] c.s.orderservice.service.OrderService    : OrderService: createOrder finished, orderId=32, userId=3, totalPrice=11394.00
-2025-12-10T02:37:53.527+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-4] c.s.o.controller.OrderController         : OrderController: order created successfully, orderId=32, userId=3, totalPrice=11394.00, itemsCount=2
-2025-12-10T02:37:54.332+03:00  INFO 13208 --- [order-service] [scheduling-1] c.s.orderservice.kafka.OutboxPublisher   : OutboxPublisher: found 1 NEW messages to send
-2025-12-10T02:37:54.332+03:00  INFO 13208 --- [order-service] [scheduling-1] c.s.orderservice.kafka.OutboxPublisher   : OutboxPublisher: sending outboxId=28 for orderId=32 to topic=orders
-2025-12-10T02:37:54.332+03:00  INFO 13208 --- [order-service] [scheduling-1] c.s.orderservice.kafka.OutboxPublisher   : OutboxPublisher: message sent successfully, outboxId=28, orderId=32, newStatus=SENT
-2025-12-10T02:50:11.834+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-3] c.s.o.security.JwtAuthenticationFilter   : FILTER ACTIVE: /api/auth/login
-2025-12-10T02:50:25.162+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-6] c.s.o.security.JwtAuthenticationFilter   : FILTER ACTIVE: /api/orders
-2025-12-10T02:50:25.169+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-6] c.s.o.controller.OrderController         : OrderController: POST /api/orders called, itemsCount=2
-2025-12-10T02:50:25.169+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-6] c.s.orderservice.service.OrderService    : OrderService: createOrder started, username=testuser, itemsCount=2
-2025-12-10T02:50:25.172+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-6] c.s.orderservice.service.OrderService    : OrderService: sending inventory check for 2 items
-2025-12-10T02:50:25.172+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-6] c.s.orderservice.grpc.InventoryClient    : Calling InventoryService.checkAvailability for 2 items
-2025-12-10T02:50:25.289+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-6] c.s.orderservice.grpc.InventoryClient    : Received inventory response with 2 products
-2025-12-10T02:50:25.289+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-6] c.s.orderservice.service.OrderService    : OrderService: inventory response contains 2 products
-2025-12-10T02:50:25.289+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-6] c.s.orderservice.service.OrderService    : OrderService: saving order (PENDING), username=testuser, totalPrice=11394.00, itemsCount=2
-2025-12-10T02:50:25.296+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-6] c.s.orderservice.service.OrderService    : OrderService: order saved, orderId=33, status=PENDING, totalPrice=11394.00
-2025-12-10T02:50:25.303+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-6] c.s.orderservice.service.OrderService    : OrderService: outbox message created, outboxId=29, orderId=33, status=NEW
-2025-12-10T02:50:25.304+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-6] c.s.orderservice.service.OrderService    : OrderService: createOrder finished, orderId=33, userId=3, totalPrice=11394.00
-2025-12-10T02:50:25.307+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-6] c.s.o.controller.OrderController         : OrderController: order created successfully, orderId=33, userId=3, totalPrice=11394.00, itemsCount=2
-2025-12-10T02:50:25.463+03:00  INFO 13208 --- [order-service] [scheduling-1] c.s.orderservice.kafka.OutboxPublisher   : OutboxPublisher: found 1 NEW messages to send
-2025-12-10T02:50:25.463+03:00  INFO 13208 --- [order-service] [scheduling-1] c.s.orderservice.kafka.OutboxPublisher   : OutboxPublisher: sending outboxId=29 for orderId=33 to topic=orders
-2025-12-10T02:50:25.465+03:00  INFO 13208 --- [order-service] [scheduling-1] c.s.orderservice.kafka.OutboxPublisher   : OutboxPublisher: message sent successfully, outboxId=29, orderId=33, newStatus=SENT
-2025-12-10T02:51:11.475+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-7] c.s.o.security.JwtAuthenticationFilter   : FILTER ACTIVE: /api/orders
-2025-12-10T02:51:11.482+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-7] c.s.o.controller.OrderController         : OrderController: POST /api/orders called, itemsCount=2
-2025-12-10T02:51:11.482+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-7] c.s.orderservice.service.OrderService    : OrderService: createOrder started, username=testuser, itemsCount=2
-2025-12-10T02:51:11.484+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-7] c.s.orderservice.service.OrderService    : OrderService: sending inventory check for 2 items
-2025-12-10T02:51:11.485+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-7] c.s.orderservice.grpc.InventoryClient    : Calling InventoryService.checkAvailability for 2 items
-2025-12-10T02:51:11.495+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-7] c.s.orderservice.grpc.InventoryClient    : Received inventory response with 2 products
-2025-12-10T02:51:11.495+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-7] c.s.orderservice.service.OrderService    : OrderService: inventory response contains 2 products
-2025-12-10T02:51:11.495+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-7] c.s.orderservice.service.OrderService    : OrderService: saving order (PENDING), username=testuser, totalPrice=11394.00, itemsCount=2
-2025-12-10T02:51:11.501+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-7] c.s.orderservice.service.OrderService    : OrderService: order saved, orderId=34, status=PENDING, totalPrice=11394.00
-2025-12-10T02:51:11.505+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-7] c.s.orderservice.service.OrderService    : OrderService: outbox message created, outboxId=30, orderId=34, status=NEW
-2025-12-10T02:51:11.506+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-7] c.s.orderservice.service.OrderService    : OrderService: createOrder finished, orderId=34, userId=3, totalPrice=11394.00
-2025-12-10T02:51:11.509+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-7] c.s.o.controller.OrderController         : OrderController: order created successfully, orderId=34, userId=3, totalPrice=11394.00, itemsCount=2
-2025-12-10T02:51:11.952+03:00  INFO 13208 --- [order-service] [scheduling-1] c.s.orderservice.kafka.OutboxPublisher   : OutboxPublisher: found 1 NEW messages to send
-2025-12-10T02:51:11.953+03:00  INFO 13208 --- [order-service] [scheduling-1] c.s.orderservice.kafka.OutboxPublisher   : OutboxPublisher: sending outboxId=30 for orderId=34 to topic=orders
-2025-12-10T02:51:11.953+03:00  INFO 13208 --- [order-service] [scheduling-1] c.s.orderservice.kafka.OutboxPublisher   : OutboxPublisher: message sent successfully, outboxId=30, orderId=34, newStatus=SENT
-2025-12-10T02:52:33.907+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-9] c.s.o.security.JwtAuthenticationFilter   : FILTER ACTIVE: /api/orders
-2025-12-10T02:52:33.915+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-9] c.s.o.controller.OrderController         : OrderController: POST /api/orders called, itemsCount=2
-2025-12-10T02:52:33.915+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-9] c.s.orderservice.service.OrderService    : OrderService: createOrder started, username=testuser, itemsCount=2
-2025-12-10T02:52:33.917+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-9] c.s.orderservice.service.OrderService    : OrderService: sending inventory check for 2 items
-2025-12-10T02:52:33.918+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-9] c.s.orderservice.grpc.InventoryClient    : Calling InventoryService.checkAvailability for 2 items
-2025-12-10T02:52:33.928+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-9] c.s.orderservice.grpc.InventoryClient    : Received inventory response with 2 products
-2025-12-10T02:52:33.928+03:00  INFO 13208 --- [order-service] [http-nio-8081-exec-9] c.s.orderservice.service.OrderService    : OrderService: inventory response contains 2 products
-2025-12-10T02:52:33.929+03:00  WARN 13208 --- [order-service] [http-nio-8081-exec-9] c.s.orderservice.service.OrderService    : OrderService: not enough stock, productId=1, requested=4, available=2
-2025-12-10T14:52:03.811+03:00  INFO 884 --- [order-service] [main] c.s.o.OrderServiceApplication            : Starting OrderServiceApplication using Java 17.0.2 with PID 884 (D:\DeskTop\Reposit\shop-microservices\order-service\target\classes started by Павел in D:\DeskTop\Reposit\shop-microservices\order-service)
-2025-12-10T14:52:03.827+03:00  INFO 884 --- [order-service] [main] c.s.o.OrderServiceApplication            : No active profile set, falling back to 1 default profile: "default"
-2025-12-10T14:52:04.410+03:00  INFO 884 --- [order-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-12-10T14:52:04.463+03:00  INFO 884 --- [order-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46 ms. Found 4 JPA repository interfaces.
-2025-12-10T14:52:05.047+03:00  INFO 884 --- [order-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
-2025-12-10T14:52:05.058+03:00  INFO 884 --- [order-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-12-10T14:52:05.059+03:00  INFO 884 --- [order-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
-2025-12-10T14:52:05.128+03:00  INFO 884 --- [order-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-12-10T14:52:05.129+03:00  INFO 884 --- [order-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1261 ms
-2025-12-10T14:52:05.244+03:00  INFO 884 --- [order-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-12-10T14:52:05.297+03:00  INFO 884 --- [order-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
-2025-12-10T14:52:05.335+03:00  INFO 884 --- [order-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-12-10T14:52:05.539+03:00  INFO 884 --- [order-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-12-10T14:52:05.561+03:00  INFO 884 --- [order-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-12-10T14:52:05.704+03:00  INFO 884 --- [order-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@16c5b50a
-2025-12-10T14:52:05.706+03:00  INFO 884 --- [order-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-12-10T14:52:06.627+03:00  INFO 884 --- [order-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-12-10T14:52:06.719+03:00  INFO 884 --- [order-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-12-10T14:52:07.078+03:00  INFO 884 --- [order-service] [main] n.d.b.g.c.a.GrpcClientAutoConfiguration  : Detected grpc-netty-shaded: Creating ShadedNettyChannelFactory + InProcessChannelFactory
-2025-12-10T14:52:07.482+03:00  WARN 884 --- [order-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-12-10T14:52:07.675+03:00  INFO 884 --- [order-service] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@141874c8, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@147ea894, org.springframework.security.web.context.SecurityContextHolderFilter@42fc744, org.springframework.security.web.header.HeaderWriterFilter@c2ddfeb, org.springframework.web.filter.CorsFilter@167f9043, org.springframework.security.web.authentication.logout.LogoutFilter@fefd4a2, com.shop.orderservice.security.JwtAuthenticationFilter@52a0bc48, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@25bd68ea, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7915111a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@38aed8ad, org.springframework.security.web.session.SessionManagementFilter@444fbd13, org.springframework.security.web.access.ExceptionTranslationFilter@189f9f9f, org.springframework.security.web.access.intercept.AuthorizationFilter@420dde28]
-2025-12-10T14:52:07.975+03:00  INFO 884 --- [order-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path ''
-2025-12-10T14:52:08.021+03:00  INFO 884 --- [order-service] [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
-	allow.auto.create.topics = true
-	auto.commit.interval.ms = 5000
-	auto.include.jmx.reporter = true
-	auto.offset.reset = latest
-	bootstrap.servers = [localhost:9092]
-	check.crcs = true
-	client.dns.lookup = use_all_dns_ips
-	client.id = consumer-order-service-1
-	client.rack = 
-	connections.max.idle.ms = 540000
-	default.api.timeout.ms = 60000
-	enable.auto.commit = false
-	exclude.internal.topics = true
-	fetch.max.bytes = 52428800
-	fetch.max.wait.ms = 500
-	fetch.min.bytes = 1
-	group.id = order-service
-	group.instance.id = null
-	heartbeat.interval.ms = 3000
-	interceptor.classes = []
-	internal.leave.group.on.close = true
-	internal.throw.on.fetch.stable.offset.unsupported = false
-	isolation.level = read_uncommitted
-	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
-	max.partition.fetch.bytes = 1048576
-	max.poll.interval.ms = 300000
-	max.poll.records = 500
-	metadata.max.age.ms = 300000
-	metric.reporters = []
-	metrics.num.samples = 2
-	metrics.recording.level = INFO
-	metrics.sample.window.ms = 30000
-	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
-	receive.buffer.bytes = 65536
-	reconnect.backoff.max.ms = 1000
-	reconnect.backoff.ms = 50
-	request.timeout.ms = 30000
-	retry.backoff.ms = 100
-	sasl.client.callback.handler.class = null
-	sasl.jaas.config = null
-	sasl.kerberos.kinit.cmd = /usr/bin/kinit
-	sasl.kerberos.min.time.before.relogin = 60000
-	sasl.kerberos.service.name = null
-	sasl.kerberos.ticket.renew.jitter = 0.05
-	sasl.kerberos.ticket.renew.window.factor = 0.8
-	sasl.login.callback.handler.class = null
-	sasl.login.class = null
-	sasl.login.connect.timeout.ms = null
-	sasl.login.read.timeout.ms = null
-	sasl.login.refresh.buffer.seconds = 300
-	sasl.login.refresh.min.period.seconds = 60
-	sasl.login.refresh.window.factor = 0.8
-	sasl.login.refresh.window.jitter = 0.05
-	sasl.login.retry.backoff.max.ms = 10000
-	sasl.login.retry.backoff.ms = 100
-	sasl.mechanism = GSSAPI
-	sasl.oauthbearer.clock.skew.seconds = 30
-	sasl.oauthbearer.expected.audience = null
-	sasl.oauthbearer.expected.issuer = null
-	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
-	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
-	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
-	sasl.oauthbearer.jwks.endpoint.url = null
-	sasl.oauthbearer.scope.claim.name = scope
-	sasl.oauthbearer.sub.claim.name = sub
-	sasl.oauthbearer.token.endpoint.url = null
-	security.protocol = PLAINTEXT
-	security.providers = null
-	send.buffer.bytes = 131072
-	session.timeout.ms = 45000
-	socket.connection.setup.timeout.max.ms = 30000
-	socket.connection.setup.timeout.ms = 10000
-	ssl.cipher.suites = null
-	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
-	ssl.endpoint.identification.algorithm = https
-	ssl.engine.factory.class = null
-	ssl.key.password = null
-	ssl.keymanager.algorithm = SunX509
-	ssl.keystore.certificate.chain = null
-	ssl.keystore.key = null
-	ssl.keystore.location = null
-	ssl.keystore.password = null
-	ssl.keystore.type = JKS
-	ssl.protocol = TLSv1.3
-	ssl.provider = null
-	ssl.secure.random.implementation = null
-	ssl.trustmanager.algorithm = PKIX
-	ssl.truststore.certificates = null
-	ssl.truststore.location = null
-	ssl.truststore.password = null
-	ssl.truststore.type = JKS
-	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
-
-2025-12-10T14:52:08.152+03:00  INFO 884 --- [order-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
-2025-12-10T14:52:08.152+03:00  INFO 884 --- [order-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
-2025-12-10T14:52:08.153+03:00  INFO 884 --- [order-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1765367528151
-2025-12-10T14:52:08.156+03:00  INFO 884 --- [order-service] [main] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=consumer-order-service-1, groupId=order-service] Subscribed to topic(s): order-status
-2025-12-10T14:52:08.171+03:00  INFO 884 --- [order-service] [main] c.s.o.OrderServiceApplication            : Started OrderServiceApplication in 4.793 seconds (process running for 5.131)
-2025-12-10T14:52:08.672+03:00  INFO 884 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-order-service-1, groupId=order-service] Cluster ID: 1gJd-S3mSVaBVIEDusvs6w
-2025-12-10T14:52:08.676+03:00  INFO 884 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
-2025-12-10T14:52:08.679+03:00  INFO 884 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] (Re-)joining group
-2025-12-10T14:52:08.718+03:00  INFO 884 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Request joining group due to: need to re-join with the given member-id: consumer-order-service-1-023048ec-3384-4ba9-bec5-15697eec9c1c
-2025-12-10T14:52:08.719+03:00  INFO 884 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
-2025-12-10T14:52:08.720+03:00  INFO 884 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] (Re-)joining group
-2025-12-10T14:52:11.748+03:00  INFO 884 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Successfully joined group with generation Generation{generationId=13, memberId='consumer-order-service-1-023048ec-3384-4ba9-bec5-15697eec9c1c', protocol='range'}
-2025-12-10T14:52:11.754+03:00  INFO 884 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Finished assignment for group at generation 13: {consumer-order-service-1-023048ec-3384-4ba9-bec5-15697eec9c1c=Assignment(partitions=[order-status-0])}
-2025-12-10T14:52:11.780+03:00  INFO 884 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Successfully synced group in generation Generation{generationId=13, memberId='consumer-order-service-1-023048ec-3384-4ba9-bec5-15697eec9c1c', protocol='range'}
-2025-12-10T14:52:11.781+03:00  INFO 884 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Notifying assignor about the new Assignment(partitions=[order-status-0])
-2025-12-10T14:52:11.784+03:00  INFO 884 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Adding newly assigned partitions: order-status-0
-2025-12-10T14:52:11.808+03:00  INFO 884 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-order-service-1, groupId=order-service] Setting offset for partition order-status-0 to the committed offset FetchPosition{offset=1, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}
-2025-12-10T14:52:11.810+03:00  INFO 884 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : order-service: partitions assigned: [order-status-0]
-2025-12-10T14:53:09.166+03:00  INFO 884 --- [order-service] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-12-10T14:53:09.167+03:00  INFO 884 --- [order-service] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-12-10T14:53:09.168+03:00  INFO 884 --- [order-service] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2025-12-10T14:53:09.188+03:00  INFO 884 --- [order-service] [http-nio-8081-exec-1] c.s.o.security.JwtAuthenticationFilter   : FILTER ACTIVE: /api/orders
-2025-12-10T14:53:09.331+03:00  INFO 884 --- [order-service] [http-nio-8081-exec-1] c.s.o.controller.OrderController         : OrderController: POST /api/orders called, itemsCount=2
-2025-12-10T14:53:09.331+03:00  INFO 884 --- [order-service] [http-nio-8081-exec-1] c.s.orderservice.service.OrderService    : OrderService: createOrder started, username=testuser, itemsCount=2
-2025-12-10T14:53:09.335+03:00  INFO 884 --- [order-service] [http-nio-8081-exec-1] c.s.orderservice.service.OrderService    : OrderService: sending inventory check for 2 items
-2025-12-10T14:53:09.351+03:00  INFO 884 --- [order-service] [http-nio-8081-exec-1] c.s.orderservice.grpc.InventoryClient    : Calling InventoryService.checkAvailability for 2 items
-2025-12-10T14:53:09.820+03:00  INFO 884 --- [order-service] [http-nio-8081-exec-1] c.s.orderservice.grpc.InventoryClient    : Received inventory response with 2 products
-2025-12-10T14:53:09.820+03:00  INFO 884 --- [order-service] [http-nio-8081-exec-1] c.s.orderservice.service.OrderService    : OrderService: inventory response contains 2 products
-2025-12-10T14:53:09.821+03:00  INFO 884 --- [order-service] [http-nio-8081-exec-1] c.s.orderservice.service.OrderService    : OrderService: saving order (PENDING), username=testuser, totalPrice=2848.50, itemsCount=2
-2025-12-10T14:53:09.869+03:00  INFO 884 --- [order-service] [http-nio-8081-exec-1] c.s.orderservice.service.OrderService    : OrderService: order saved, orderId=35, status=PENDING, totalPrice=2848.50
-2025-12-10T14:53:09.915+03:00  INFO 884 --- [order-service] [http-nio-8081-exec-1] c.s.orderservice.service.OrderService    : OrderService: outbox message created, outboxId=31, orderId=35, status=NEW
-2025-12-10T14:53:09.916+03:00  INFO 884 --- [order-service] [http-nio-8081-exec-1] c.s.orderservice.service.OrderService    : OrderService: createOrder finished, orderId=35, userId=3, totalPrice=2848.50
-2025-12-10T14:53:09.929+03:00  INFO 884 --- [order-service] [http-nio-8081-exec-1] c.s.o.controller.OrderController         : OrderController: order created successfully, orderId=35, userId=3, totalPrice=2848.50, itemsCount=2
-2025-12-10T14:53:10.161+03:00  INFO 884 --- [order-service] [scheduling-1] c.s.orderservice.kafka.OutboxPublisher   : OutboxPublisher: found 1 NEW messages to send
-2025-12-10T14:53:10.161+03:00  INFO 884 --- [order-service] [scheduling-1] c.s.orderservice.kafka.OutboxPublisher   : OutboxPublisher: sending outboxId=31 for orderId=35 to topic=orders
-2025-12-10T14:53:10.171+03:00  INFO 884 --- [order-service] [scheduling-1] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
-	acks = -1
-	auto.include.jmx.reporter = true
-	batch.size = 16384
-	bootstrap.servers = [localhost:9092]
-	buffer.memory = 33554432
-	client.dns.lookup = use_all_dns_ips
-	client.id = producer-1
-	compression.type = none
-	connections.max.idle.ms = 540000
-	delivery.timeout.ms = 120000
-	enable.idempotence = true
-	interceptor.classes = []
-	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
-	linger.ms = 0
-	max.block.ms = 60000
-	max.in.flight.requests.per.connection = 5
-	max.request.size = 1048576
-	metadata.max.age.ms = 300000
-	metadata.max.idle.ms = 300000
-	metric.reporters = []
-	metrics.num.samples = 2
-	metrics.recording.level = INFO
-	metrics.sample.window.ms = 30000
-	partitioner.adaptive.partitioning.enable = true
-	partitioner.availability.timeout.ms = 0
-	partitioner.class = null
-	partitioner.ignore.keys = false
-	receive.buffer.bytes = 32768
-	reconnect.backoff.max.ms = 1000
-	reconnect.backoff.ms = 50
-	request.timeout.ms = 30000
-	retries = 2147483647
-	retry.backoff.ms = 100
-	sasl.client.callback.handler.class = null
-	sasl.jaas.config = null
-	sasl.kerberos.kinit.cmd = /usr/bin/kinit
-	sasl.kerberos.min.time.before.relogin = 60000
-	sasl.kerberos.service.name = null
-	sasl.kerberos.ticket.renew.jitter = 0.05
-	sasl.kerberos.ticket.renew.window.factor = 0.8
-	sasl.login.callback.handler.class = null
-	sasl.login.class = null
-	sasl.login.connect.timeout.ms = null
-	sasl.login.read.timeout.ms = null
-	sasl.login.refresh.buffer.seconds = 300
-	sasl.login.refresh.min.period.seconds = 60
-	sasl.login.refresh.window.factor = 0.8
-	sasl.login.refresh.window.jitter = 0.05
-	sasl.login.retry.backoff.max.ms = 10000
-	sasl.login.retry.backoff.ms = 100
-	sasl.mechanism = GSSAPI
-	sasl.oauthbearer.clock.skew.seconds = 30
-	sasl.oauthbearer.expected.audience = null
-	sasl.oauthbearer.expected.issuer = null
-	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
-	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
-	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
-	sasl.oauthbearer.jwks.endpoint.url = null
-	sasl.oauthbearer.scope.claim.name = scope
-	sasl.oauthbearer.sub.claim.name = sub
-	sasl.oauthbearer.token.endpoint.url = null
-	security.protocol = PLAINTEXT
-	security.providers = null
-	send.buffer.bytes = 131072
-	socket.connection.setup.timeout.max.ms = 30000
-	socket.connection.setup.timeout.ms = 10000
-	ssl.cipher.suites = null
-	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
-	ssl.endpoint.identification.algorithm = https
-	ssl.engine.factory.class = null
-	ssl.key.password = null
-	ssl.keymanager.algorithm = SunX509
-	ssl.keystore.certificate.chain = null
-	ssl.keystore.key = null
-	ssl.keystore.location = null
-	ssl.keystore.password = null
-	ssl.keystore.type = JKS
-	ssl.protocol = TLSv1.3
-	ssl.provider = null
-	ssl.secure.random.implementation = null
-	ssl.trustmanager.algorithm = PKIX
-	ssl.truststore.certificates = null
-	ssl.truststore.location = null
-	ssl.truststore.password = null
-	ssl.truststore.type = JKS
-	transaction.timeout.ms = 60000
-	transactional.id = null
-	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
-
-2025-12-10T14:53:10.180+03:00  INFO 884 --- [order-service] [scheduling-1] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
-2025-12-10T14:53:10.194+03:00  INFO 884 --- [order-service] [scheduling-1] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
-2025-12-10T14:53:10.194+03:00  INFO 884 --- [order-service] [scheduling-1] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
-2025-12-10T14:53:10.195+03:00  INFO 884 --- [order-service] [scheduling-1] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1765367590194
-2025-12-10T14:53:10.203+03:00  INFO 884 --- [order-service] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: 1gJd-S3mSVaBVIEDusvs6w
-2025-12-10T14:53:10.214+03:00  INFO 884 --- [order-service] [scheduling-1] c.s.orderservice.kafka.OutboxPublisher   : OutboxPublisher: message sent successfully, outboxId=31, orderId=35, newStatus=SENT
-2025-12-10T14:53:10.284+03:00  INFO 884 --- [order-service] [kafka-producer-network-thread | producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 2000 with epoch 0
-2025-12-10T15:01:08.771+03:00  INFO 884 --- [order-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-order-service-1, groupId=order-service] Node -1 disconnected.
+2025-12-11T18:03:48.822+03:00  INFO 9696 --- [order-service] [scheduling-1] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2025-12-11T18:03:48.837+03:00  INFO 9696 --- [order-service] [scheduling-1] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
+2025-12-11T18:03:48.837+03:00  INFO 9696 --- [order-service] [scheduling-1] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
+2025-12-11T18:03:48.837+03:00  INFO 9696 --- [order-service] [scheduling-1] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1765465428837
+2025-12-11T18:03:48.846+03:00  INFO 9696 --- [order-service] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: 1gJd-S3mSVaBVIEDusvs6w
+2025-12-11T18:03:48.857+03:00  INFO 9696 --- [order-service] [scheduling-1] c.s.orderservice.kafka.OutboxPublisher   : OutboxPublisher: message sent successfully, outboxId=32, orderId=36, newStatus=SENT
+2025-12-11T18:03:48.877+03:00  INFO 9696 --- [order-service] [kafka-producer-network-thread | producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 3000 with epoch 0
+2025-12-11T18:03:55.952+03:00  INFO 9696 --- [order-service] [http-nio-8081-exec-2] c.s.o.controller.OrderController         : OrderController: POST /api/orders called, user=testuser, itemsCount=2
+2025-12-11T18:03:55.955+03:00  INFO 9696 --- [order-service] [http-nio-8081-exec-2] c.s.orderservice.service.OrderService    : OrderService: createOrder started, username=testuser, itemsCount=2
+2025-12-11T18:03:55.957+03:00  INFO 9696 --- [order-service] [http-nio-8081-exec-2] c.s.orderservice.service.OrderService    : OrderService: sending inventory check for 2 items
+2025-12-11T18:03:55.958+03:00  INFO 9696 --- [order-service] [http-nio-8081-exec-2] c.s.orderservice.grpc.InventoryClient    : Calling InventoryService.checkAvailability for 2 items
+2025-12-11T18:03:55.972+03:00  INFO 9696 --- [order-service] [http-nio-8081-exec-2] c.s.orderservice.grpc.InventoryClient    : Received inventory response with 2 products
+2025-12-11T18:03:55.972+03:00  INFO 9696 --- [order-service] [http-nio-8081-exec-2] c.s.orderservice.service.OrderService    : OrderService: inventory response contains 2 products
+2025-12-11T18:03:55.972+03:00  INFO 9696 --- [order-service] [http-nio-8081-exec-2] c.s.orderservice.service.OrderService    : OrderService: saving order (PENDING), username=testuser, totalPrice=2848.50, itemsCount=2
+2025-12-11T18:03:55.978+03:00  INFO 9696 --- [order-service] [http-nio-8081-exec-2] c.s.orderservice.service.OrderService    : OrderService: order saved, orderId=37, status=PENDING, totalPrice=2848.50
+2025-12-11T18:03:55.983+03:00  INFO 9696 --- [order-service] [http-nio-8081-exec-2] c.s.orderservice.service.OrderService    : OrderService: outbox message created, outboxId=33, orderId=37, status=NEW
+2025-12-11T18:03:55.984+03:00  INFO 9696 --- [order-service] [http-nio-8081-exec-2] c.s.orderservice.service.OrderService    : OrderService: createOrder finished, orderId=37, userId=3, totalPrice=2848.50
+2025-12-11T18:03:55.988+03:00  INFO 9696 --- [order-service] [http-nio-8081-exec-2] c.s.o.controller.OrderController         : OrderController: order created successfully, orderId=37, userId=3, totalPrice=2848.50, itemsCount=2
+2025-12-11T18:03:56.968+03:00  INFO 9696 --- [order-service] [scheduling-1] c.s.orderservice.kafka.OutboxPublisher   : OutboxPublisher: found 1 NEW messages to send
+2025-12-11T18:03:56.969+03:00  INFO 9696 --- [order-service] [scheduling-1] c.s.orderservice.kafka.OutboxPublisher   : OutboxPublisher: sending outboxId=33 for orderId=37 to topic=orders
+2025-12-11T18:03:56.969+03:00  INFO 9696 --- [order-service] [scheduling-1] c.s.orderservice.kafka.OutboxPublisher   : OutboxPublisher: message sent successfully, outboxId=33, orderId=37, newStatus=SENT
+2025-12-11T18:03:58.233+03:00  INFO 9696 --- [order-service] [http-nio-8081-exec-3] c.s.o.controller.OrderController         : OrderController: POST /api/orders called, user=testuser, itemsCount=2
+2025-12-11T18:03:58.235+03:00  INFO 9696 --- [order-service] [http-nio-8081-exec-3] c.s.orderservice.service.OrderService    : OrderService: createOrder started, username=testuser, itemsCount=2
+2025-12-11T18:03:58.238+03:00  INFO 9696 --- [order-service] [http-nio-8081-exec-3] c.s.orderservice.service.OrderService    : OrderService: sending inventory check for 2 items
+2025-12-11T18:03:58.239+03:00  INFO 9696 --- [order-service] [http-nio-8081-exec-3] c.s.orderservice.grpc.InventoryClient    : Calling InventoryService.checkAvailability for 2 items
+2025-12-11T18:03:58.251+03:00  INFO 9696 --- [order-service] [http-nio-8081-exec-3] c.s.orderservice.grpc.InventoryClient    : Received inventory response with 2 products
+2025-12-11T18:03:58.251+03:00  INFO 9696 --- [order-service] [http-nio-8081-exec-3] c.s.orderservice.service.OrderService    : OrderService: inventory response contains 2 products
+2025-12-11T18:03:58.251+03:00  WARN 9696 --- [order-service] [http-nio-8081-exec-3] c.s.orderservice.service.OrderService    : OrderService: not enough stock, productId=1, requested=1, available=0
+2025-12-11T18:03:58.255+03:00  WARN 9696 --- [order-service] [http-nio-8081-exec-3] c.s.o.exception.GlobalExceptionHandler   : IllegalArgumentException: Not enough stock for product: 1

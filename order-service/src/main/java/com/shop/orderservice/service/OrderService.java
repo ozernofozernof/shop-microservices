@@ -15,8 +15,6 @@ import com.shop.orderservice.repository.UserRepository;
 import com.shop.proto.inventory.ProductResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -39,14 +37,17 @@ public class OrderService {
     private final ObjectMapper objectMapper;
 
     @Transactional
-    public OrderResponse createOrder(OrderCreateRequest request) {
+    public OrderResponse createOrder(OrderCreateRequest request, String username) {
 
-        // 1. Пользователь
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        String username = authentication.getName();
+        if (request == null || request.getItems() == null || request.getItems().isEmpty()) {
+            throw new IllegalArgumentException("Order must contain at least one item");
+        }
+
+        int itemsCount = request.getItems().size();
 
         log.info("OrderService: createOrder started, username={}, itemsCount={}",
-                username, request.getItems().size());
+                username, itemsCount
+        );
 
         User user = userRepository.findByUsername(username)
                 .orElseThrow(() -> {
@@ -60,9 +61,15 @@ public class OrderService {
         // 2. Идём в inventory один раз
         List<OrderItemRequest> itemRequests = request.getItems();
 
-        log.info("OrderService: sending inventory check for {} items", itemRequests.size());
+        log.info("OrderService: sending inventory check for {} items", itemsCount);
         Map<Long, ProductResponse> inventoryInfo =
                 inventoryClient.checkAvailabilityBatch(itemRequests);
+
+        if (inventoryInfo == null || inventoryInfo.isEmpty()) {
+            log.error("OrderService: inventory response is empty for {} items", itemsCount);
+            throw new IllegalStateException("Inventory service returned no product data");
+        }
+
         log.info("OrderService: inventory response contains {} products", inventoryInfo.size());
 
         // 3. Обрабатываем товары
@@ -169,3 +176,4 @@ public class OrderService {
         }
     }
 }
+

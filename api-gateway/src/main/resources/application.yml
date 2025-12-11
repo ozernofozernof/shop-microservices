@@ -40,6 +40,14 @@ spring:
       default-filters:
         - RemoveRequestHeader=Cookie
 
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods: "*"
+            allowedHeaders: "*"
+            allowCredentials: false
+
 jwt:
   secret: "SUPER_PAVEL_SECRET_KEY_SUPER_PAVEL_SECRET_KEY_123"
   access-expiration-ms: 900000      # 15 минут

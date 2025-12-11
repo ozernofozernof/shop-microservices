@@ -17,18 +17,30 @@ public class OrderController {
     private final OrderService orderService;
 
     @PostMapping
-    public ResponseEntity<OrderResponse> createOrder(@RequestBody OrderCreateRequest request) {
-        log.info("OrderController: POST /api/orders called, itemsCount={}",
-                request.getItems() != null ? request.getItems().size() : 0);
+    public ResponseEntity<OrderResponse> createOrder(
+            @RequestBody OrderCreateRequest request,
+            @RequestHeader(value = "X-User-Name", required = false) String username
+    ) {
+        if (username == null || username.isBlank()) {
+            throw new IllegalStateException("Missing X-User-Name header");
+        }
 
-        OrderResponse response = orderService.createOrder(request);
+        log.info("OrderController: POST /api/orders called, user={}, itemsCount={}",
+                username,
+                request.getItems() != null ? request.getItems().size() : 0
+        );
+
+        OrderResponse response = orderService.createOrder(request, username);
 
         log.info("OrderController: order created successfully, orderId={}, userId={}, totalPrice={}, itemsCount={}",
-                response.getOrderId(), response.getUserId(),
+                response.getOrderId(),
+                response.getUserId(),
                 response.getTotalPrice(),
-                response.getItems() != null ? response.getItems().size() : 0);
+                response.getItems() != null ? response.getItems().size() : 0
+        );
 
         return ResponseEntity.ok(response);
     }
 }
+
 
