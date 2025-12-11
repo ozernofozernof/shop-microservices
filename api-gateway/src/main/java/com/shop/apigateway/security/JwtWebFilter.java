@@ -13,6 +13,21 @@ import org.springframework.web.server.WebFilterChain;
 import reactor.core.publisher.Mono;
 import reactor.core.scheduler.Schedulers;
 
+/**
+ * Реактивный JWT-фильтр для API Gateway.
+ * <p>
+ * Задачи фильтра:
+ * <ul>
+ *     <li>Пропускать без проверки все запросы к публичным endpoint'ам {@code /api/auth/**}.</li>
+ *     <li>Забирать JWT из заголовка {@code Authorization: Bearer ...}.</li>
+ *     <li>Валидировать токен через {@link JwtTokenProvider}.</li>
+ *     <li>Загружать пользователя через {@link CustomUserDetailsService} и
+ *     класть {@link org.springframework.security.core.Authentication} в
+ *     реактивный {@link org.springframework.security.core.context.SecurityContext}.</li>
+ * </ul>
+ * Тем самым вся аутентификация сосредоточена на входе — в gateway, а
+ * downstream-сервисы получают уже аутентифицированный запрос.
+ */
 @Component
 @RequiredArgsConstructor
 @Slf4j
@@ -21,6 +36,18 @@ public class JwtWebFilter implements WebFilter {
     private final JwtTokenProvider jwtTokenProvider;
     private final CustomUserDetailsService userDetailsService;
 
+    /**
+     * Основная логика фильтра:
+     * <ol>
+     *     <li>Пропускает без проверки запросы на {@code /api/auth/**}.</li>
+     *     <li>Пытается извлечь и провалидировать JWT.</li>
+     *     <li>При успешной валидации поднимает аутентификацию в SecurityContext.</li>
+     *     <li>При невалидном токене возвращает 401.</li>
+     * </ol>
+     *
+     * @param exchange текущий HTTP-запрос/ответ (reactive)
+     * @param chain    оставшаяся цепочка WebFilter'ов
+     */
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, WebFilterChain chain) {
         String path = exchange.getRequest().getPath().value();
@@ -33,7 +60,8 @@ public class JwtWebFilter implements WebFilter {
         String header = exchange.getRequest().getHeaders().getFirst(HttpHeaders.AUTHORIZATION);
 
         if (header == null || !header.startsWith("Bearer ")) {
-            // Без токена — просто идём дальше, и Security вернёт 401
+            // Без токена: фильтр не аутентифицирует запрос,
+            // дальше сработают стандартные правила security (и вернут 401 для защищённых роутов).
             return chain.filter(exchange);
         }
 
@@ -48,7 +76,7 @@ public class JwtWebFilter implements WebFilter {
         String username = jwtTokenProvider.getUsernameFromToken(token);
         log.info("JwtWebFilter: token valid, username={}", username);
 
-        // CustomUserDetailsService - блокирующий, поэтому оборачиваем в отдельный пул
+        // CustomUserDetailsService — блокирующий, выносим в boundedElastic
         return Mono.fromCallable(() -> userDetailsService.loadUserByUsername(username))
                 .subscribeOn(Schedulers.boundedElastic())
                 .flatMap(userDetails -> {
@@ -59,7 +87,8 @@ public class JwtWebFilter implements WebFilter {
                                     userDetails.getAuthorities()
                             );
 
-                    // Кладём Authentication в реактивный SecurityContext
+                    // Кладём Authentication в реактивный SecurityContext,
+                    // дальше в цепочке его сможет прочитать Spring Security.
                     return chain.filter(exchange)
                             .contextWrite(ReactiveSecurityContextHolder.withAuthentication(auth));
                 });
