@@ -10,6 +10,13 @@ import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+/**
+ * Слушатель Kafka-событий об изменении статуса заказа.
+ * <p>
+ * Ожидает сообщения из топика {@code app.kafka.order-status-topic},
+ * десериализует их в {@link OrderStatusEvent} и обновляет статус
+ * соответствующего {@link Order} в БД.
+ */
 @Service
 @RequiredArgsConstructor
 @Slf4j
@@ -18,6 +25,21 @@ public class OrderStatusListener {
     private final OrderRepository orderRepository;
     private final ObjectMapper objectMapper;
 
+    /**
+     * Обработчик сообщений со статусом заказа.
+     * <p>
+     * Шаги:
+     * <ol>
+     *     <li>Десериализует входной JSON в {@link OrderStatusEvent}.</li>
+     *     <li>Ищет заказ в БД по {@code orderId}.</li>
+     *     <li>В зависимости от статуса из события ({@code CONFIRMED}/{@code REJECTED})
+     *     обновляет поле {@link OrderStatus}.</li>
+     *     <li>Логирует предыдущее и новое состояние.</li>
+     * </ol>
+     * Если статус неизвестен или заказа нет — пишет в лог и завершает обработку.
+     *
+     * @param payload JSON-строка с данными события
+     */
     @KafkaListener(
             topics = "${app.kafka.order-status-topic}",
             groupId = "order-service"

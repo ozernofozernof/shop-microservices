@@ -8,6 +8,18 @@ import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+/**
+ * Kafka-listener, который обрабатывает события о создании заказа
+ * ({@link OrderCreatedEvent}) и резервирует товары на складе.
+ * <p>
+ * Поведение:
+ * <ul>
+ *     <li>Слушает топик {@code app.kafka.orders-topic}.</li>
+ *     <li>Для каждого товара из заказа уменьшает поле {@code quantity} в БД.</li>
+ *     <li>Если товара не хватает — кидает {@link IllegalStateException} и логирует ошибку.</li>
+ * </ul>
+ * Это часть паттерна “order-service → outbox → Kafka → inventory-service”.
+ */
 @Service
 @RequiredArgsConstructor
 @Slf4j
@@ -15,6 +27,14 @@ public class InventoryOrderListener {
 
     private final ProductRepository productRepository;
 
+    /**
+     * Обработка события {@link OrderCreatedEvent} из Kafka.
+     * <p>
+     * Выполняется в транзакции: если при резервировании какого-то товара
+     * произойдёт ошибка, изменения по всем товарам будут откатены.
+     *
+     * @param event событие, содержащее информацию о заказе и его позициях
+     */
     @KafkaListener(
             topics = "${app.kafka.orders-topic}",
             groupId = "inventory-service",

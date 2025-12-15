@@ -35,8 +35,8 @@ public class SecurityConfig {
      *     <li>Считывает JWT из заголовка Authorization.</li>
      *     <li>Проверяет подпись и срок действия токена.</li>
      *     <li>Кладёт данные пользователя в SecurityContext.</li>
-     *     <li>Прокидывает username дальше через кастомный заголовок
-     *     (например, {@code X-User-Name}) в order-service.</li>
+     *     <li>Позволяет далее в route-настройках прокинуть username, например,
+     *     в заголовке {@code X-User-Name}, в downstream-сервисы.</li>
      * </ul>
      */
     private final JwtWebFilter jwtWebFilter;

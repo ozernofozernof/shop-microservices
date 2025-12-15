@@ -13,6 +13,19 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
+/**
+ * REST-контроллер, отвечающий за аутентификацию и выдачу JWT-токенов.
+ * <p>
+ * На уровне API Gateway здесь реализованы:
+ * <ul>
+ *     <li>регистрация нового пользователя ({@code /api/auth/register});</li>
+ *     <li>логин по логину и паролю ({@code /api/auth/login});</li>
+ *     <li>обновление пары токенов по refresh-токену ({@code /api/auth/refresh}).</li>
+ * </ul>
+ * <p>
+ * Все операции работают с локальной БД пользователя (таблица {@code users}) в gateway
+ * и используют {@link JwtTokenProvider} для генерации и валидации токенов.
+ */
 @RestController
 @RequestMapping("/api/auth")
 @RequiredArgsConstructor
@@ -22,6 +35,24 @@ public class AuthController {
     private final PasswordEncoder passwordEncoder;
     private final JwtTokenProvider jwtTokenProvider;
 
+    /**
+     * Регистрация нового пользователя.
+     * <p>
+     * Шаги:
+     * <ol>
+     *     <li>Проверяем, что логин и email ещё не заняты.</li>
+     *     <li>Хешируем пароль с помощью {@link PasswordEncoder}.</li>
+     *     <li>Сохраняем пользователя с ролью {@link Role#ROLE_USER}.</li>
+     *     <li>Сразу выдаём пару токенов (access + refresh).</li>
+     * </ol>
+     *
+     * @param request DTO с данными регистрации (username, email, password)
+     * @return
+     * <ul>
+     *     <li>400, если логин или email уже используются;</li>
+     *     <li>200 + {@link JwtResponse}, если регистрация успешна.</li>
+     * </ul>
+     */
     @PostMapping("/register")
     public ResponseEntity<?> register(@RequestBody RegisterRequest request) {
         if (userRepository.existsByUsername(request.getUsername())) {
@@ -46,6 +77,21 @@ public class AuthController {
         return ResponseEntity.ok(new JwtResponse(accessToken, refreshToken));
     }
 
+    /**
+     * Логин пользователя по логину и паролю.
+     * <p>
+     * Валидация выполняется вручную:
+     * <ul>
+     *     <li>ищем пользователя по username;</li>
+     *     <li>сравниваем сырой пароль с хешем через {@link PasswordEncoder#matches}.</li>
+     * </ul>
+     * При успехе выдаём новую пару (access + refresh) токенов.
+     *
+     * @param request DTO с логином и паролем
+     * @return 200 + {@link JwtResponse} при успешной аутентификации
+     * @throws RuntimeException если логин или пароль неверные
+     *                          (обрабатывается глобальным обработчиком/по умолчанию фреймворком)
+     */
     @PostMapping("/login")
     public ResponseEntity<JwtResponse> login(@RequestBody LoginRequest request) {
         // руками проверяем логин/пароль
@@ -62,6 +108,24 @@ public class AuthController {
         return ResponseEntity.ok(new JwtResponse(accessToken, refreshToken));
     }
 
+    /**
+     * Обновление пары JWT-токенов по действующему refresh-токену.
+     * <p>
+     * Шаги:
+     * <ol>
+     *     <li>Проверяем подпись и срок жизни переданного токена.</li>
+     *     <li>Убеждаемся, что в claim {@code type} указано {@code "refresh"}.</li>
+     *     <li>Извлекаем username из токена.</li>
+     *     <li>Генерируем новую пару access + refresh токенов.</li>
+     * </ol>
+     *
+     * @param request DTO с полем {@code refreshToken}
+     * @return
+     * <ul>
+     *     <li>400, если токен некорректен или не является refresh;</li>
+     *     <li>200 + {@link JwtResponse} с новой парой токенов при успехе.</li>
+     * </ul>
+     */
     @PostMapping("/refresh")
     public ResponseEntity<JwtResponse> refresh(@RequestBody RefreshTokenRequest request) {
         String refreshToken = request.getRefreshToken();

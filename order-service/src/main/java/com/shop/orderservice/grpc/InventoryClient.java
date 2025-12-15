@@ -15,26 +15,53 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * gRPC-клиент для взаимодействия с {@code inventory-service}.
+ * <p>
+ * Основные задачи:
+ * <ul>
+ *     <li>Запрашивать информацию по товарам (цена, скидка, остатки).</li>
+ *     <li>Поддерживать как одиночный запрос по одному продукту,
+ *     так и батч-запрос по нескольким позициям.</li>
+ * </ul>
+ * Используется в {@link com.shop.orderservice.service.OrderService} при создании заказов.
+ */
 @Component
 @Slf4j
 public class InventoryClient {
 
+    /**
+     * Блокирующий stub gRPC-клиента, создаётся и конфигурируется
+     * Spring Boot Starter gRPC по имени канала {@code inventory}.
+     */
     @GrpcClient("inventory")
     private InventoryServiceGrpc.InventoryServiceBlockingStub inventoryStub;
 
+    /**
+     * Проверяет наличие одного товара, используя общий batсh-endpoint
+     * {@code InventoryService.checkAvailability}.
+     *
+     * @param productId идентификатор товара
+     * @param quantity  запрашиваемое количество (на данный момент здесь
+     *                  не используется, но может быть полезно при расширении
+     *                  протокола)
+     * @return {@link ProductResponse} с информацией о товаре
+     * @throws IllegalStateException если сервис вернул пустой ответ
+     *                               или произошла gRPC-ошибка
+     */
     public ProductResponse checkAvailability(Long productId, int quantity) {
         try {
-            //Создаём запрос по одному продукту
+            // Создаём запрос по одному продукту
             ProductRequest item = ProductRequest.newBuilder()
                     .setProductId(productId)
                     .build();
 
-            //Обёрточный запрос для batсh-метода
+            // Обёрточный запрос для batch-метода
             CheckAvailabilityRequest request = CheckAvailabilityRequest.newBuilder()
                     .addItems(item)
                     .build();
 
-            //Вызываем gRPC с новым типом
+            // Вызываем gRPC
             CheckAvailabilityResponse response = inventoryStub.checkAvailability(request);
 
             if (response.getProductsCount() == 0) {
@@ -43,7 +70,7 @@ public class InventoryClient {
                 );
             }
 
-            //Пока берём первый продукт из ответа
+            // Пока берём первый продукт из ответа
             return response.getProducts(0);
 
         } catch (StatusRuntimeException e) {
@@ -56,7 +83,15 @@ public class InventoryClient {
     }
 
     /**
-     * батч-метод – список позиций → одна gRPC-вызов.
+     * Батч-метод: список позиций заказа → один gRPC-вызов к inventory-service.
+     * <p>
+     * На основе списка {@link OrderItemRequest} собирает запрос,
+     * вызывает {@code checkAvailability} и возвращает карту
+     * {@code productId → ProductResponse}.
+     *
+     * @param items список позиций заказа
+     * @return карта с информацией по каждому найденному продукту
+     * @throws IllegalStateException при gRPC-ошибках или неожиданных исключениях
      */
     public Map<Long, ProductResponse> checkAvailabilityBatch(List<OrderItemRequest> items) {
         try {

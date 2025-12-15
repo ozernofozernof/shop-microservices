@@ -12,6 +12,18 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import net.devh.boot.grpc.server.service.GrpcService;
 
+/**
+ * gRPC-сервис склада (inventory), отвечающий за проверку доступности товаров.
+ * <p>
+ * Реализует метод {@code checkAvailability}, который:
+ * <ul>
+ *     <li>принимает список productId;</li>
+ *     <li>для каждого пытается получить товар из БД;</li>
+ *     <li>возвращает список {@link ProductResponse} с текущими остатками и ценой;</li>
+ *     <li>если товара нет — возвращает заглушку с количеством 0.</li>
+ * </ul>
+ * Используется order-service через gRPC-клиент.
+ */
 @Slf4j
 @GrpcService
 @RequiredArgsConstructor
@@ -19,11 +31,19 @@ public class InventoryGrpcService extends InventoryServiceGrpc.InventoryServiceI
 
     private final ProductService productService;
 
+    /**
+     * Проверка доступности товаров по списку productId.
+     *
+     * @param request           входной запрос с набором {@link ProductRequest}
+     * @param responseObserver  gRPC-observer для отправки ответа
+     */
     @Override
     public void checkAvailability(
             CheckAvailabilityRequest request,
             StreamObserver<CheckAvailabilityResponse> responseObserver
     ) {
+        log.info("InventoryGrpcService: checkAvailability called, itemsCount={}",
+                request.getItemsCount());
 
         CheckAvailabilityResponse.Builder responseBuilder = CheckAvailabilityResponse.newBuilder();
 
@@ -45,7 +65,10 @@ public class InventoryGrpcService extends InventoryServiceGrpc.InventoryServiceI
 
                 responseBuilder.addProducts(productResponse);
             } catch (RuntimeException ex) {
-                log.warn("Product {} not found in inventory: {}", productId, ex.getMessage());
+                // Логируем, но не рвём весь batch — возвращаем "пустой" продукт.
+                log.warn("InventoryGrpcService: product {} not found in inventory: {}",
+                        productId, ex.getMessage());
+
                 ProductResponse productResponse = ProductResponse.newBuilder()
                         .setProductId(productId)
                         .setName("")
@@ -58,7 +81,11 @@ public class InventoryGrpcService extends InventoryServiceGrpc.InventoryServiceI
             }
         }
 
-        responseObserver.onNext(responseBuilder.build());
+        CheckAvailabilityResponse response = responseBuilder.build();
+        log.info("InventoryGrpcService: checkAvailability finished, productsInResponse={}",
+                response.getProductsCount());
+
+        responseObserver.onNext(response);
         responseObserver.onCompleted();
     }
 }
