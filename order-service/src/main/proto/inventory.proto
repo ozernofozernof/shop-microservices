@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package inventory;
+
+option java_multiple_files = true;
+option java_package = "com.shop.proto.inventory";
+option java_outer_classname = "InventoryProto";
+
+service InventoryService {
+  rpc checkAvailability(CheckAvailabilityRequest) returns (CheckAvailabilityResponse);
+}
+
+message CheckAvailabilityRequest {
+  repeated ProductRequest items = 1;
+}
+
+message CheckAvailabilityResponse {
+  repeated ProductResponse products = 1;
+}
+
+message ProductRequest {
+  int64 product_id = 1;
+}
+
+message ProductResponse {
+  int64 product_id = 1;
+  string name = 2;
+  int32 available_quantity = 3;
+  double price = 4;
+  double sale = 5;
+}

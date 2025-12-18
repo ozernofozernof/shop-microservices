@@ -6,9 +6,9 @@ spring:
     name: inventory-service
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/inventorydb
-    username: inventory_user
-    password: inventory_pass
+    url: jdbc:postgresql://localhost:5433/inventory_db
+    username: postgres
+    password: postgres
     driver-class-name: org.postgresql.Driver
 
   jpa:
@@ -16,6 +16,34 @@ spring:
       ddl-auto: update
     show-sql: true
 
+  kafka:
+    bootstrap-servers: localhost:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    consumer:
+      group-id: inventory-service
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+
+
 grpc:
   server:
-    port: 9090
+    port: 9091
+
+app:
+  kafka:
+    orders-topic: orders
+    order-status-topic: order-status
+
+logging:
+  file:
+    name: logs/inventory-service.log
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%X{requestId}] %logger{36} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%X{requestId}] %logger{36} - %msg%n"
+
+  level:
+    org.hibernate.SQL: WARN
+    org.hibernate.type: WARN
+    com.shop.inventoryservice: INFO
