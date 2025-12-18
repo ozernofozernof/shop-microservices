@@ -3,19 +3,24 @@ package com.shop.orderservice.kafka;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.shop.orderservice.entity.Order;
 import com.shop.orderservice.entity.OrderStatus;
+import com.shop.orderservice.filter.RequestIdFilter;
 import com.shop.orderservice.repository.OrderRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.kafka.clients.consumer.ConsumerRecord;
+import org.apache.kafka.common.header.Header;
+import org.slf4j.MDC;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.nio.charset.StandardCharsets;
+
 /**
  * Слушатель Kafka-событий об изменении статуса заказа.
- * <p>
- * Ожидает сообщения из топика {@code app.kafka.order-status-topic},
- * десериализует их в {@link OrderStatusEvent} и обновляет статус
- * соответствующего {@link Order} в БД.
+ *
+ * <p>Дополнительно: поднимает {@code requestId} из Kafka headers в MDC,
+ * чтобы логирование было сквозным.
  */
 @Service
 @RequiredArgsConstructor
@@ -25,28 +30,25 @@ public class OrderStatusListener {
     private final OrderRepository orderRepository;
     private final ObjectMapper objectMapper;
 
-    /**
-     * Обработчик сообщений со статусом заказа.
-     * <p>
-     * Шаги:
-     * <ol>
-     *     <li>Десериализует входной JSON в {@link OrderStatusEvent}.</li>
-     *     <li>Ищет заказ в БД по {@code orderId}.</li>
-     *     <li>В зависимости от статуса из события ({@code CONFIRMED}/{@code REJECTED})
-     *     обновляет поле {@link OrderStatus}.</li>
-     *     <li>Логирует предыдущее и новое состояние.</li>
-     * </ol>
-     * Если статус неизвестен или заказа нет — пишет в лог и завершает обработку.
-     *
-     * @param payload JSON-строка с данными события
-     */
     @KafkaListener(
             topics = "${app.kafka.order-status-topic}",
             groupId = "order-service"
     )
     @Transactional
-    public void handleStatus(String payload) {
+    public void handleStatus(ConsumerRecord<String, String> record) {
+        String requestId = null;
+        Header h = record.headers().lastHeader(RequestIdFilter.HEADER);
+        if (h != null) {
+            requestId = new String(h.value(), StandardCharsets.UTF_8);
+        }
+
+        if (requestId != null && !requestId.isBlank()) {
+            MDC.put(RequestIdFilter.MDC_KEY, requestId);
+        }
+
         try {
+            String payload = record.value();
+
             OrderStatusEvent event =
                     objectMapper.readValue(payload, OrderStatusEvent.class);
 
@@ -76,9 +78,12 @@ public class OrderStatusListener {
                     event.getOrderId(), previousStatus, order.getStatus(), event.getReason());
 
         } catch (Exception e) {
-            log.error("OrderStatusListener: failed to process payload={}", payload, e);
+            log.error("OrderStatusListener: failed to process record", e);
+        } finally {
+            MDC.remove(RequestIdFilter.MDC_KEY);
         }
     }
 }
+
 
 

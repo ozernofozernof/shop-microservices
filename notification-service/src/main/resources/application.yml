@@ -25,6 +25,11 @@ spring:
       properties:
         spring.json.trusted.packages: "*"
 
+logging:
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%X{requestId}] %logger{36} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%X{requestId}] %logger{36} - %msg%n"
+
 app:
   kafka:
     orders-topic: orders

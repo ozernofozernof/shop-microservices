@@ -56,6 +56,9 @@ jwt:
 logging:
   file:
     name: api-gateway/logs/api-gateway.log
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%X{requestId}] %logger{36} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%X{requestId}] %logger{36} - %msg%n"
 
   level:
     com.shop.apigateway: INFO

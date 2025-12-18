@@ -2,27 +2,28 @@ package com.shop.orderservice.kafka;
 
 import com.shop.orderservice.entity.OutboxMessage;
 import com.shop.orderservice.entity.OutboxStatus;
+import com.shop.orderservice.filter.RequestIdFilter;
 import com.shop.orderservice.repository.OutboxMessageRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.kafka.clients.producer.ProducerRecord;
+import org.slf4j.MDC;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.nio.charset.StandardCharsets;
 import java.util.List;
 
 /**
- * Публикатор outbox-сообщений в Kafka.
- * <p>
- * Реализация паттерна Outbox:
+ * Публикатор outbox-сообщений в Kafka (паттерн Outbox).
+ *
+ * <p>Дополнительно:
  * <ul>
- *     <li>Заказ и запись в outbox сохраняются в одной транзакции.</li>
- *     <li>Этот сервис периодически (каждую секунду) читает сообщения
- *     со статусом {@link OutboxStatus#NEW} из БД.</li>
- *     <li>Отправляет payload в Kafka и обновляет статус на {@link OutboxStatus#SENT}
- *     или {@link OutboxStatus#FAILED} в случае ошибки.</li>
+ *   <li>Прокидывает {@code X-Request-Id} из outbox в Kafka headers,</li>
+ *   <li>Устанавливает {@code requestId} в MDC на время логирования/отправки.</li>
  * </ul>
  */
 @Service
@@ -33,25 +34,9 @@ public class OutboxPublisher {
     private final OutboxMessageRepository outboxMessageRepository;
     private final KafkaTemplate<String, String> kafkaTemplate;
 
-    /**
-     * Топик, куда отправляются события о создании заказов.
-     * Значение берётся из конфигурации {@code app.kafka.orders-topic}.
-     */
     @Value("${app.kafka.orders-topic}")
     private String ordersTopic;
 
-    /**
-     * Периодическая задача публикации новых outbox-сообщений.
-     * <p>
-     * Работает в транзакции:
-     * <ul>
-     *     <li>Читает до 100 сообщений со статусом {@link OutboxStatus#NEW}.</li>
-     *     <li>Пытается отправить каждое сообщение в Kafka.</li>
-     *     <li>При успехе помечает сообщение как {@link OutboxStatus#SENT}.</li>
-     *     <li>При ошибке помечает как {@link OutboxStatus#FAILED} и логирует исключение.</li>
-     * </ul>
-     * Период запуска — каждые 1000 мс.
-     */
     @Transactional
     @Scheduled(fixedDelay = 1000)
     public void publishNewMessages() {
@@ -67,16 +52,27 @@ public class OutboxPublisher {
         for (OutboxMessage msg : messages) {
             Long orderId = msg.getAggregateId();
             Long outboxId = msg.getId();
+            String requestId = msg.getRequestId();
+
+            if (requestId != null && !requestId.isBlank()) {
+                MDC.put(RequestIdFilter.MDC_KEY, requestId);
+            }
 
             try {
                 log.info("OutboxPublisher: sending outboxId={} for orderId={} to topic={}",
                         outboxId, orderId, ordersTopic);
 
-                kafkaTemplate.send(
+                ProducerRecord<String, String> record = new ProducerRecord<>(
                         ordersTopic,
                         orderId != null ? orderId.toString() : null,
                         msg.getPayload()
                 );
+
+                if (requestId != null && !requestId.isBlank()) {
+                    record.headers().add(RequestIdFilter.HEADER, requestId.getBytes(StandardCharsets.UTF_8));
+                }
+
+                kafkaTemplate.send(record);
 
                 msg.setStatus(OutboxStatus.SENT);
 
@@ -86,10 +82,13 @@ public class OutboxPublisher {
                 log.error("OutboxPublisher: failed to send outboxId={} for orderId={}",
                         outboxId, orderId, e);
                 msg.setStatus(OutboxStatus.FAILED);
+            } finally {
+                MDC.remove(RequestIdFilter.MDC_KEY);
             }
         }
     }
 }
+
 
 
 

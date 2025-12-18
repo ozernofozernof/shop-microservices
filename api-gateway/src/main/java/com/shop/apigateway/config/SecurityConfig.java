@@ -21,8 +21,13 @@ import org.springframework.security.web.server.SecurityWebFilterChain;
  *     <li>Отключаем stateful-механику (CSRF, formLogin, httpBasic).</li>
  *     <li>Настраиваем, какие маршруты доступны без аутентификации.</li>
  *     <li>Подключаем кастомный {@link JwtWebFilter}, который валидирует JWT
- *     и обогащает запрос данными пользователя перед проксированием в микросервисы.</li>
+ *     и кладёт аутентификацию в SecurityContext.</li>
  * </ul>
+ *
+ * <p><b>Важно:</b> {@code RequestIdWebFilter} является {@code GlobalFilter} (Spring Cloud Gateway),
+ * а не {@code WebFilter} (WebFlux Security). Поэтому он не должен добавляться в
+ * {@link SecurityWebFilterChain} через {@code addFilterAt}. Он будет применяться
+ * Gateway автоматически как глобальный фильтр (через {@code @Component}).
  */
 @Configuration
 @EnableWebFluxSecurity
@@ -30,14 +35,9 @@ import org.springframework.security.web.server.SecurityWebFilterChain;
 public class SecurityConfig {
 
     /**
-     * Фильтр, который:
-     * <ul>
-     *     <li>Считывает JWT из заголовка Authorization.</li>
-     *     <li>Проверяет подпись и срок действия токена.</li>
-     *     <li>Кладёт данные пользователя в SecurityContext.</li>
-     *     <li>Позволяет далее в route-настройках прокинуть username, например,
-     *     в заголовке {@code X-User-Name}, в downstream-сервисы.</li>
-     * </ul>
+     * Реактивный JWT-фильтр.
+     * <p>
+     * Валидирует JWT и, если токен корректный, поднимает Authentication в SecurityContext.
      */
     private final JwtWebFilter jwtWebFilter;
 
@@ -50,37 +50,30 @@ public class SecurityConfig {
     @Bean
     public SecurityWebFilterChain springSecurityFilterChain(ServerHttpSecurity http) {
         return http
-                // Gateway — stateless, работаем только по JWT
                 .csrf(ServerHttpSecurity.CsrfSpec::disable)
                 .httpBasic(ServerHttpSecurity.HttpBasicSpec::disable)
                 .formLogin(ServerHttpSecurity.FormLoginSpec::disable)
-
-                // Правила доступа к маршрутам
                 .authorizeExchange(exchanges -> exchanges
-                        // Регистрация/логин — публичные
                         .pathMatchers("/api/auth/**").permitAll()
-                        // Создание пользователя — тоже доступно без токена
                         .pathMatchers(HttpMethod.POST, "/api/users").permitAll()
-                        // Всё остальное — только для аутентифицированных
                         .anyExchange().authenticated()
                 )
-
-                // Подключаем наш JWT-фильтр на этап аутентификации
+                // JWT — на этапе AUTHENTICATION
                 .addFilterAt(jwtWebFilter, SecurityWebFiltersOrder.AUTHENTICATION)
-
                 .build();
     }
 
     /**
-     * Кодировщик паролей для работы с пользователями (регистрация/логин).
-     * <p>
-     * Используем BCrypt как де-факто стандарт для хэширования паролей.
+     * Кодировщик паролей для регистрации/логина.
+     *
+     * @return {@link PasswordEncoder} на основе BCrypt
      */
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
 }
+
 
 
 

@@ -18,6 +18,9 @@ spring:
 
   kafka:
     bootstrap-servers: localhost:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
     consumer:
       group-id: inventory-service
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
@@ -36,6 +39,9 @@ app:
 logging:
   file:
     name: logs/inventory-service.log
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%X{requestId}] %logger{36} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%X{requestId}] %logger{36} - %msg%n"
 
   level:
     org.hibernate.SQL: WARN

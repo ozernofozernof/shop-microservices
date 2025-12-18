@@ -22,6 +22,9 @@ public class OutboxMessage {
     @Column(nullable = false)
     private String aggregateType;
 
+    @Column(name = "request_id")
+    private String requestId;
+
     // id заказа
     @Column(nullable = false)
     private Long aggregateId;

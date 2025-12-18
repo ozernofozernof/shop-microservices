@@ -17,6 +17,8 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import com.shop.orderservice.filter.RequestIdFilter;
+import org.slf4j.MDC;
 
 import java.math.BigDecimal;
 import java.time.OffsetDateTime;
@@ -184,9 +186,11 @@ public class OrderService {
         // 5. Кладём событие в outbox
         OrderCreatedEvent event = OrderMapper.toOrderCreatedEvent(saved);
         String payload = toJson(event);
+        String requestId = MDC.get(RequestIdFilter.MDC_KEY);
 
         OutboxMessage outboxMessage = OutboxMessage.builder()
                 .aggregateType("ORDER")
+                .requestId(requestId)
                 .aggregateId(saved.getId())
                 .type("ORDER_CREATED")
                 .payload(payload)
